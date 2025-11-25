@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Cultura - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/cultura css.css">
+</head>
+<body>
+<nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <seccion class="banner-cultura">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="cultura/banner.png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+
+
+
+ <nav class="menu-cultura">
+  <ul>
+    <li><a href="#gaita">🎶 Gaita</a></li>
+    <li><a href="#artes">🎨 Artes</a></li>
+    <li><a href="eventos.html">🎉 Festividades</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="#juegos">🧷 Juegos</a></li>
+    <li><a href="#lenguaje">🗣️ Lenguaje</a></li>
+    <li><a href="#moda">🌟 Moda</a></li>
+    <li><a href="lugares.html">🏞️ Lugares</a></li>
+  </ul>
+</nav>
+
+
+<section id="gaita" class="galeria-gaita">
+<div style="text-align: center;">
+  <h2 class="titulo-gaita">🎶 Gaita Zuliana: Ritmo que enciende el alma</h2>
+</div>
+
+   <div class="masonry-gaita">
+    <!-- Tarjeta de enlaces con botones -->
+    <div class="tarjeta-gaita" onclick="abrirModale(
+      'cultura/enlaces-gaita.png',
+      '🔗 Enlaces gaiteros',
+      'Explora gaitas clásicas y modernas en YouTube.',
+      [
+        { texto: '🎧 Gaitas Tradicionales Mix', url: 'https://www.youtube.com/watch?v=jwTgZIc1k30' },
+        { texto: '🎧 Éxitos Gaiteros', url: 'https://www.youtube.com/watch?v=oIwU24BcJiQ' },
+        { texto: '🎧 Gaitas Populares 2024', url: 'https://www.youtube.com/watch?v=1yrCdfKarGc' }
+      ]
+    )">
+      <img src="cultura/enlaces-gaita.png" alt="Enlaces gaiteros">
+      <h3>🔗 Enlaces gaiteros</h3>
+      <p>Explora gaitas clásicas y modernas en YouTube.</p>
+      <div class="botones-enlaces">
+        <a href="https://www.youtube.com/watch?v=jwTgZIc1k30" target="_blank">🎧 Tradicionales Mix</a>
+        <a href="https://www.youtube.com/watch?v=oIwU24BcJiQ" target="_blank">🎧 Éxitos Gaiteros</a>
+        <a href="https://www.youtube.com/watch?v=1yrCdfKarGc" target="_blank">🎧 Populares 2024</a>
+      </div>
+    </div>
+
+    <!-- Video cabimero -->
+   <div class="tarjeta-gaita">
+  <h3>📹 Gaita Cabimera</h3>
+  <video controls width="100%" poster="img/gaita-cabimera.jpg">
+    <source src="videos/Punta Icotea.mp4" type="video/mp4">
+    Tu navegador no soporta el video HTML5.
+  </video>
+  <p>Una interpretación vibrante que celebra el alma musical de Cabimas.</p>
+</div>
+
+
+    <!-- Origen -->
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/origen.png', '📜 Origen de la Gaita', 'La gaita zuliana nació en el estado Zulia como expresión musical popular, ligada a la devoción mariana, la protesta social y la celebración comunitaria. Su historia se remonta al siglo XIX, cuando los gaiteros improvisaban versos con instrumentos rudimentarios en plazas y calles. En 2014 fue declarada patrimonio cultural de Venezuela.')">
+      <img src="cultura/origen.png" alt="Origen de la gaita">
+      <h3>📜 Origen</h3>
+      <p>Desde el Zulia para el mundo, la gaita es identidad y tradición.</p>
+    </div>
+
+    <!-- Instrumentos -->
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/furro.png', '🥁 Furro', 'Instrumento de percusión con palo central. Marca el ritmo grave de la gaita.')">
+      <img src="cultura/furro.png" alt="Furro">
+      <h3>🥁 Furro</h3>
+      <p>El pulso grave que sostiene la gaita.</p>
+    </div>
+
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/tambora.png', '🪘 Tambora', 'Tambor cilíndrico golpeado con baquetas. Aporta fuerza y dinamismo.')">
+      <img src="cultura/tambora.png" alt="Tambora">
+      <h3>🪘 Tambora</h3>
+      <p>El golpe que enciende la fiesta gaitera.</p>
+    </div>
+
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/cuatro.png', '🎸 Cuatro', 'Pequeña guitarra de cuatro cuerdas. Da armonía y base melódica.')">
+      <img src="cultura/cuatro.png" alt="Cuatro">
+      <h3>🎸 Cuatro</h3>
+      <p>El alma melódica de la gaita zuliana.</p>
+    </div>
+
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/maracas.png', '🎶 Maracas', 'Instrumento de percusión que aporta ritmo y textura. Se agita con energía.')">
+      <img src="cultura/maracas.png" alt="Maracas">
+      <h3>🎶 Maracas</h3>
+      <p>Ritmo y sabor en cada agite.</p>
+    </div>
+
+    <!-- Frase gaitera -->
+    <div class="tarjeta-gaita" onclick="abrirModale('cultura/frase.png', '🗣️ Frase gaitera', '“Cuando canto una gaita, mi alma se enciende como el sol del Zulia.” ')">
+      <img src="cultura/frase.png" alt="Frase gaitera">
+      <h3>🗣️ Frase gaitera</h3>
+      <p>Una expresión que enciende el alma.</p>
+    </div>
+  
+
+  <div id="modal-gaita" class="modal-gaita">
+    <span class="cerrar-modal" onclick="cerrarModale()">×</span>
+    <img id="modal-imagen" src="" alt="Imagen ampliada">
+    <h3 id="modal-titulo"></h3>
+    <p id="modal-texto"></p>
+    <div id="modal-enlaces"></div>
+  </div>
+</section>
+
+
+<section id="artes" class="arte-cabimas">
+  <div class="titulo-con-fondo">
+    <h2 class="titulo-arte"> 🎨 Arte Cabimense: Color, Memoria y Ritmo</h2>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <div class="linea-tiempo-expandible">
+    <div class="bloque-decada borde-verde" onclick="toggleDecada(this)">
+      <div class="cabecera">
+        <span class="anio">1950s Primeros trazos del arte cabimense</span>
+        <span class="icono">➕</span>
+      </div>
+      <div class="contenido">
+        <h3>Primeros trazos del arte cabimense</h3>
+        <img src="img/arte_1950.jpg" alt="Arte 1950s">
+        <p>Durante los años 50, el arte en Cabimas comienza a emerger con muralistas influenciados por el auge petrolero. Las obras reflejan la vida obrera, la religiosidad popular y los paisajes del lago.</p>
+      </div>
+    </div>
+
+    <div class="bloque-decada borde-azul" onclick="toggleDecada(this)">
+      <div class="cabecera">
+        <span class="anio">1970s Arte como expresión social</span>
+        <span class="icono">➕</span>
+      </div>
+      <div class="contenido">
+        <h3>Arte como expresión social</h3>
+        <img src="img/arte_1970.jpg" alt="Arte 1970s">
+        <p>El teatro popular y la pintura religiosa se consolidan. Surgen colectivos barriales que usan el arte como denuncia social. Se crean obras que retratan la lucha obrera y la fe en San Benito.</p>
+      </div>
+    </div>
+
+    <div class="bloque-decada borde-amarillo" onclick="toggleDecada(this)">
+      <div class="cabecera">
+        <span class="anio">1990s Colectivos y talleres comunitarios</span>
+        <span class="icono">➕</span>
+      </div>
+      <div class="contenido">
+        <h3>Colectivos y talleres comunitarios</h3>
+        <img src="img/arte_1990.jpg" alt="Arte 1990s">
+        <p>Cabimas vive un auge de colectivos artísticos, exposiciones locales y talleres comunitarios. Se fundan espacios como la Casa de la Cultura y se promueven concursos de pintura y escultura.</p>
+      </div>
+    </div>
+
+    <div class="bloque-decada borde-negro" onclick="toggleDecada(this)">
+      <div class="cabecera">
+        <span class="anio">2010s Arte digital y redes sociales</span>
+        <span class="icono">➕</span>
+      </div>
+      <div class="contenido">
+        <h3>Arte digital y redes sociales</h3>
+        <img src="img/arte_2010.jpg" alt="Arte 2010s">
+        <p>Emergen artistas digitales, ilustradores y cineastas locales. El arte se difunde por redes sociales y plataformas digitales. Se crean cortos, animaciones y murales urbanos con estilo contemporáneo.</p>
+      </div>
+    </div>
+
+    <div class="bloque-decada borde-multicolor" onclick="toggleDecada(this)">
+      <div class="cabecera">
+        <span class="anio">2020s   Arte interactivo y memoria digital</span>
+        <span class="icono">➕</span>
+      </div>
+      <div class="contenido">
+        <h3>Arte interactivo y memoria digital</h3>
+        <img src="cultura/cabimas cultural.png" alt="Arte 2020s">
+        <p>Proyectos web como CABIMAS CULTURAL rescatan la memoria visual de Cabimas. Se integran ilustraciones, animaciones y narrativas interactivas. El arte se convierte en herramienta educativa y cultural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria-arte">
+  <h2 class="titulo-galeria">Conoce la Galería de Arte Cabimense</h2>
+  <div class="grid-galeria">
+    <div class="tarjeta-obra" onclick="abrirModal('obra1')">
+      <img src="cultura/Ramiro borjas.jpg" alt="Obra 1">
+      <h3>“EL MUELLE”</h3>
+    </div>
+    <div class="tarjeta-obra" onclick="abrirModal('obra2')">
+      <img src="cultura/Blanco aparicio.jpg" alt="Obra 2">
+      <h3>“Teatro Cabimas”</h3>
+    </div>
+    <!-- Más tarjetas -->
+  </div>
+
+  <!-- Modal interactivo -->
+  <div class="modal-obra" id="modal-obra1">
+    <div class="contenido-modal">
+      <span class="cerrar" onclick="cerrarModal('obra1')">✖️</span>
+      <img src="cultura/Ramiro borjas.jpg" alt="Obra 1">
+      <h2>“EL MUELLE”</h2>
+      <p><strong>Artista:</strong> Ramiro Borjas</p>
+      <p><strong>Técnica:</strong> Acrílico sobre lienzo</p>
+      <p><strong>Año:</strong> 2019</p>
+      <p><strong>Descripción:</strong> Esta obra representa al primer muelle de Cabimas.</p>
+    </div>
+  </div>
+
+  <div class="modal-obra" id="modal-obra2">
+    <div class="contenido-modal">
+      <span class="cerrar" onclick="cerrarModal('obra2')">✖️</span>
+      <img src="cultura/Blanco aparicio.jpg" alt="Obra 2">
+      <h2>“Teatro Cabimas”</h2>
+      <p><strong>Artista:</strong> Blanco Aparicio</p>
+      <p><strong>Técnica:</strong> óleo</p>
+      <p><strong>Año:</strong> 2023</p>
+      <p><strong>Descripción:</strong> Una reinterpretación de como era en su timpo el teatro de Cabimas</p>
+    </div>
+  </div>
+</section>
+
+<section id="juegos" class="juegos-cabimas-seccion">
+  <div id="juegos-carrusel">
+  <div id="confetti-carrusel"></div>
+  <div class="juegos-cabimas-titulo">
+    <h2>🎯 Juegos Tradicionales de Cabimas 🪁</h2>
+  </div>
+
+
+  <div class="juegos-cabimas-carrusel">
+    <button class="juegos-cabimas-flecha izq" onclick="juegosCabimasMover(-1)">⬅️</button>
+ 
+
+    <div class="juegos-cabimas-slider" id="juegosCabimasSlider">
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/saltar la cuerda.jpg" alt="La cuerda">
+        <h3>La cuerda</h3>
+        <p>Niños y niñas compiten saltando una cuerda larga en ritmo grupal. Se juega en plazas y calles.</p>
+        <video src="juegos cabimas/saltar cuerda.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/carrera de sacos.jpg" alt="Carrera de sacos">
+        <h3>Carrera de sacos</h3>
+        <p>Competencia divertida donde los participantes saltan dentro de sacos. Se juega en fiestas y escuelas.</p>
+        <video src="juegos cabimas/carrera de sacos.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/15713395033930.jpg" alt="voleibol callejero">
+        <h3>Voleibol callejero</h3>
+        <p>Juego tradicional adaptado a espacios abiertos. Se juega con redes improvisadas y equipos mixtos.</p>
+        <video src="juegos cabimas/voleibol.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/metras.jpg" alt="la metra">
+        <h3>La metra</h3>
+        <p>Se juega con bolitas de vidrio (metras) en círculos dibujados en el suelo. El objetivo es sacar las metras del rival.</p>
+        <video src="juegos cabimas/metras.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/escondite.jpg" alt="el escondite">
+        <h3>El escondite</h3>
+        <p>Un jugador cuenta mientras los demás se esconden. El objetivo es encontrarlos antes de que lleguen a la base.</p>
+        <video src="juegos cabimas/escondite.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/gallinita ciega.jpg" alt="la gallinita ciega">
+        <h3>La gallinita ciega</h3>
+        <p>Un jugador con los ojos vendados intenta atrapar a los demás guiándose por sonidos. Se juega en espacios cerrados.</p>
+        <video src="juegos cabimas/gallinita ciega.mp4" controls></video>
+      </div>
+
+      <div class="juegos-cabimas-tarjeta">
+        <img src="juegos cabimas/papagaloo.jpg" alt="el papagallo">
+        <h3>El papagayo</h3>
+        <p>Se arma y vuela un papagayo hecho con caña, papel y hilo. Se compite por altura y duración.</p>
+        <video src="juegos cabimas/cometa.mp4" controls></video>
+      </div>
+    </div>
+   
+
+    <button class="juegos-cabimas-flecha der" onclick="juegosCabimasMover(1)">➡️</button>
+  </div>
+</section>
+
+<section id="lenguaje">
+   
+  </div>
+
+  <div class="titulo-lenguaje">
+    <h2>🗣️ Así hablamos en Cabimas</h2>
+    <strong>En Cabimas, el lenguaje no es solo comunicación: es ritmo, es carácter, es memoria. 
+Dicen que el zuliano no habla: declama con picardía. Y en Cabimas, esa picardía se mezcla con el voseo maracucho, con expresiones indígenas, con giros costeños y con una musicalidad que convierte cualquier frase en una escena teatral. Aquí no se dice “¡qué calor!”, se dice “¡qué molleja de solazo!”. No se miente, se “echa un mojón”. No se trabaja, se “le echa pichón”.</strong>
+  </p>
+
+  <!-- 🎭 Carrusel de expresiones -->
+  <div class="expresiones-carrusel">
+    <div class="expresion">
+      <h3>😲 Vergación</h3>
+      <p>Expresa sorpresa, molestia o emoción intensa.</p>
+    </div>
+    <div class="expresion">
+      <h3>😱 Qué molleja</h3>
+      <p>¡Asombro total! Se usa para exagerar.</p>
+    </div>
+    <div class="expresion">
+      <h3>💪 Echarle pichón</h3>
+      <p>Esforzarse con ganas, no rendirse.</p>
+    </div>
+    <div class="expresion">
+      <h3>🤥 Mojón</h3>
+      <p>Mentira o exageración.</p>
+    </div>
+    <div class="expresion">
+      <h3>🧽 Jalar bola</h3>
+      <p>Adular excesivamente a alguien.</p>
+    </div>
+    <div class="expresion">
+      <h3>👋 ¡Epa vos!</h3>
+      <p>Saludo informal entre amigos.</p>
+    </div>
+    <div class="expresion">
+      <h3>✅ ¡Ajá pues!</h3>
+      <p>Confirmación o cierre de idea.</p>
+    </div>
+    <div class="expresion">
+      <h3>😤 ¡No joda!</h3>
+      <p>Frustración o incredulidad.</p>
+    </div>
+    <div class="expresion">
+      <h3>💸 ¡Ta’ barato!</h3>
+      <p>Algo está muy económico.</p>
+    </div>
+    <div class="expresion">
+      <h3>😕 ¡Ta’ chimbo!</h3>
+      <p>Algo está mal hecho o decepcionante.</p>
+    </div>
+    <div class="expresion">
+      <h3>😒 ¡Qué ladilla!</h3>
+      <p>Fastidio o aburrimiento.</p>
+    </div>
+     <div class="expresion">
+      <h3>🧠 ¡Ta’ peluo!</h3>
+      <p>Algo difícil o complicado</p>
+    </div>
+  </div>
+
+  <!-- 🎥 Videos -->
+  <div class="videos-lenguaje">
+    <h3>🎬 ¿Cómo suena Cabimas?</h3>
+    <iframe src="https://www.youtube.com/embed/W-MSLRvDFvE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/mRarV6hetzQ" allowfullscreen></iframe>
+  </div>
+
+
+  <div class="juego-lenguaje">
+  <h3>🎮 ¿Sabes qué significa?</h3>
+
+  <div class="juego-bloque">
+    <p><strong>¿Qué significa “tripón”?</strong></p>
+    <div class="opciones">
+      <button onclick="verificar(0)">Un tipo de sopa</button>
+      <button onclick="verificar(1)">Niño pequeño</button>
+      <button onclick="verificar(2)">Mentira</button>
+    </div>
+    <p id="resultado"></p>
+  </div>
+
+  <div class="juego-bloque">
+    <p><strong>¿Qué significa “guachafita”?</strong></p>
+    <div class="opciones">
+      <button onclick="verificar2(0)">Fiesta o alboroto</button>
+      <button onclick="verificar2(1)">Comida picante</button>
+      <button onclick="verificar2(2)">Mentira exagerada</button>
+    </div>
+    <p id="resultado2"></p>
+  </div>
+</div>
+</section>
+
+
+
+<section id="moda"> 
+  <div class="moda-titulo">
+    <h2>👗 Moda en Cabimas</h2>
+    <p>Tradición que se reinventa con estilo</p>
+  </div>
+
+    <!-- 📜 Historia en tarjetas -->
+  <div class="moda-historia">
+    <h3>📜 Nuestra historia</h3>
+    <div class="tarjetas-historia">
+      <div class="tarjeta-moda">
+        <img src="moda cabimas/wayus 3.jpg" alt="Traje tradicional">
+        <div class="contenido">
+          <h4>Raíces festivas</h4>
+          <p>Los trajes típicos usados en las fiestas patronales reflejan la mezcla indígena y colonial.</p>
+        </div>
+      </div>
+      <div class="tarjeta-moda">
+        <img src="moda cabimas/wayus.jpg" alt="Vestido bordado">
+        <div class="contenido">
+          <h4>Elegancia bordada</h4>
+          <p>Vestidos bordados eran símbolo de distinción en celebraciones familiares y religiosas.</p>
+        </div>
+      </div>
+      <div class="tarjeta-moda">
+        <img src="moda cabimas/antaño.JPG" alt="Moda petrolera">
+        <div class="contenido">
+          <h4>Influencia petrolera</h4>
+          <p>Con el auge petrolero llegaron telas importadas y estilos europeos que se mezclaron con lo local.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="moda-actual">
+  <h3>👠 Moda actual</h3>
+  <div class="actual-tarjetas">
+    <div class="tarjeta-moda">
+      <img src="moda cabimas/cuchilla.jpg" alt="Estilo urbano">
+      <div class="contenido">
+        <h4>Estilo urbano con raíces tradicionales</h4>
+        <p>Jóvenes mezclan jeans, camisetas y accesorios hechos a mano.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-moda">
+      <img src="moda cabimas/reciclaje.jpg" alt="Diseño artesanal">
+      <div class="contenido">
+        <h4>Diseño artesanal y sostenible</h4>
+        <p>Emprendedores locales crean piezas únicas con materiales reciclados y bordados típicos.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-moda">
+      <img src="moda cabimas/pasarela en el centrp.jpg" alt="Pasarela comunitaria">
+      <div class="contenido">
+        <h4>Pasarelas comunitarias y ferias de diseño</h4>
+        <p>Eventos locales muestran la creatividad cabimense con desfiles en plazas y centros culturales.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 🖼️ Galería -->
+  <div class="moda-galeria">
+    <h3>🖼️ Galería de estilo cabimense</h3>
+    <div class="galeria-imagenes">
+      <img src="moda cabimas/antaño.JPG" alt="Moda típica">
+      <img src="moda cabimas/bailarinas.jpg" alt="Traje festivo">
+       <img src="moda cabimas/hombres.jpeg" alt="Estilo urbano">
+      <img src="moda cabimas/feria.jpeg" alt="Estilo urbano">
+      <img src="moda cabimas/reinas.jpg" alt="Estilo urbano">
+
+
+    </div>
+  </div>
+
+  <!-- 🎮 Juego -->
+  <div class="moda-juego">
+    <h3>🎮 adivina la prenda</h3>
+    <div class="juego-bloque">
+      <p><strong>¿Qué es una guayabera?</strong></p>
+      <div class="opciones">
+        <button onclick="verificarModa(0)">Vestido indígena</button>
+        <button onclick="verificarModa(1)">Camisa típica de Cabimas</button>
+        <button onclick="verificarModa(2)">Traje de gala</button>
+      </div>
+      <p id="resultadoModa"></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#00ff00', '#0000ff', '#000000', '#ffcc00']; // verde, azul, negro, amarillo
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+
+animar();
+</script>
+
+<script>function abrirModale(imagen, titulo, texto, enlaces = []) {
+  const modal = document.getElementById('modal-gaita');
+  modal.classList.remove('fadeOut');
+  modal.style.display = 'block';
+  document.getElementById('modal-imagen').src = imagen;
+  document.getElementById('modal-titulo').innerText = titulo;
+  document.getElementById('modal-texto').innerText = texto;
+
+  const enlacesContainer = document.getElementById('modal-enlaces');
+  enlacesContainer.innerHTML = '';
+  enlaces.forEach(enlace => {
+    const a = document.createElement('a');
+    a.href = enlace.url;
+    a.target = '_blank';
+    a.innerText = enlace.texto;
+    enlacesContainer.appendChild(a);
+  });
+}
+
+function cerrarModale() {
+  const modal = document.getElementById('modal-gaita');
+  modal.classList.add('fadeOut');
+  setTimeout(() => {
+    modal.style.display = 'none';
+    modal.classList.remove('fadeOut');
+  }, 400);
+}
+
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+document.querySelectorAll('.decada').forEach(item => {
+  item.addEventListener('mouseover', () => {
+    document.getElementById('info-hover').textContent = item.getAttribute('data-info');
+  });
+  item.addEventListener('mouseout', () => {
+    document.getElementById('info-hover').textContent = '';
+  });
+});
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 50 },
+    "color": { "value": ["#006600", "#000000", "#ffcc00", "#0066cc"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.6 },
+    "size": { "value": 6 },
+    "move": { "enable": true, "speed": 2 }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" }
+    }
+  }
+});
+</script>
+
+<style>
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+</style>
+
+<script>
+function toggleDecada(element) {
+  element.classList.toggle('open');
+  const icon = element.querySelector('.icono');
+  icon.textContent = element.classList.contains('open') ? '✖️' : '➕';
+}
+</script>
+
+
+<script>
+function abrirModal(id) {
+  document.getElementById('modal-' + id).style.display = 'flex';
+}
+
+function cerrarModal(id) {
+  document.getElementById('modal-' + id).style.display = 'none';
+}
+</script>
+
+<script>
+let juegosCabimasIndex = 0;
+
+function juegosCabimasMover(direccion) {
+  const slider = document.getElementById('juegosCabimasSlider');
+  const tarjetas = slider.querySelectorAll('.juegos-cabimas-tarjeta');
+  const tarjetaWidth = tarjetas[0].offsetWidth + 20;
+  juegosCabimasIndex += direccion;
+
+  if (juegosCabimasIndex < 0) juegosCabimasIndex = 0;
+  if (juegosCabimasIndex > tarjetas.length - 1) juegosCabimasIndex = tarjetas.length - 1;
+
+  slider.scrollTo({
+    left: tarjetaWidth * juegosCabimasIndex,
+    behavior: 'smooth'
+  });
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+<script>
+tsParticles.load("confetti-carrusel", {
+  fullScreen: { enable: false },
+  particles: {
+    number: { value: 50 },
+    shape: { type: ["circle", "square", "star", "triangle"] },
+    color: {
+      value: ["#e63946", "#f1fa8c", "#457b9d", "#2a9d8f", "#ff9f1c"],
+    },
+    size: { value: 6, random: true },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "bottom",
+      outModes: { default: "out" },
+    },
+    opacity: { value: 0.8, random: true },
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "bubble" },
+      onClick: { enable: true, mode: "push" },
+    },
+    modes: {
+      bubble: {
+        distance: 100,
+        size: 10,
+        duration: 2,
+        opacity: 1,
+      },
+      push: { quantity: 4 },
+    },
+  },
+  background: { color: "#fffbe6" },
+});
+</script>
+
+
+<script>
+function verificar(opcion) {
+  const resultado = document.getElementById("resultado");
+  resultado.style.animation = "none";
+  void resultado.offsetWidth;
+  resultado.style.animation = "pulse 0.5s ease";
+
+  if (opcion === 1) {
+    resultado.textContent = "✅ ¡Correcto! Tripón es un niño pequeño.";
+    resultado.style.color = "#2a9d8f";
+  } else {
+    resultado.textContent = "❌ Intenta otra vez.";
+    resultado.style.color = "#e63946";
+  }
+}
+
+function verificar2(opcion) {
+  const resultado2 = document.getElementById("resultado2");
+  resultado2.style.animation = "none";
+  void resultado2.offsetWidth;
+  resultado2.style.animation = "pulse 0.5s ease";
+
+  if (opcion === 0) {
+    resultado2.textContent = "✅ ¡Correcto! Guachafita es fiesta o alboroto.";
+    resultado2.style.color = "#2a9d8f";
+  } else {
+    resultado2.textContent = "❌ Intenta otra vez.";
+    resultado2.style.color = "#e63946";
+  }
+}
+</script>
+
+<script>
+// 🎮 Juego interactivo
+function verificarModa(opcion) {
+  const resultado = document.getElementById("resultadoModa");
+  resultado.style.animation = "none";
+  void resultado.offsetWidth;
+  resultado.style.animation = "pulse 0.5s ease";
+
+  if (opcion === 1) {
+    resultado.textContent = "✅ ¡Correcto! La guayabera es una camisa típica de Cabimas.";
+    resultado.style.color = "#2a9d8f";
+  } else {
+    resultado.textContent = "❌ Intenta otra vez.";
+    resultado.style.color = "#e63946";
+  }
+}
+
+// 🖼️ Lightbox para galería
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".galeria-imagenes img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      const overlay = document.createElement("div");
+      overlay.className = "lightbox-overlay";
+
+      const fullImg = document.createElement("img");
+      fullImg.src = img.src;
+      fullImg.alt = img.alt;
+      fullImg.className = "lightbox-img";
+
+      overlay.appendChild(fullImg);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", () => {
+        overlay.classList.add("fadeOut");
+        setTimeout(() => overlay.remove(), 300);
+      });
+    });
+  });
+});
+</script>
+
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+ <script src="js/script.js"></script>
+</body>
+</html>

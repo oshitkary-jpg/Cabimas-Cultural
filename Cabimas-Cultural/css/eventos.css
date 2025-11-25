@@ -1,0 +1,1041 @@
+.menu-cabimas {
+  width: 100%;
+  background: linear-gradient(to right, #7ed957, #ffcc00, #00cfff, #000);
+  padding: 12px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 99999;
+}
+
+/* Menú horizontal (PC) */
+.desktop-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.curva-menu {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 5;
+}
+
+.curva-menu svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.menu-cabimas a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  font-size: 1.05em;
+  position: relative;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-cabimas a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.menu-cabimas a:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.menu-cabimas a:hover::after {
+  width: 100%;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none; /* oculto en PC */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  align-items: center;
+  gap: 6px;
+}
+
+.toggle-text {
+  font-size: 1rem;
+  margin-left: 8px;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay emergente */
+.menu-overlay {
+  position: fixed;
+  inset: 0; /* ocupa toda la pantalla */
+  background: rgba(0,0,0,0.95);
+  display: none; /* oculto por defecto */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* por encima de todo */
+}
+
+/* Lista dentro del overlay */
+.menu-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* vertical */
+  gap: 1.2rem;
+}
+
+.menu-overlay a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff; /* texto blanco para que se vea */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover {
+  color: #ffd700; /* dorado al pasar */
+}
+
+/* Responsive: en móviles mostramos hamburguesa y ocultamos menú de escritorio */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important; /* oculta menú horizontal en pantallas pequeñas */
+  }
+
+  .menu-toggle {
+    display: flex; /* muestra hamburguesa */
+  }
+}
+
+/* En PC ocultamos hamburguesa y overlay */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* oculta hamburguesa en PC */
+  }
+  .menu-overlay {
+    display: none !important; /* overlay nunca aparece en PC */
+  }
+}
+
+
+  /* FOOTER*/
+.onda-footer {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.onda-footer svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* Footer principal */
+.footer-cabimas {
+  background-color: #014f2b; /* Verde oscuro */
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 30px;
+}
+
+/* Logo alineado con texto */
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-footer {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-logo h3 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #FFD700;
+}
+
+.footer-logo p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.footer-enlaces h4,
+.footer-contacto h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.footer-enlaces ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-enlaces li {
+  margin-bottom: 6px;
+}
+
+.footer-enlaces a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-enlaces a:hover {
+  color: #FFD700;
+}
+
+.footer-contacto p {
+  margin: 6px 0;
+}
+
+.footer-creditos {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.footer-creditos strong {
+  color: #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-enlaces ul {
+    display: inline-block;
+  }
+
+  .logo-titulo {
+    justify-content: center;
+  }
+}
+
+.banner-patrimonio {
+  position: relative;
+  height: 60vh; /* altura moderada */
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#particulas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3; /* partículas por encima */
+  pointer-events: none;
+}
+
+.contenido-banner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.contenido-banner img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+
+.titulo-banner {
+  margin-top: 16px;
+  font-size: 2.2em;
+  color: #fcbf49;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ @media (max-width: 768px) {
+  .menu-cultura li a {
+    font-size: 1em;
+    padding: 10px 14px;
+  }
+}
+
+.menu-cultura {
+  background: linear-gradient(to right, #f47804, #fc49b4);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(18, 19, 33, 0.486);
+}
+
+.menu-cultura ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.menu-cultura li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.0em; /* ligeramente más grande */
+  font-weight: 600;
+  color: #fff;
+  background-color: #acde22;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 18px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* sombra detrás del botón */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* sombra detrás del texto */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.menu-cultura li a:hover {
+  background-color: #9efbf6;
+  color: #09214a;
+  transform: scale(1.1);
+  box-shadow: 0 0 16px rgba(252, 191, 73, 0.6); /* sombra dorada al pasar */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+#cab-eventos {
+  position: relative;
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fondo dinámico */
+#cab-eventos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff1744, #ffeb3b, #4caf50, #2196f3);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  z-index: 0;
+}
+
+/* Partículas festivas */
+#cab-eventos::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #ffeb3b 3px, transparent 4px),
+    radial-gradient(circle, #ff1744 3px, transparent 4px),
+    radial-gradient(circle, #4caf50 3px, transparent 4px),
+    radial-gradient(circle, #2196f3 3px, transparent 4px),
+    radial-gradient(circle, #ff9800 3px, transparent 4px);
+  background-size: 60px 60px;
+  animation: confettiFall 15s linear infinite;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.cab-eventos-header {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Animaciones */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes confettiFall {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 600px; }
+}
+.cab-eventos-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(0,0,0,.6);
+  animation: fadeInDown 1.5s ease;
+}
+
+.cab-eventos-intro {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  background: rgba(0,0,0,.4);
+  padding: 1.5rem;
+  border-radius: 16px;
+  animation: fadeInUp 2s ease;
+}
+
+.explorar-btn {
+  margin-top: 2rem;
+  padding: .8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#ff1744,#ffeb3b);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: pulse 2s infinite;
+}
+.explorar-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,.4);
+}
+
+/* Animaciones */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes moveDots {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+#cab-eventos-culturales {
+  background-color: #1e2a47; /* azul profundo */
+  color: #fff;
+  padding: 3rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.hero-intro h2 {
+  font-size: 2.8rem;
+  margin-bottom: .5rem;
+  animation: fadeInDown 1s ease;
+}
+.hero-intro p {
+  font-size: 1.2rem;
+  opacity: .9;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  perspective: 1000px;
+  height: 320px;
+  position: relative;
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.card-front {
+  background-size: cover;
+  background-position: center;
+}
+.card-front h3 {
+  background: rgba(0,0,0,.6);
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+.card-back {
+  background: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  padding: 1rem;
+}
+.card-back h4 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(360deg);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #1e2a47;       /* fondo sólido elegante */
+  --card: #ffffff;     /* tarjeta mes */
+  --ink: #1e2a47;      /* texto primario */
+  --muted: #6b7a90;    /* texto secundario */
+  --line: #dde3ea;     /* líneas */
+  --accent: #ffb703;   /* acento festivo */
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: #fff;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Contenedor principal */
+.modern-calendar {
+  background: var(--bg);
+  padding: 2rem 1rem;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+
+/* Encabezado con botones */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.calendar-header h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.calendar-header button {
+  background: #24365f;
+  color: #fff;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .3s ease, transform .3s ease;
+}
+.calendar-header button:hover {
+  background: #34495e;
+  transform: scale(1.05);
+}
+
+/* Grilla de un mes */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .4rem;
+}
+
+/* Celda de día */
+.day-cell {
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  min-height: 80px;
+  padding: .4rem;
+  text-align: center;
+  font-size: .9rem;
+  border: 1px solid var(--line);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.day-cell:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+.day-cell.empty {
+  visibility: hidden;
+}
+
+/* Número del día */
+.day-number {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: .2rem;
+}
+
+/* Evento */
+.event-marker {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: .2rem;
+  animation: bounce .8s infinite alternate;
+}
+.event-title {
+  font-size: .7rem;
+  margin-top: .2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Animación del marcador 📍 */
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-4px); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .modern-calendar {
+    max-width: 95%;
+  }
+  .calendar-header h3 {
+    font-size: 1.3rem;
+  }
+  .day-cell {
+    min-height: 70px;
+    font-size: .8rem;
+  }
+}
+#calendar-section {
+  background: linear-gradient(135deg, #1e2a47, #24365f); /* degradado elegante */
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.calendar-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffd700; /* dorado festivo */
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+  animation: fadeInDown 1s ease;
+}
+
+.modern-calendar {
+  background: rgba(255,255,255,.1); /* fondito translúcido para contraste */
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: inset 0 0 12px rgba(255,255,255,.2);
+}
+
+/* Animación para el título */
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+
+#eventos-deportivos {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  max-width: 1100px;
+  margin: 2rem auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sports-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: #ffd700;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+  animation: fadeInDown 1s ease;
+}
+.sports-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: .9;
+}
+
+.sports-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.sport-card {
+  perspective: 1000px;
+  height: 320px;
+  position: relative;
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-front {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.card-front h3 {
+  background: rgba(0,0,0,.6);
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+.card-back {
+  background: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  text-align: center;
+}
+.card-back h4 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+.card-back p {
+  font-size: .9rem;
+  margin-bottom: .8rem;
+}
+.card-back .mini-cal {
+  background: #203a43;
+  color: #fff;
+  padding: .3rem .6rem;
+  border-radius: 6px;
+  font-size: .85rem;
+  animation: bounce 1s infinite alternate;
+}
+
+.sport-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+.sport-card:hover .card-back {
+  transform: rotateY(360deg);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-4px); }
+}
+
+.mini-calendar {
+  margin-top: 1rem;
+  background: #f6f8fb;
+  border-radius: 10px;
+  padding: .5rem;
+  box-shadow: inset 0 0 8px rgba(0,0,0,.1);
+  color: #1e2a47;
+  width: 100%;
+}
+
+.mini-calendar h5 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .2rem;
+}
+
+.day {
+  font-weight: 600;
+  font-size: .8rem;
+  text-align: center;
+  color: #6b7a90;
+}
+
+.day-cell {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.day-cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.day-cell.event {
+  background: #ffd700;
+  color: #1e2a47;
+  font-weight: 700;
+  animation: pulse 1s infinite alternate;
+}
+
+.empty {
+  visibility: hidden;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+#eventos-actuales {
+  background: linear-gradient(135deg, #dff8ce, #e0eafc);
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  max-width: 1100px;
+  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.actual-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e2a47;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,.2);
+  animation: fadeInDown 1s ease;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.actual-card {
+  flex: 0 0 300px;
+  height: 200px;
+  margin: 0 1rem;
+  cursor: pointer;
+  animation: fadeInUp 1s ease;
+}
+
+.card-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,.3);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card-banner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+.card-banner h3 {
+  background: rgba(0,0,0,.6);
+  padding: .5rem 1rem;
+  border-radius: 8px;
+}
+.card-banner .date, .card-banner .place {
+  display: block;
+  margin-top: .5rem;
+  background: rgba(255,255,255,.8);
+  color: #1e2a47;
+  padding: .3rem .6rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1e2a47;
+  color: #fff;
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s, transform .3s;
+  z-index: 999;
+}
+.carousel-btn:hover {
+  background: #34495e;
+  transform: scale(1.1);
+}
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,.6);
+  animation: fadeIn .5s ease;
+}
+.modal-content {
+  background: #497084;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  animation: zoomIn .5s ease;
+}
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes zoomIn {
+  from { transform:scale(0.8); opacity:0; }
+  to { transform:scale(1); opacity:1; }
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out; /* más suave */
+}

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Historia - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <section class="banner-historia">
+  <img src="img/Copilot_20251014_201656.png" alt="Historia Cabimas" class="imagen-banner">
+  <div class="particulas-libres">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</section>
+
+<section class="onda-invertida">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,90 C480,0 960,180 1440,60 L1440,0 L0,0 Z" fill="#260d07"/>
+  </svg>
+</section>
+
+
+<section class="onda-superior-invertida">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,80 C480,10 960,120 1440,40 L1440,80 L0,80 Z" fill="currentColor"/>
+  </svg>
+</section>
+
+<section class="linea-tiempo-cuadricula">
+  <h2 class="titulo-historia">🌅 Ecos de Cabimas: Huellas que narran</h2>
+  <p class="intro-historia">
+Desde las canoas indígenas que surcaban el Lago de Maracaibo hasta el rugido del Barroso II que transformó el destino de la ciudad, Cabimas ha tejido su historia con fuerza, fe y cultura.  
+Esta sección es un recorrido por sus momentos más emblemáticos, donde cada fecha es una puerta abierta a las voces, colores y memorias que nos definen.
+</p>
+  <div class="grid-eventos">
+    <div class="linea-conectora"></div>
+
+    <!-- Evento 1 -->
+    <div class="evento" onclick="toggleEvento(this)" data-epoca="antiguo">
+      <div class="encabezado">
+        <img src="img/Indigena.png" alt="Ícono indígenas">
+        <span class="fecha">1500</span>
+         <div class="titulo">Orígenes Indígenas</div>
+      </div>
+      <div class="contenido">
+        <h3>Orígenes Indígenas</h3>
+        <p>Los pueblos Añú y Wayuu habitaban las orillas del Lago de Maracaibo, construyendo palafitos y desarrollando una economía de pesca y trueque. Su cosmovisión estaba ligada al agua, al sol y a los ciclos naturales.</p>
+        <img src="img/Wayuu_abandonados (1).jpg" alt="Orígenes indígenas">
+      </div>
+    </div>
+
+    <!-- Evento 2 -->
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="colonial">
+      <div class="encabezado">
+        <img src="img/iglesia.png" alt="Ícono misión">
+        <span class="fecha">1758</span>
+         <div class="titulo">Fundación Colonial</div>
+      </div>
+      <div class="contenido">
+        <h3>Fundación Colonial</h3>
+        <p>Los misioneros capuchinos fundaron la misión de San Ambrosio de Punta de Piedra, estableciendo las primeras estructuras religiosas y educativas en la zona.</p>
+        <img src="img/capuchinos misioneros tukuko venezuela (1).jpg" alt="Fundación colonial">
+      </div>
+    </div>
+
+    <!-- Evento 3 -->
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="petrolero">
+      <div class="encabezado">
+        <img src="img/torre.png" alt="Ícono petróleo">
+        <span class="fecha">1922</span>
+       <div class="titulo">El Reventón</div>
+
+      </div>
+      <div class="contenido">
+        <h3>El Reventón</h3>
+        <p>El pozo Barroso II explotó con fuerza, marcando el inicio de la era petrolera en Cabimas. Miles de trabajadores llegaron, transformando la economía y el paisaje urbano.</p>
+        <img src="img/TOREE.jpg" alt="Barroso II">
+      </div>
+    </div>
+
+    <!-- Evento 4 -->
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="moderno">
+      <div class="encabezado">
+        <img src="img/educacion.png" alt="Ícono educación">
+        <span class="fecha">1960</span>
+        <div class="titulo">Expansión Educativa</div>
+      </div>
+      <div class="contenido">
+        <h3>Expansión Educativa</h3>
+        <p>Cabimas se consolidó como centro educativo y cultural, con la creación de escuelas, liceos y centros artísticos que fortalecieron la identidad local.</p>
+        <img src="img/educacic3b3n11.jpg" alt="Educación en Cabimas">
+      </div>
+    </div>
+
+    <!-- Evento 5 -->
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="moderno">
+      <div class="encabezado">
+        <img src="img/municipalidad.png" alt="Ícono municipio">
+        <span class="fecha">1991</span>
+        <div class="titulo">Municipalidad</div>
+      </div>
+      <div class="contenido">
+        <h3>Municipalidad</h3>
+        <p>Cabimas se convirtió oficialmente en municipio autónomo, fortaleciendo su estructura administrativa y promoviendo el desarrollo local con identidad propia.</p>
+        <img src="img/cabimas (1).jpg" alt="Municipalidad">
+      </div>
+    </div>
+
+      <!-- Evento 5 -->
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="moderno">
+      <div class="encabezado">
+        <img src="img/municipalidad.png" alt="Ícono municipio">
+        <span class="fecha">1991–2000</span>
+        <div class="titulo">Crecimiento poblacional</div>
+      </div>
+      <div class="contenido">
+        <h3>Crecimiento poblacional</h3>
+        <p>Cabimas experimentó un fuerte crecimiento poblacional, pasando de aproximadamente 190.000 habitantes en 1990 a 237.000 en 2000s</p>
+        <img src="img/cabimas (1).jpg" alt="Municipalidad">
+      </div>
+    </div>
+
+    <div class="evento" onclick="toggleEvento(this)"data-epoca="moderno">
+      <div class="encabezado">
+        <img src="img/municipalidad.png" alt="Ícono municipio">
+        <span class="fecha">2000–2015</span>
+        <div class="titulo">Consolidación de Zonas</div>
+      </div>
+      <div class="contenido">
+        <h3>Consolidación de Zonas</h3>
+        <p>Se consolidaron zonas residenciales y comerciales, aunque comenzaron a evidenciarse problemas de servicios públicos.</p>
+        <img src="img/cabimas (1).jpg" alt="Municipalidad">
+      </div>
+    </div>
+
+     <div class="evento" onclick="toggleEvento(this)"data-epoca="moderno">
+      <div class="encabezado">
+        <img src="img/municipalidad.png" alt="Ícono municipio">
+        <span class="fecha">2025</span>
+        <div class="titulo">Actualidad</div>
+      </div>
+      <div class="contenido">
+        <h3>Actualidad</h3>
+        <p>Cabimas en 2025 es una ciudad resiliente que enfrenta desafíos económicos y sociales, pero mantiene viva su identidad cultural y comunitaria. Aunque marcada por el declive petrolero y problemas de servicios, sigue siendo un núcleo urbano activo en el estado Zulia..</p>
+        <img src="img/cabimas (1).jpg" alt="Municipalidad">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="carrusel-cine">
+  <h2 class="titulo-cine">🎞️ Cabimas en Celuloide — Curiosidades que Iluminan la Pantalla</h2>
+  <p class="intro-cine">
+    Cada curiosidad es una escena que se despliega con emoción. Avanza, retrocede, amplía… y déjate sorprender.
+  </p>
+
+  <div class="carrusel-container">
+    <button class="flecha izquierda" onclick="moverCarrusel(-1)">←</button>
+
+    <div class="carrusel">
+      <div class="escena activa">
+        <img src="cabimas/16.png" alt="Árbol Copaiba" onclick="ampliarImagen(this)">
+        <h3>🌳 El árbol que dio nombre a Cabimas</h3>
+        <p>El árbol Copaiba, usado por los indígenas para curar heridas, crecía en abundancia donde hoy está el casco central.</p>
+      </div>
+
+      <div class="escena">
+        <img src="cabimas/17.png" alt="Palafitos" onclick="ampliarImagen(this)">
+        <h3>🏠 Palafitos que flotaban como sueños</h3>
+        <p>Los Añú vivían sobre el agua, en casas que giraban con el viento como veletas naturales.</p>
+      </div>
+
+      <div class="escena">
+        <img src="cabimas/18.png" alt="Pozo Barroso II" onclick="ampliarImagen(this)">
+        <h3>🔥 El petróleo que rugió como volcán</h3>
+        <p>El pozo Barroso II explotó en 1922 y brotó durante más de una semana. Se escuchaba desde kilómetros.</p>
+      </div>
+
+      <div class="escena">
+        <img src="cabimas/19.png" alt="Cine y gaitas" onclick="ampliarImagen(this)">
+        <h3>🎶 Cine bajo las estrellas</h3>
+        <p>En los años 60, se proyectaban películas mexicanas con gaitas en vivo antes de cada función.</p>
+      </div>
+
+      <div class="escena">
+        <img src="cabimas/Escudo_Cabimas.png" alt="Escudo de Cabimas" onclick="ampliarImagen(this)">
+        <h3>⭐ El escudo que guarda un mensaje oculto</h3>
+        <p>“Los pueblos decaen, no mueren” es la frase que acompaña la estrella dorada del escudo.</p>
+      </div>
+    </div>
+
+    <button class="flecha derecha" onclick="moverCarrusel(1)">→</button>
+  </div>
+
+  <div class="modal" onclick="cerrarModal()">
+    <img id="imagen-ampliada" src="" alt="Imagen ampliada">
+  </div>
+</section>
+
+<section class="galeria-personajes">
+  <h2 class="titulo-galeria">🌟 Rostros que Forjaron Cabimas</h2>
+  <p class="subtitulo-galeria">Cada rostro guarda una historia, cada historia una huella imborrable en nuestra tierra</p>
+
+  <div class="grid-personajes">
+    <div class="tarjeta" onclick="mostrarInfo(this)">
+      <img src="cabimas/485932113_10237717367573867_1422860429941258594_n.jpg" alt="Plinio Marín">
+      <h3>🕵️‍♂️ El guardián del escudo — PLINIO MARÍN</h3>
+      <div class="info">
+        <p><strong>Fechas:</strong> 1968 (creación del escudo)</p>
+        <p><strong>Hallazgos:</strong> Diseñó el escudo de Cabimas con símbolos de fe, sol y resistencia. Su lema “Los pueblos decaen, no mueren” aún inspira.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta" onclick="mostrarInfo(this)">
+      <img src="cabimas/articulo_14062018_221602.jpg" alt="Doña Carmen">
+      <h3>📚 La voz que enseñó a generaciones — DOÑA CARMEN</h3>
+      <div class="info">
+        <p><strong>Fechas:</strong> 1940–1980</p>
+        <p><strong>Hallazgos:</strong> Fundadora de la primera escuela popular en Barrio Obrero. Enseñó a leer a más de 3,000 niños.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta" onclick="mostrarInfo(this)">
+      <img src="cabimas/330px-Rafael_Urdaneta_2012_000.jpg" alt="Rafael Urdaneta">
+      <h3>⚔️ El zuliano que soñó libertad — RAFAEL URDANERA</h3>
+      <div class="info">
+        <p><strong>Fechas:</strong> 1788–1845</p>
+        <p><strong>Hallazgos:</strong> General independentista nacido en Maracaibo, símbolo de lucha en toda la región zuliana. Su legado vive en plazas y escuelas.</p>
+      </div>
+    </div>
+  <div class="tarjeta" onclick="mostrarInfo(this)">
+  <img src="cabimas/ana.png" alt="Ana María Campos">
+  <h3>🔥 La mujer que desafió al imperio — ANA MARÍA CAMPOS</h3>
+  <div class="info">
+    <p><strong>Fechas:</strong> 1790–1828</p>
+    <p><strong>Hallazgos:</strong> Heroína zuliana que enfrentó al ejército español con valentía. Su frase “¡Si muero, muero por la libertad!” resuena en la historia.</p>
+  </div>
+</div>
+
+<div class="tarjeta" onclick="mostrarInfo(this)">
+  <img src="cabimas/Jesus_Soto_100anitos1.jpg" alt="Jesús Soto">
+  <h3>🎨 El arte que vibra — JESÚS SOTO</h3>
+  <div class="info">
+    <p><strong>Fechas:</strong> 1923–2005</p>
+    <p><strong>Hallazgos:</strong> Maestro del arte cinético nacido en Ciudad Bolívar, con obras expuestas en Cabimas. Su legado visual inspira a generaciones creativas.</p>
+  </div>
+</div>
+
+<div class="tarjeta" onclick="mostrarInfo(this)">
+  <img src="cabimas/rafael b.png" alt="Rafael Batalla">
+  <h3>🎺 El eco de la gaita — RAFAEL BATALLA</h3>
+  <div class="info">
+    <p><strong>Fechas:</strong> 1950–2010</p>
+    <p><strong>Hallazgos:</strong> Compositor y gaitero cabimense que llevó la voz del pueblo a festivales nacionales. Fundador de agrupaciones emblemáticas como “Cabimas Gaita y Tradición”.</p>
+  </div>
+</div>
+<div class="tarjeta" onclick="mostrarInfo(this)">
+  <img src="cabimas/rosalino mata.png" alt="Rosalino Mata">
+  <h3>🛢️ El cronista del petróleo — ROSALINO MATA</h3>
+  <div class="info">
+    <p><strong>Fechas:</strong> 1935–2012</p>
+    <p><strong>Hallazgos:</strong> Historiador cabimense que documentó la vida petrolera desde sus inicios. Fundó el Archivo Histórico de Cabimas y rescató testimonios obreros.</p>
+  </div>
+</div>
+
+<div class="tarjeta" onclick="mostrarInfo(this)">
+  <img src="cabimas/Maria_Luisa_Pacheco..jpg" alt="María Luisa Pacheco">
+  <h3>🎭 La voz del teatro zuliano — MARÍA LUISA PACHECO</h3>
+  <div class="info">
+    <p><strong>Fechas:</strong> 1948–1998</p>
+    <p><strong>Hallazgos:</strong> Actriz y directora nacida en Cabimas, fundadora del Teatro Popular Zuliano. Promovió obras con identidad regional y formó generaciones de artistas.</p>
+  </div>
+</div>
+
+</section>
+
+<section class="carrusel-historico">
+  <h2 class="titulo-cine">🎞️ HALLAZGOS QUE MARCARON A CABIMAS</h2>
+  <div class="cinta-cine" id="cintaCine">
+    <div class="fotograma" onclick="mostrarCompleto(this)">
+      <div class="titulo-superpuesto">🛶 1758 — PALAFITOS FUNDACIONALES</div>
+      <img src="historia carrusel/palafitos.png" alt="Palafitos en el Lago">
+      <div class="contenido">
+        <h3 class="titulo-hallazgo">🛶 1758 — PALAFITOS FUNDACIONALES</h3>
+        <p class="frase">“Cabimas nació flotando sobre el lago.”</p>
+        <p class="detalle">Los Añú construyeron viviendas sobre pilotes en el Lago de Maracaibo, creando un pueblo acuático único.</p>
+      </div>
+    </div>
+
+    <div class="fotograma" onclick="mostrarCompleto(this)">
+            <div class="titulo-superpuesto">🕊️ 1880 — MISIONEROS CAPUCHINOS</div>
+      <img src="historia carrusel/capuchinos.png" alt="Misioneros Capuchinos">
+      <div class="contenido">
+        <h3 class="titulo-hallazgo">🕊️ 1880 — MISIONEROS CAPUCHINOS</h3>
+        <p class="frase">“La fe llegó con libros, pan y esperanza.”</p>
+        <p class="detalle">Frailes capuchinos fundaron escuelas y centros comunitarios, dejando huella educativa y espiritual.</p>
+      </div>
+    </div>
+
+    <div class="fotograma" onclick="mostrarCompleto(this)">
+      <div class="titulo-superpuesto">🛢️ 1917 — PERFORACIONES PRE-ZUMAQUE</div>
+      <img src="historia carrusel/perforacion.png" alt="Perforación petrolera">
+      <div class="contenido">
+        <h3 class="titulo-hallazgo">🛢️ 1917 — PERFORACIONES PRE-ZUMAQUE</h3>
+        <p class="frase">“El petróleo ya susurraba bajo tierra.”</p>
+        <p class="detalle">Antes del famoso Zumaque I, Cabimas ya era explorada por compañías extranjeras.</p>
+      </div>
+    </div>
+
+    <div class="fotograma" onclick="mostrarCompleto(this)">
+      <div class="titulo-superpuesto">📻 1952 — RADIO CABIMAS</div>
+      <img src="historia carrusel/radio.png" alt="Radio Cabimas">
+      <div class="contenido">
+        <h3 class="titulo-hallazgo">📻 1952 — RADIO CABIMAS</h3>
+        <p class="frase">“La voz del pueblo se oyó por primera vez.”</p>
+        <p class="detalle">Transmitía gaitas, noticias y mensajes educativos desde una caseta en el centro.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla completa -->
+  <div id="pantallaCompleta" class="pantalla-completa" onclick="cerrarCompleto()">
+    <div class="contenido-completo" id="contenidoCompleto"></div>
+  </div>
+</section>
+
+<section class="evolucion-petrolera">
+  <h2 class="titulo-evolucion">⚡ CABIMAS DESPUÉS DEL ESTALLIDO PETROLERO</h2>
+  <div class="contenedor-evolucion">
+    <div class="bloque-evolucion">
+      <h3>🛢️ El rugido del petróleo</h3>
+      <p>Desde 1917, Cabimas se convirtió en epicentro energético. Torres, tuberías y obreros marcaron el pulso de una ciudad que aprendió a latir con fuerza industrial.</p>
+    </div>
+
+    <div class="bloque-evolucion">
+      <h3>🏙️ Urbanismo con identidad</h3>
+      <p>Barrios como Ambrosio, La Rosa y Punta Icotea crecieron entre gaitas, concreto y esperanza. Cabimas se expandió sin perder su alma.</p>
+    </div>
+
+    <div class="bloque-evolucion">
+      <h3>🎶 Cultura que resiste</h3>
+      <p>La gaita no se apagó. Las voces de Cardenales, los tambores de calle y los murales urbanos siguen contando lo que el petróleo no puede decir.</p>
+    </div>
+
+    <div class="bloque-evolucion">
+      <h3>📡 Comunicación y comunidad</h3>
+      <p>De Radio Cabimas a los podcasts locales, la ciudad aprendió a escucharse, a narrarse, a conectarse. Hoy, cada voz cuenta.</p>
+    </div>
+
+    <div class="bloque-evolucion">
+      <h3>🧠 Educación y reinvención</h3>
+      <p>Cabimas no solo extrae: investiga, enseña, transforma. Desde institutos técnicos hasta proyectos culturales, la ciudad se reinventa con cada generación.</p>
+    </div>
+
+    <div class="bloque-evolucion">
+      <h3>🚀 Mirando al futuro</h3>
+      <p>Cabimas sueña con energía limpia, turismo cultural y tecnología accesible. Porque su historia no termina: apenas comienza.</p>
+  </div>
+
+   <div class="bloque-evolucion">
+      <h3>🌟 Cabimas HOY</h3>
+      <p>Población estimada: 624.000 (área metropolitana)</p>
+      <p>Municipio dividido en 9 parroquias</p>
+      <p>Identidad cultural fuerte: gaita, religiosidad popular, gastronomía, memoria petrolera</p>
+      <p>Desafíos: servicios públicos, migración, empleo</p>
+      <p>Oportunidades: turismo cultural, digitalización, participación comunitaria</p>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- FOOTER -->
+
+  <!-- Curva decorativa -->
+  <div class="curva-menu">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="url(#degradado-menu)"></path>
+    </svg>
+  </div>
+
+  <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+
+    <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+     <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+<script>
+  function toggleEvento(elemento) {
+    const eventos = document.querySelectorAll('.evento');
+
+    eventos.forEach(e => {
+      if (e !== elemento) {
+        e.classList.remove('activo');
+        e.classList.add('inactivo');
+      }
+    });
+
+    // Alternar el evento clicado
+    if (elemento.classList.contains('activo')) {
+      elemento.classList.remove('activo');
+      eventos.forEach(e => e.classList.remove('inactivo'));
+    } else {
+      elemento.classList.add('activo');
+    }
+  }
+</script>
+
+
+<script>
+  let indice = 0;
+  const escenas = document.querySelectorAll('.escena');
+
+  function moverCarrusel(direccion) {
+    escenas.forEach(e => e.classList.remove('activa'));
+    indice = (indice + direccion + escenas.length) % escenas.length;
+    escenas[indice].classList.add('activa');
+  }
+
+  function ampliarImagen(img) {
+    const modal = document.querySelector('.modal');
+    const imagenAmpliada = document.getElementById('imagen-ampliada');
+    imagenAmpliada.src = img.src;
+    modal.style.display = 'flex';
+  }
+
+  function cerrarModal() {
+    document.querySelector('.modal').style.display = 'none';
+  }
+
+  // Inicializar
+  moverCarrusel(0);
+</script>
+
+
+<script>
+  function mostrarInfo(tarjetaSeleccionada) {
+    const todasLasTarjetas = document.querySelectorAll('.tarjeta');
+
+    todasLasTarjetas.forEach(tarjeta => {
+      const info = tarjeta.querySelector('.info');
+      if (tarjeta === tarjetaSeleccionada) {
+        const yaAbierta = tarjeta.classList.contains('mostrando');
+        if (yaAbierta) {
+          tarjeta.classList.remove('mostrando');
+          info.style.maxHeight = null;
+        } else {
+          tarjeta.classList.add('mostrando');
+          info.style.maxHeight = info.scrollHeight + "px";
+        }
+      } else {
+        tarjeta.classList.remove('mostrando');
+        info.style.maxHeight = null;
+      }
+    });
+  }
+</script>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const cinta = document.getElementById('cintaCine');
+  const clones = cinta.innerHTML;
+  cinta.innerHTML += clones; // Duplicar contenido para loop visual
+});
+
+
+function mostrarCompleto(elemento) {
+  const contenido = elemento.querySelector('.contenido').innerHTML;
+  document.getElementById('contenidoCompleto').innerHTML = contenido;
+  document.getElementById('pantallaCompleta').style.display = 'flex';
+}
+
+function cerrarCompleto() {
+  document.getElementById('pantallaCompleta').style.display = 'none';
+}
+
+</script>
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

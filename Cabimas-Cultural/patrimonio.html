@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Patrimonio - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/patrimonio.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+ <nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <seccion class="banner-patrimonio">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="patrimonioimg/patrimonio banner.png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+
+
+ <nav class="menu-cultura">
+  <ul>
+    <li><a href="#introduccion">🏛️ Introducción</a></li>
+    <li><a href="#cab-patrimonios">🏫 Patrimonio Tangible</a></li>
+    <li><a href="#cab-intangible">🎭 Patrimonio Intangible</a></li>
+    <li><a href="#cab-natural">🌿 Patrimonio Natural</a></li>
+    <li><a href="#cab-instituciones">🤝 Instituciones y Aliados</a></li>
+  </ul>
+</nav>
+
+<section id="introduccion">
+  <div class="intro-contenedor">
+    <div class="intro-texto">
+      <h2>🏛️ Patrimonio de Cabimas</h2>
+      <p class="descripcion">
+        El patrimonio de Cabimas es la memoria viva de su gente, sus espacios, sus saberes y sus tradiciones. Preservarlo es honrar nuestras raíces y proyectar nuestra identidad hacia el futuro.
+      </p>
+      <blockquote class="frase">
+        “Cabimas no se cuenta, se vive en cada esquina, en cada canto, en cada recuerdo.”  
+        <span>— Voz popular cabimense</span>
+      </blockquote>
+    </div>
+    <div class="intro-imagen">
+      <img src="patrimonioimg/iglesia.webp" alt="Imagen representativa del patrimonio de Cabimas">
+    </div>
+  </div>
+</section>
+
+<section id="cab-patrimonios">
+  <div class="cab-patrimonios-header">
+    <h2>🏛️ Patrimonio Tangible de Cabimas</h2>
+    <p class="cab-patrimonios-intro">
+      <strong>Descubre los espacios y monumentos que guardan la memoria viva de nuestra ciudad.</strong>
+    </p>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- Catedral -->
+      <div class="carousel-item" data-patrimonio="catedral">
+        <img src="https://images.hive.blog/DQmc6nj8FvKzTnRLLEZs2Lca3P79AbhXZQSGpkiB8MAQP1n/20240113_105215.jpg" alt="Catedral de Cabimas">
+        <h3>Catedral de Cabimas</h3>
+        <p><strong>Símbolo religioso y cultural del siglo XX.</strong></p>
+        <button class="open-modal" data-open="catedral">Ver más</button>
+      </div>
+      <!-- Plaza Bolívar -->
+      <div class="carousel-item" data-patrimonio="plaza">
+        <img src="https://pbs.twimg.com/media/Br-jASTIIAAQLNQ.jpg" alt="Plaza Bolívar">
+        <h3>Plaza Bolívar</h3>
+        <p><strong>Centro histórico y social de la ciudad.</strong></p>
+        <button class="open-modal" data-open="plaza">Ver más</button>
+      </div>
+      <!-- Teatro Municipal -->
+      <div class="carousel-item" data-patrimonio="teatro">
+        <img src="https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2023/11/teatro-javier-fernandez11.png?resize=640%2C341&ssl=1" alt="Teatro Municipal">
+        <h3>Teatro Municipal</h3>
+        <p><strong>Espacio cultural para artes escénicas.</strong></p>
+        <button class="open-modal" data-open="teatro">Ver más</button>
+      </div>
+      <!-- Casas Coloniales -->
+      <div class="carousel-item" data-patrimonio="casas">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvg_AJ9OabLdzPFo25-W1gIYg2JLQ4J-166-MbakHcmdbax8vARJ2AJIEOujzrTBuW2HZvkX_sTkZ3M6stfFabq_sEd0qLVccPm90sVzoToRULQc_6EluxoJiiYCeRQ-Tjjdn1Mheu8Z5m/s1600/100_0148.JPG" alt="Casas Coloniales">
+        <h3>Casas Coloniales</h3>
+        <p><strong>Arquitectura tradicional que conserva la historia.</strong></p>
+        <button class="open-modal" data-open="casas">Ver más</button>
+      </div>
+      <!-- Museo Arqueológico -->
+      <div class="carousel-item" data-patrimonio="museo">
+        <img src="https://somosnoticiascol.com/wp-content/uploads/2024/08/454401154_402006019565729_1106929416276317152_n.jpg" alt="Museo Arqueológico">
+        <h3>Casa de la cultura</h3>
+        <p><strong>Principal centro cultural del municipio</strong></p>
+        <button class="open-modal" data-open="museo">Ver más</button>
+      </div>
+      <!-- Monumentos Históricos -->
+      <div class="carousel-item" data-patrimonio="monumentos">
+        <img src="img/monumentos.jpg" alt="Monumentos Históricos">
+        <h3>Monumentos Históricos</h3>
+        <p><strong>Esculturas y símbolos de identidad cabimera.</strong></p>
+        <button class="open-modal" data-open="monumentos">Ver más</button>
+      </div>
+      <!-- Plaza Concordia -->
+      <div class="carousel-item" data-patrimonio="concordia">
+        <img src="https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2024/11/plaza-ali-primera.png?fit=649%2C289&ssl=1" alt="Plaza Concordia">
+        <h3>Plaza Concordia</h3>
+        <p><strong>Espacio urbano de encuentro y tradición.</strong></p>
+        <button class="open-modal" data-open="concordia">Ver más</button>
+      </div>
+      <!-- Parque La Estrella -->
+      <div class="carousel-item" data-patrimonio="estrella">
+        <img src="img/estrella.jpg" alt="Parque La Estrella">
+        <h3>Parque La Estrella</h3>
+        <p><strong>Área verde emblemática para la recreación.</strong></p>
+        <button class="open-modal" data-open="estrella">Ver más</button>
+      </div>
+    
+      <!-- Monumento al Trabajador Petrolero -->
+      <div class="carousel-item" data-patrimonio="petrolero">
+        <img src="https://i.pinimg.com/564x/58/a5/3d/58a53de0bc40948db64b2e99837b352b.jpg" alt="Monumento al Trabajador Petrolero">
+        <h3>Monumento al Trabajador Petrolero</h3>
+        <p><strong>Homenaje a la fuerza laboral de Cabimas.</strong></p>
+        <button class="open-modal" data-open="petrolero">Ver más</button>
+      </div>
+    </div>
+    <button class="carousel-btn prev">◀</button>
+    <button class="carousel-btn next">▶</button>
+  </div>
+<div id="map-patrimonios" style="width:100%; height:400px; border-radius:12px; margin-top:2rem;"></div>
+
+</section>
+
+<!-- Modal -->
+  <div id="patrimonio-modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close">✖</button>
+      <div class="modal-content"></div>
+<a id="route-btn" href="#" target="_blank" class="route-btn">Seguir ruta</a>
+
+    </div>
+  </div>
+
+<section id="cab-intangible">
+  <div class="cab-intangible-header">
+    <h2>🎉 Patrimonio Intangible de Cabimas</h2>
+    <p class="cab-intangible-intro">
+      Tradiciones, música, danzas y saberes que mantienen viva la identidad cultural de nuestra ciudad.
+    </p>
+  </div>
+
+  <div class="intangible-gallery">
+    <!-- Gaita Zuliana -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://radiomiraflores.net.ve/wp-content/uploads/2023/11/La-gaita-zuliana-patrimonio-cultural-de-Venezuela.jpg');">
+          <h3>🎶 Gaita Zuliana</h3>
+        </div>
+        <div class="card-back">
+          <h3>Gaita Zuliana</h3>
+          <p>Expresión musical que acompaña la Navidad y refleja el sentir popular.</p>
+          <a href="http://127.0.0.1:5500/Cabimas-Cultural/cultura.html#gaita" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carnaval -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://media.quepasa.com.ve/site/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-11-at-7.55.47-PM-1.jpeg');">
+          <h3>🎭 Carnaval</h3>
+        </div>
+        <div class="card-back">
+          <h3>Carnaval de Cabimas</h3>
+          <p>Desfiles coloridos, comparsas y disfraces que llenan de alegría las calles.</p>
+          <a href="ruta-carnaval.html" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Semana Santa -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://www.bloomberglinea.com/resizer/zyEzsGpcHjcuZTShbZgNgnJu8Sc=/arc-photo-bloomberglinea/arc2-prod/public/SMDZNQKI4NBK5KR2MHHWM3EMMQ.jpg');">
+          <h3>✝️ Semana Santa</h3>
+        </div>
+        <div class="card-back">
+          <h3>Semana Santa</h3>
+          <p>Procesiones y rituales religiosos que unen fe y tradición.</p>
+          <a href="ruta-semana-santa.html" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oralidad -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://ich.unesco.org/img/photo/thumb/08811-MED.jpg');">
+          <h3>📖 Oralidad Popular</h3>
+        </div>
+        <div class="card-back">
+          <h3>Oralidad Popular</h3>
+          <p>Relatos, mitos y leyendas transmitidos de generación en generación.
+            Espantos como La Sayona, El Silbón o relatos propios como el Ceretón de la “L” y la Casa de Tejas forman parte del imaginario oral cabimense.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NUEVAS TARJETAS -->
+
+    <!-- Danza de los Diablos Danzantes -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/75/Danzantes_de_Yare.jpg');">
+          <h3>😈 Diablos Danzantes</h3>
+        </div>
+        <div class="card-back">
+          <h3>Danza de los Diablos Danzantes</h3>
+          <p>Tradición religiosa y festiva que mezcla fe, música y danza ancestral.</p>
+          <a href="ruta-diablos.html" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gastronomía Cabimera -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://assets.isu.pub/document-structure/201222132832-83527cb33ef816f1a57f10c4fce2394e/v1/fbb5f4d03c218057e5b11278862d6886.jpg?width=720&quality=85%2C50');">
+          <h3>🍲 Gastronomía</h3>
+        </div>
+        <div class="card-back">
+          <h3>Gastronomía Cabimera</h3>
+          <p>Platos típicos como la arepa cabimera y dulces tradicionales que evocan identidad.</p>
+          <a href="gastronomia.html" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Juegos Tradicionales -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Juegos_Ancestrales_2.jpg/1024px-Juegos_Ancestrales_2.jpg');">
+          <h3>🎲 Juegos Tradicionales</h3>
+        </div>
+        <div class="card-back">
+          <h3>Juegos Tradicionales</h3>
+          <p>Actividades como trompo, perinola y metras que forman parte de la infancia cabimera.</p>
+          <a href="http://127.0.0.1:5500/Cabimas-Cultural/cultura.html#juegos" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Artesanía -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAKeSeT3PZnUonJY8kBsmMsh2BdUQvGQn2ywfWWfuISI0o_TEMWsqITLZ2rS4JV6I5qxIn1KInTWBYwHHJvdO5RDNYtKZY33Ytu1IOpeRmEIV0XqBUqo6SZ-wMSZHtOuwcXVYP049l1aAT/s1600/CABIMAS+037.JPG');">
+          <h3>🎨 Artes</h3>
+        </div>
+        <div class="card-back">
+          <h3>Artes</h3>
+          <p>Dibujos, ilustraciones y piezas hechas a mano que transmiten creatividad y tradición.</p>
+          <a href="http://127.0.0.1:5500/Cabimas-Cultural/cultura.html#artes" class="more-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-natural">
+  <div class="cab-natural-header">
+    <h2>🌳 Patrimonio Natural de Cabimas</h2>
+    <p class="cab-natural-intro">
+      Espacios naturales, fauna y paisajes que reflejan la riqueza ecológica de nuestra tierra.
+    </p>
+  </div>
+
+  <!-- Mosaico -->
+  <div class="mosaic">
+    <!-- Ejemplo de tarjeta -->
+    <div class="mosaic-item fauna" style="background-image:url('https://www.vitakraft.com/fileadmin/_processed_/a/5/csm_cu%C3%A1les_son_los_loros_que_hablan_y_c%C3%B3mo_ense%C3%B1arles_79ed0baf21.jpg');">
+      <div class="overlay">
+        <h3>🦜 Aves Tropicales</h3>
+        <p>Coloridas especies que habitan en los manglares y parques.
+          En Cabimas se han registrado más de 45 especies de aves, muchas asociadas al Lago de Maracaibo y sus manglares, lo que convierte a la ciudad en un punto importante de biodiversidad dentro del Zulia.
+        </p>
+      </div>
+    </div>
+
+    <div class="mosaic-item flora" style="background-image:url('https://laborincondelmar.org/wp-content/uploads/2010/01/p1130207.jpg');">
+      <div class="overlay">
+        <h3>🌱 Manglares</h3>
+        <p>Ecosistemas vitales que protegen la costa y albergan biodiversidad.
+          En Cabimas existe el manglar de Punta Gorda, un ecosistema costero que forma parte de la cuenca del Lago de Maracaibo y constituye uno de los humedales más importantes de la ciudad.
+        </p>
+      </div>
+    </div>
+
+    <div class="mosaic-item paisajes" style="background-image:url('https://diarioelregionaldelzulia.com/wp-content/uploads/2024/09/Sector-El-Cardonal-de-Cabimas-enmontado-2-T.jpg');">
+      <div class="overlay">
+        <h3>🌊 Laguna de Cabimas</h3>
+        <p>En Cabimas, las lagunas forman parte de su patrimonio natural y están estrechamente ligadas al Lago de Maracaibo y a los humedales que lo rodean. 
+</p>
+      </div>
+    </div>
+
+    <div class="mosaic-item fauna" style="background-image:url('https://static.nationalgeographicla.com/files/styles/image_3200/public/green-iguana.jpg?w=1600');">
+      <div class="overlay">
+        <h3>🐊 Fauna Silvestre</h3>
+        <p>La fauna silvestre de Cabimas está marcada por su ubicación en la Costa Oriental del Lago de Maracaibo, con ecosistemas de manglares, humedales y zonas urbanas que albergan una gran diversidad de especies.</p>
+      </div>
+    </div>
+
+    <div class="mosaic-item flora" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/77/Euphorbia_Milii_flowers.jpg');">
+      <div class="overlay">
+        <h3>🌸 Flora Local</h3>
+        <p>La flora de Cabimas combina especies propias de la cuenca del Lago de Maracaibo con plantas ornamentales y árboles típicos del Zulia, destacando manglares, cayenas, apamates y flores urbanas como la corona de Cristo.</p>
+      </div>
+    </div>
+
+    <div class="mosaic-item paisajes" style="background-image:url('https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2024/02/Ruta-lacustre-Cabimas-Maracaibo-1.jpeg?fit=800%2C284&ssl=1');">
+      <div class="overlay">
+        <h3>🏞️ Parque Natural</h3>
+        <p>En Cabimas y sus alrededores, los principales espacios naturales no son parques nacionales formales, sino humedales, manglares y áreas recreativas vinculadas al Lago de Maracaibo.</p>
+      </div>
+    </div>
+
+    
+    <div class="mosaic-item paisajes" style="background-image:url('patrimonioimg/lago\ de\ maracaibo.jpg');">
+      <div class="overlay">
+        <h3>🏞️ Lago de Maracaibo</h3>
+        <p>En Cabimas y sus alrededores, los principales espacios naturales no son parques nacionales formales, sino humedales, manglares y áreas recreativas vinculadas al Lago de Maracaibo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-instituciones">
+  <div class="cab-instituciones-header">
+    <h2>🤝 Instituciones y Aliados</h2>
+    <p class="cab-instituciones-intro">
+      Colaboraciones estratégicas que fortalecen la preservación y difusión del patrimonio cultural de Cabimas.
+    </p>
+  </div>
+
+  <!-- Carrusel de logos estilo marquee -->
+  <div class="logo-marquee">
+    <div class="logo-track">
+      <img src="https://annabelgonzalez.wordpress.com/wp-content/uploads/2016/08/escudo_de_luz.jpg" alt="Universidad del Zulia" title="Universidad del Zulia - Alianza desde 2018">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaSupMce3MMTX1m8fgYc89tw49XqixyaJDrg&s" alt="Alcaldía de Cabimas" title="Alcaldía de Cabimas - Alianza desde 2015">
+      <img src="patrimonioimg/direccion cultura.png" alt="Museo Arqueológico" title="Museo Arqueológico - Alianza desde 2019">
+      <img src="patrimonioimg/escuela de arte.png" alt="Fundación Cultural Cabimas" title="Fundación Cultural Cabimas - Alianza desde 2020">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd9dWNMIlZgB4S2hBSY41vvulUWLZo8XJOGg&s" alt="Ministerio de Cultura" title="Ministerio de Cultura - Alianza desde 2016">
+      <img src="https://annabelgonzalez.wordpress.com/wp-content/uploads/2016/08/escudo_de_luz.jpg" alt="Universidad del Zulia" title="Universidad del Zulia - Alianza desde 2018">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaSupMce3MMTX1m8fgYc89tw49XqixyaJDrg&s" alt="Alcaldía de Cabimas" title="Alcaldía de Cabimas - Alianza desde 2015">
+      <img src="patrimonioimg/direccion cultura.png" alt="Museo Arqueológico" title="Museo Arqueológico - Alianza desde 2019">
+      <img src="patrimonioimg/escuela de arte.png" alt="Fundación Cultural Cabimas" title="Fundación Cultural Cabimas - Alianza desde 2020">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd9dWNMIlZgB4S2hBSY41vvulUWLZo8XJOGg&s" alt="Ministerio de Cultura" title="Ministerio de Cultura - Alianza desde 2016">
+    </div>
+  </div>
+
+  <!-- Tarjetas hover reveal -->
+  <div class="instituciones-gallery">
+    <!-- Universidad del Zulia -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('https://pbs.twimg.com/media/DdpW5V9VQAEheqp.jpg');"></div>
+      <div class="inst-back">
+        <h3>Universidad del Zulia</h3>
+        <p><strong>Fecha de alianza:</strong> 2018</p>
+        <p>Institución académica que aporta investigación y formación en patrimonio cultural.</p>
+      </div>
+    </div>
+
+    <!-- Alcaldía de Cabimas -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('patrimonioimg/alacaldia.jpg');"></div>
+      <div class="inst-back">
+        <h3>Alcaldía de Cabimas</h3>
+        <p><strong>Fecha de alianza:</strong> 2015</p>
+        <p>Gobierno local que respalda proyectos de preservación y difusión cultural.</p>
+      </div>
+    </div>
+
+    <!-- Museo Arqueológico -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('patrimonioimg/casa\ de\ la\ cultura.jpg');"></div>
+      <div class="inst-back">
+        <h3>Dirección municipal de la cultura</h3>
+        <p><strong>Fecha de alianza:</strong> 2019</p>
+        <p>Espacio que conserva piezas históricas, fomenta la memoria colectiva y crea espacios educativos.</p>
+      </div>
+    </div>
+
+    <!-- Fundación Cultural Cabimas -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('patrimonioimg/escuela\ de\ arte\ plasticas.jpg');"></div>
+      <div class="inst-back">
+        <h3>Escuela de artes plásticas ¨Pedro Porto¨</h3>
+        <p><strong>Fecha de alianza:</strong> 2020</p>
+        <p>Organización que impulsa actividades artísticas y comunitarias.</p>
+      </div>
+    </div>
+
+    <!-- Biblioteca Pública -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2023/11/IMG_20231127_094849.jpg?w=1920&ssl=1');"></div>
+      <div class="inst-back">
+        <h3>Biblioteca Pública Cabimas</h3>
+        <p><strong>Fecha de alianza:</strong> 2017</p>
+        <p>Centro de conocimiento que promovía la lectura y la investigación cultural. Desafortunadamente actualmente esta inactiva</p>
+      </div>
+    </div>
+
+    <!-- Ministerio de Cultura -->
+    <div class="inst-card">
+      <div class="inst-front" style="background-image:url('patrimonioimg/mision\ cultura.png');"></div>
+      <div class="inst-back">
+        <h3>Misión Cultura Venezuela</h3>
+        <p><strong>Fecha de alianza:</strong> 2016</p>
+        <p>Entidad nacional que apoya políticas de preservación y difusión del patrimonio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#F54927', '#F5BE27', '#000000', '#F52768']; 
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+
+animar();
+</script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  // ===== Datos de Patrimonios =====
+  const PATRIMONIOS = {
+    catedral: {
+      nombre: 'Catedral de Cabimas',
+      concepto: 'Símbolo religioso y cultural del siglo XX.',
+      detalles: ['Fundación inicial: La construcción comenzó en 1829 y se extendió hasta 1965, reflejando varias etapas de desarrollo', 'Fundadores: Juan de Dios Castro y Juana Villazmil fueron los impulsores de la obra.', ],
+      ubicacion: [10.390391801032502, -71.46793819089774],
+      imagen: 'https://diarioelregionaldelzulia.com/wp-content/uploads/2022/11/CATEDRAL-T.jpg'
+    },
+    plaza: {
+      nombre: 'Plaza Bolívar',
+      concepto: 'Centro histórico y social de la ciudad.',
+      detalles: ['Escultura de Simón Bolívar como pieza central.', 'Áreas verdes y bancas con memoria urbana.'],
+      ubicacion:  [10.390017892662497, -71.46901964820934],
+      imagen: 'https://images.hive.blog/DQmPR4ad4e7eA8XXHP2iEhuJkUGD9XidBvSD3MxTW3tsfWr/20240113_105745.jpg'
+    },
+    teatro: {
+      nombre: 'Teatro Municipal',
+      concepto: 'Espacio cultural para artes escénicas.',
+      detalles: ['Sede de festivales, obras y conciertos.', 'Arquitectura funcional con acústica cuidada.'],
+      ubicacion: [10.389696048319683, -71.4694199212237],
+      imagen: 'https://somosnoticiascol.com/wp-content/uploads/2022/05/add041d1-3174-4453-9482-72b0b01bcac9-1024x768.jpg'
+    },
+    casas: {
+      nombre: 'Casas Coloniales',
+      concepto: 'Arquitectura tradicional que conserva la historia.',
+      detalles: ['Fachadas con portones de madera.', 'Patios interiores con vegetación y aljibes.'],
+      ubicacion: [10.393624978201048, -71.45548359837386],
+      imagen: 'img/casas.jpg'
+    },
+    museo: {
+      nombre: 'Casa de la cultura',
+      concepto: 'Espacio que combina biblioteca pública, museo arqueológico y escuela artística',
+      detalles: ['Colecciones prehispánicas y coloniales.', 'Programas educativos para escuelas y público.','En sus instalaciones funciona el Núcleo Cabimas del Sistema Nacional de Orquestas, donde niños y jóvenes reciben clases de música y participan en orquestas sinfónicas.'],
+      ubicacion: [10.392837810167466, -71.47066823453342],
+      imagen: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfaq2BoZToFJDsMIVgTly_H05aMlqgDufsS1G-3BRO6k30xQ0rjIGE9ELCSp2OPi-HdO025R982k_9zFFM5hqGnbfOBmSyQt67Lttg7-Hf7IJilG6b1XJOWV87OBD2mBjw0p7QfACgyVE/s1600/cabimas+cultura.png'
+    },
+    monumentos: {
+      nombre: 'Monumentos Históricos',
+      concepto: 'Esculturas y símbolos de identidad cabimera.',
+      detalles: ['Hitos urbanos que honran fechas y personajes.', 'Materiales diversos: bronce, concreto, piedra.'],
+      ubicacion: [10.397503487579467, -71.44827018065568],
+      imagen: 'img/monumentos.jpg'
+    },
+    concordia: {
+      nombre: 'Plaza Concordia',
+      concepto: 'Espacio urbano de encuentro y tradición.',
+      detalles: ['Ferias, música y actividades comunitarias.', 'Arbolado y mobiliario con identidad local.'],
+      ubicacion: [10.393478981743431, -71.4493964212236],
+      imagen: 'https://primeraedicioncol.com/wp-content/uploads/2022/11/wp-1669221327870.jpg'
+    },
+    estrella: {
+      nombre: 'Parque La Estrella',
+      concepto: 'Área verde emblemática para la recreación.',
+      detalles: ['Senderos, juegos y descanso al aire libre.', 'Espacio para actividades deportivas y familiares.'],
+      ubicacion: [10.393624978201048, -71.45548359837386],
+      imagen: 'img/estrella.jpg'
+    },
+    petrolero: {
+      nombre: 'Monumento al Trabajador Petrolero',
+      concepto: 'Homenaje a la fuerza laboral de Cabimas.',
+      detalles: ['Reconoce el aporte de la industria petrolera.', 'Figura simbólica en el paisaje urbano.'],
+      ubicacion: [10.390193683411015, -71.4494126482094],
+      imagen: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVhK4C6kQoHLiJu0aYRkQz4ACOKQNDW9wE4P_x87bKzYOGGdapuMstDk6BLalmv4fNGCyN9hJcvIQLy8y0NAbK1qoAG-FxUXXqxajpV9I4Z91kxm_f7s-70S9peeeZwT09Y0I9QyjD0Is/s320/IMG_0931.JPG'
+    }
+  };
+
+  // ===== Carrusel =====
+  const track = document.querySelector('.carousel-track');
+  const items = document.querySelectorAll('.carousel-item');
+  let index = 0;
+
+  function updateCarousel() {
+    const itemWidth = items[0].offsetWidth + 20; // ancho + margen
+    track.style.transform = `translateX(-${index * itemWidth}px)`;
+  }
+
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+    if (index < items.length - 1) index++;
+    updateCarousel();
+  });
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+    if (index > 0) index--;
+    updateCarousel();
+  });
+
+  // ===== Modal =====
+  const modal = document.getElementById('patrimonio-modal');
+  const modalContent = modal.querySelector('.modal-content');
+  const closeBtn = modal.querySelector('.modal-close');
+  const routeBtn = document.getElementById('route-btn');
+  let map, marker;
+
+  function buildModalHTML(id) {
+    const p = PATRIMONIOS[id];
+    if (!p) return '';
+    const detalles = p.detalles.map(d => `<li>${d}</li>`).join('');
+    return `
+      <h3>${p.nombre}</h3>
+      <p>${p.concepto}</p>
+      <ul>${detalles}</ul>
+      <img src="${p.imagen}" alt="${p.nombre}" style="width:100%;border-radius:12px;margin-top:.6rem;">
+    `;
+  }
+
+  function openModal(id) {
+    const p = PATRIMONIOS[id];
+    if (!p) return;
+    modalContent.innerHTML = buildModalHTML(id);
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+
+  // Botón de ruta a Google Maps externo
+  routeBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${p.ubicacion[0]},${p.ubicacion[1]}`;
+}
+
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+    modalContent.innerHTML = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
+
+  // ===== Enganche de botones "Ver más" =====
+  document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.open; // lee el data-open
+      openModal(id);
+    });
+  });
+});
+
+</script>
+
+<script>// Inicializar mapa centrado en Cabimas
+const map = L.map('map-patrimonios').setView([10.393624978201048, -71.45548359837386], 13);
+
+// Capa base de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Patrimonios con coordenadas
+const PATRIMONIOS = {
+  catedral: { nombre:'Catedral de Cabimas', ubicacion:[10.390391801032502, -71.46793819089774] },
+  plaza: { nombre:'Plaza Bolívar', ubicacion:[10.390017892662497, -71.46901964820934] },
+  teatro: { nombre:'Teatro Municipal', ubicacion:[10.389696048319683, -71.4694199212237] },
+  casas: { nombre:'Casas Coloniales', ubicacion:[10.393624978201048, -71.45548359837386] },
+  museo: { nombre:'Casa de la cultura', ubicacion:[10.392837810167466, -71.47066823453342] },
+  monumentos: { nombre:'Monumentos Históricos', ubicacion:[10.397503487579467, -71.44827018065568] },
+  concordia: { nombre:'Plaza Concordia', ubicacion:[10.393478981743431, -71.4493964212236] },
+  estrella: { nombre:'Parque La Estrella', ubicacion:[10.393624978201048, -71.45548359837386] },
+  petrolero: { nombre:'Monumento al Trabajador Petrolero', ubicacion:[10.390193683411015, -71.4494126482094] }
+};
+
+// Agregar marcadores con popups
+Object.values(PATRIMONIOS).forEach(p => {
+  L.marker(p.ubicacion).addTo(map)
+    .bindPopup(`<strong>${p.nombre}</strong>`);
+});
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initPatrimoniosMap" async defer></script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.intangible-track');
+  const items = document.querySelectorAll('.intangible-card');
+  let index = 0;
+
+  function updateCarousel() {
+    const itemWidth = items[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${index * itemWidth}px)`;
+  }
+
+  document.querySelector('.intangible-btn.next').addEventListener('click', () => {
+    if (index < items.length - 1) index++;
+    updateCarousel();
+  });
+  document.querySelector('.intangible-btn.prev').addEventListener('click', () => {
+    if (index > 0) index--;
+    updateCarousel();
+  });
+});
+</script>
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

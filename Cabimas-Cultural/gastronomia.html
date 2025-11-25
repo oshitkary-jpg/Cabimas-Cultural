@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Gastronomía - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/gastronomia.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  </nav><nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <seccion class="banner-patrimonio">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="gastronomia/gastronomia banner.png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+
+
+ <nav class="menu-cultura">
+  <ul>
+    <li><a href="#cab-gastro-intro">🫓 Introducción</a></li>
+    <li><a href="#cab-platos">🥣 Platos típicos</a></li>
+    <li><a href="#cab-zonas">🍽️ Zonas gastronómicas</a></li>
+    <li><a href="#cab-callejera">🍔 Comida callejera</a></li>
+    <li><a href="#cab-dulces">🍰 Dulces Locales</a></li>
+  </ul>
+</nav>
+
+<!-- Introducción Gastronomía -->
+<section id="cab-gastro-intro">
+  <div class="cab-gastro-overlay">
+    <h2 class="cab-gastro-titulo">🍲 Gastronomía de Cabimas</h2>
+    <p class="cab-gastro-texto">
+      La gastronomía de Cabimas es un reflejo de su identidad cultural y de la riqueza del Zulia. 
+      En sus mesas conviven sabores tradicionales como las <strong>arepas rellenas</strong>, 
+      el <strong>patacón zuliano</strong>, los <strong>bollos pelones</strong> y el infaltable 
+      <strong>queso costeño</strong>, junto a platos de pescado fresco del Lago de Maracaibo y dulces típicos 
+      como la <strong>mandoca</strong>. Cada receta cuenta una historia de mestizaje, creatividad y arraigo popular, 
+      convirtiendo la comida cabimense en un símbolo de convivencia y sabor.
+    </p>
+  </div>
+</section>
+
+<section id="cab-platos">
+  <div class="cab-platos-header">
+    <h2 class="cab-platos-titulo">🍴 Platos típicos de Cabimas</h2>
+    <div class="cab-platos-toggle" role="group" aria-label="Vista de contenido">
+      <button class="cab-toggle-btn" data-view="historia" aria-pressed="true">Historia</button>
+      <button class="cab-toggle-btn" data-view="receta" aria-pressed="false">Receta</button>
+    </div>
+  </div>
+
+  <p class="cab-platos-intro">
+    Este recetario vivo combina sabor, memoria y juego. Explora cada plato, marca los ingredientes,
+    sigue los pasos con tiempo, guarda tus favoritos y comparte la cultura cabimense.
+  </p>
+
+  <div class="cab-platos-grid">
+
+    <!-- Arepa cabimera -->
+    <article class="cab-plato-card" data-plato="arepa">
+      <div class="cab-plato-imgwrap">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2NFuwER_Ge9yh--Hwft5NBSKECzZIlYx2RGRROBSPBIIQGpC3_EpBi-B8NERVBP1MyRRjqk4CnF9foFQ2IJhk2hY3UORQ5HiLcigEJug4IZM3t_yVp2FrJEMrYNYsxITHA7Z8GlUNe--OjekPuw0RK2S9bpYla9wJ0SbtYibuMoxZFUWs-8XqOgKA/s1600/arepa-cabimera.jpg" alt="Arepa cabimera" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Icono urbano</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Arepa cabimera</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        Arepa frita con relleno servido encima: identidad rápida y abundante, perfecta para la noche cabimense.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="arepa">
+            <li><label><input type="checkbox"> Harina de maíz precocida</label></li>
+            <li><label><input type="checkbox"> Sal</label></li>
+            <li><label><input type="checkbox"> Aceite para freír</label></li>
+            <li><label><input type="checkbox"> Carne mechada</label></li>
+            <li><label><input type="checkbox"> Queso de mano</label></li>
+            <li><label><input type="checkbox"> Huevo cocido</label></li>
+            <li><label><input type="checkbox"> Mayonesa y kétchup</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="arepa">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="8">Prepara la masa y forma discos pequeños.</li>
+            <li data-min="6">Fríe hasta dorar por ambos lados.</li>
+            <li data-min="5">Monta la carne, queso y huevo sobre la arepa.</li>
+            <li data-min="2">Agrega salsas al gusto y sirve caliente.</li>
+          </ol>
+        </div>
+        <button class="cab-download-btn" data-download="arepa">⬇️ Descargar receta PDF</button>
+
+      </div>
+    </article>
+
+    <!-- Patacón zuliano -->
+    <article class="cab-plato-card" data-plato="patacon">
+      <div class="cab-plato-imgwrap">
+        <img src="https://breakthrukitchen.com/wp-content/uploads/2025/06/img_0121-1.jpg" alt="Patacón zuliano" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Símbolo regional</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Patacón zuliano</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        Plátano frito como base, coronado con carnes, ensalada y salsas: contundente y festivo.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="patacon">
+            <li><label><input type="checkbox"> Plátano verde</label></li>
+            <li><label><input type="checkbox"> Carne o pollo desmechado</label></li>
+            <li><label><input type="checkbox"> Queso rallado</label></li>
+            <li><label><input type="checkbox"> Ensalada (tomate, lechuga)</label></li>
+            <li><label><input type="checkbox"> Salsas (ajo, tártara, kétchup)</label></li>
+            <li><label><input type="checkbox"> Aceite para freír</label></li>
+            <li><label><input type="checkbox"> Sal y pimienta</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="patacon">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="7">Corta y fríe el plátano, aplasta y vuelve a freír.</li>
+            <li data-min="5">Prepara el relleno con carnes y ensalada.</li>
+            <li data-min="3">Arma el patacón y baña con salsas.</li>
+            <li data-min="2">Sirve caliente y crujiente.</li>
+          </ol>
+         
+        </div>
+       <button class="cab-download-btn" data-download="patacon">⬇️ Descargar receta PDF</button>
+
+      </div>
+    </article>
+
+    <!-- Bollos pelones -->
+    <article class="cab-plato-card" data-plato="bollos">
+      <div class="cab-plato-imgwrap">
+        <img src="https://res.cloudinary.com/enbonnet/image/upload/v1575759424/d7z648k6upq5fwt1bgll.png" alt="Bollos pelones" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Casa y tradición</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Bollos pelones</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        Masas de maíz con guiso y salsa: reconfortantes, familiares y profundamente cabimenses.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="bollos">
+            <li><label><input type="checkbox"> Harina de maíz</label></li>
+            <li><label><input type="checkbox"> Guiso (carne, pollo o vegetales)</label></li>
+            <li><label><input type="checkbox"> Salsa de tomate casera</label></li>
+            <li><label><input type="checkbox"> Cebolla y ajo</label></li>
+            <li><label><input type="checkbox"> Comino y sal</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="bollos">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="6">Prepara la masa y arma bolitas con relleno.</li>
+            <li data-min="12">Cuece en agua con sal hasta que floten firmes.</li>
+            <li data-min="5">Sirve con salsa y espolvorea comino.</li>
+          </ol>
+        </div>
+        <button class="cab-download-btn" data-download="bollos">⬇️ Descargar receta PDF</button>
+      </div>
+    </article>
+
+    <!-- Mandoca -->
+    <article class="cab-plato-card" data-plato="mandoca">
+      <div class="cab-plato-imgwrap">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitWK9FXoDan5yYoee_gBTB0F_ljzcDXlRZLRXGruqcEy_CrP-tUCn97lPruOwsYf9DwH3xPgU_MbE5iEFccJ__D-Se2k5D-mi01zgxx3xSrrpKEh9AfbOMOS-tRyK-qV0hu3JGrJzi7Mh_ep-JIu5-mRkbn5BuuaLT_rFVEVXl9nRXtmbb7eHFXmVKWg/s1600-rw/mandocas-venezolanas-receta.jpg" alt="Mandoca zuliana" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Dulce zuliano</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Mandoca zuliana</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        Anillo crujiente y tierno: plátano maduro, queso y papelón que endulzan la memoria.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="mandoca">
+            <li><label><input type="checkbox"> Plátano maduro</label></li>
+            <li><label><input type="checkbox"> Queso costeño</label></li>
+            <li><label><input type="checkbox"> Papelón (panela)</label></li>
+            <li><label><input type="checkbox"> Harina de maíz</label></li>
+            <li><label><input type="checkbox"> Aceite para freír</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="mandoca">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="5">Haz puré de plátano y mezcla con queso y papelón.</li>
+            <li data-min="6">Agrega harina, forma anillos y reposa.</li>
+            <li data-min="6">Fríe hasta dorar intensamente y escurre.</li>
+          </ol>
+        </div>
+        <button class="cab-download-btn" data-download="mandoca">⬇️ Descargar receta PDF</button>
+      </div>
+    </article>
+
+      <!-- Pescado frito -->
+    <article class="cab-plato-card" data-plato="pescado">
+      <div class="cab-plato-imgwrap">
+        <img src="https://media.noticiaalminuto.com/2020/12/WhatsApp-Image-2020-12-05-at-7.57.53-PM.jpeg" alt="Pescado Frito" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Frescura del lago</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Pescado frito zuliano</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        El sabor del pescado fresco del Lago de Maracaibo, combinado con el ajo y limón, es parte de la identidad culinaria local.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="pescado">
+            <li><label><input type="checkbox"> 1 pescado entero fresco</label></li>
+            <li><label><input type="checkbox"> 2 dientes de ajo</label></li>
+            <li><label><input type="checkbox"> Jugo de 1 limón</label></li>
+            <li><label><input type="checkbox"> Sal al gusto</label></li>
+            <li><label><input type="checkbox"> Aceite para freír</label></li>
+            <li><label><input type="checkbox"> Pimienta negra molida</label></li>
+            <li><label><input type="checkbox"> Harina de trigo</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="pescado">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="5">Lava bien el pescado, retira escamas, tripas y branquias.</li>
+            <li data-min="6">Frota el pescado con ajo machacado, jugo de limón, sal y las especias opcionales.</li>
+            <li data-min="6">Pasa el pescado por harina de trigo, asegurándote de cubrirlo ligeramente.</li>
+            <li data-min="6">Fríe el pescado por ambos lados hasta que esté dorado y crujiente.</li>
+          </ol>
+        </div>
+        <button class="cab-download-btn" data-download="pescado">⬇️ Descargar receta PDF</button>
+      </div>
+    </article>
+
+      <!-- Chivo -->
+    <article class="cab-plato-card" data-plato="chivo">
+      <div class="cab-plato-imgwrap">
+        <img src="https://turismosucre.com.ve/images/gastronomia/2020/chivo-en-coco_500x540.jpg" alt="Chivo en Coco" class="cab-plato-img" loading="lazy">
+        <span class="cab-plato-badge">Sabores encontrados</span>
+        <button class="cab-fav-btn" title="Guardar en favoritos">★</button>
+      </div>
+      <h3 class="cab-plato-nombre">Chivo en Coco</h3>
+      <p class="cab-plato-concepto cab-view-historia">
+        Un plato emblemático de la gastronomía marabina que combina sabores intensos con la suavidad del coco.
+      </p>
+      <div class="cab-plato-receta cab-view-receta" hidden>
+        <div class="cab-ingredientes">
+          <h4>Ingredientes</h4>
+          <ul class="cab-ingred-list" data-plato="chivo">
+            <li><label><input type="checkbox"> 1 kg de carne de chivo</label></li>
+            <li><label><input type="checkbox"> 2 tazas de leche de coco fresca</label></li>
+            <li><label><input type="checkbox"> Aceite onotado o vegetal</label></li>
+            <li><label><input type="checkbox"> 2 limones</label></li>
+            <li><label><input type="checkbox"> Sal y pimienta al gusto</label></li>
+            <li><label><input type="checkbox"> 4 dientes de ajo machacados</label></li>
+            <li><label><input type="checkbox"> 1 hoja de laurel</label></li>
+            <li><label><input type="checkbox"> 1 cebolla grande picada</label></li>
+            <li><label><input type="checkbox"> 1 pimentón rojo picado</label></li>
+          </ul>
+        </div>
+        <div class="cab-pasos" data-plato="chivo">
+          <h4>Pasos</h4>
+          <ol class="cab-pasos-list">
+            <li data-min="5">Lava la carne con agua y jugo de limón para reducir el sabor fuerte. Enjuaga bien.</li>
+            <li data-min="6">Sazona con ajo, comino, orégano, sal y pimienta.</li>
+            <li data-min="6"> En una olla, calienta aceite onotado. Sofríe cebolla, pimentón, ají dulce, cebollín y ajo hasta que estén dorados.</li>
+            <li data-min="6">Agrega la carne de chivo al sofrito y dóralo por todos lados.</li>
+            <li data-min="6">Añade la hoja de laurel y suficiente agua para cubrir la carne.</li>
+            <li data-min="6">Cuando el chivo esté tierno y el líquido se haya reducido, incorpora la leche de coco.</li>
+          </ol>
+        </div>
+        <button class="cab-download-btn" data-download="chivo">⬇️ Descargar receta PDF</button>
+      </div>
+    </article>
+  </div>
+
+  <!-- Quiz moderno -->
+  
+
+  <div id="cab-plato-modal" class="cab-plato-modal" aria-hidden="true">
+    <div class="cab-plato-modal-inner">
+      <button class="cab-plato-close" aria-label="Cerrar">×</button>
+      <div class="cab-plato-modal-content"></div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-zonas" aria-label="Zonas gastronómicas de Cabimas">
+
+  <div class="cab-zonas-header">
+    <h2>🌆 Zonas gastronómicas de Cabimas</h2>
+    <p class="cab-zonas-intro">
+      <strong>Un mapa cultural para sentir dónde se vive la comida cabimense: plazas, avenidas, mercados y orillas del lago.
+      Explora cada zona, conoce su ambiente y descubre los platos que la hacen única.</strong>
+    </p>
+  </div>
+
+  <!-- Mapa interactivo -->
+  <div class="cab-mapa-wrap">
+ <div class="cab-mapa-legend">
+  <div class="legend-card legend-mercado">
+    <h4>Mercado Municipal 🍴</h4>
+    <p>Calle Independencia, Cabimas</p>
+  </div>
+  <div class="legend-card legend-avenida">
+    <h4>Av. Independencia 🌙</h4>
+    <p>Avenida Independencia, Cabimas</p>
+  </div>
+  <div class="legend-card legend-plaza">
+    <h4>La H ☕</h4>
+    <p>Carretera la H</p>
+  </div>
+  <div class="legend-card legend-malecon">
+    <h4>Malecón 🌊</h4>
+    <p>Orilla del Lago de Maracaibo</p>
+  </div>
+  <div class="legend-card legend-rosa">
+    <h4>Sector La Rosa 🏠</h4>
+    <p>Zona petrolera, Cabimas</p>
+  </div>
+  <div class="legend-card legend-costamall">
+  <h4>Costa Mall 🛍️</h4>
+  <p>Av. Intercomunal, Cabimas</p>
+</div>
+<div class="legend-card legend-boulevard">
+  <h4>Boulevard San José 🎶</h4>
+  <p>Calle Cumaná, Cabimas</p>
+</div>
+<div class="legend-card legend-estrella">
+  <h4>Parque La Estrella 🌳</h4>
+  <p>Sector La Estrella, Cabimas</p>
+</div>
+
+</div>
+
+
+
+    <!-- SVG mapa estilizado (no georreferenciado, decorativo) -->
+    <svg class="cab-mapa" viewBox="0 0 500 300" role="img" aria-label="Mapa estilizado de Cabimas">
+      <!-- Fondo y lago -->
+      <rect x="0" y="0" width="500" height="300" fill="#f7fafc"/>
+      <path d="M 0 220 C 120 180, 220 240, 500 200 L 500 300 L 0 300 Z" fill="#cce7ff" opacity="0.7"/>
+      <!-- Trazos urbanos -->
+      <path d="M 60 40 L 440 80" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 100 120 L 420 140" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 80 200 L 390 220" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- Marcadores -->
+      <g class="cab-marker" data-zona="mercado" tabindex="0">
+        <circle cx="130" cy="110" r="8" fill="#ef6c00"/>
+        <text x="145" y="114" class="cab-marker-label">Mercado Municipal</text>
+      </g>
+      <g class="cab-marker" data-zona="avenida" tabindex="0">
+        <circle cx="300" cy="70" r="8" fill="#f59e0b"/>
+        <text x="315" y="74" class="cab-marker-label">Av. Independencia</text>
+      </g>
+      <g class="cab-marker" data-zona="plaza" tabindex="0">
+        <circle cx="210" cy="150" r="8" fill="#10b981"/>
+        <text x="225" y="154" class="cab-marker-label">La H</text>
+      </g>
+      <g class="cab-marker" data-zona="malecon" tabindex="0">
+        <circle cx="380" cy="210" r="8" fill="#3b82f6"/>
+        <text x="395" y="214" class="cab-marker-label">Boulevard Costanero</text>
+      </g>
+      <g class="cab-marker" data-zona="rosa" tabindex="0">
+        <circle cx="90" cy="180" r="8" fill="#8b5cf6"/>
+        <text x="105" y="184" class="cab-marker-label">Sector La Rosa</text>
+      </g>
+      <g class="cab-marker" data-zona="costamall" tabindex="0">
+  <circle cx="260" cy="100" r="8" fill="#d946ef"/>
+  <text x="275" y="104" class="cab-marker-label">Costa Mall</text>
+</g>
+
+<g class="cab-marker" data-zona="boulevard" tabindex="0">
+  <circle cx="180" cy="130" r="8" fill="#f43f5e"/>
+  <text x="195" y="134" class="cab-marker-label">Boulevard San José</text>
+</g>
+
+<g class="cab-marker" data-zona="estrella" tabindex="0">
+  <circle cx="320" cy="160" r="8" fill="#22c55e"/>
+  <text x="335" y="164" class="cab-marker-label">Parque La Estrella</text>
+</g>
+
+    </svg>
+  </div>
+
+  <!-- Grid de tarjetas -->
+  <div class="cab-zonas-grid">
+    <article class="cab-zona-card" data-zona="mercado">
+      <div class="cab-zona-media">
+        <img src="https://eldiariotricolor.com/wp-content/uploads/2023/12/image-15-1024x449.png" alt="Mercado Municipal de Cabimas" loading="lazy">
+        <span class="cab-zona-badge">Cocina popular</span>
+      </div>
+      <h3>Mercado Municipal</h3>
+      <p>Bullicio matutino, bollos pelones, mandocas y jugos que refrescan el camino.</p>
+      <ul class="cab-zona-platos">
+        <li>Mandoca</li><li>Bollos pelones</li><li>Jugos naturales</li>
+      </ul>
+      <div class="cab-zona-actions">
+        <button class="cab-zona-ver" data-open="mercado">Ver más</button>
+<a class="cab-zona-focus" 
+   href="https://maps.app.goo.gl/LxPqbQ6Xy8XVtftD8" 
+   target="_blank" rel="noopener">Ver en mapa</a>
+      </div>
+    </article>
+
+    <article class="cab-zona-card" data-zona="avenida">
+      <div class="cab-zona-media">
+        <img src="gastronomia/calle idenpendencia 2.jpg" alt="Avenida Independencia" loading="lazy">
+        <span class="cab-zona-badge">Ruta diurna</span>
+      </div>
+      <h3>Av. Independencia</h3>
+      <p>Arepas cabimeras y patacones crujientes hasta la madrugada.</p>
+      <ul class="cab-zona-platos">
+        <li>Arepa cabimera</li><li>Patacón zuliano</li><li>Salsas artesanales</li>
+      </ul>
+      <div class="cab-zona-actions">
+        <button class="cab-zona-ver" data-open="avenida">Ver más</button>
+<a class="cab-zona-focus" 
+   href="https://maps.app.goo.gl/Joo8wdFa2H23t7Wa8" 
+   target="_blank" rel="noopener">Ver en mapa</a>
+      </div>
+    </article>
+
+    <article class="cab-zona-card" data-zona="plaza">
+      <div class="cab-zona-media">
+        <img src="img/plaza.jpg" alt="Plaza Bolívar" loading="lazy">
+        <span class="cab-zona-badge">Amantes de la Comida</span>
+      </div>
+      <h3>La H</h3>
+      <p>Comida rápida tradicional, Panaderías y restaurantes más formales.</p>
+      <ul class="cab-zona-platos">
+        <li>Pizzas</li><li>Dulces</li><li>Parrillas</li>
+      </ul>
+      <div class="cab-zona-actions">
+        <button class="cab-zona-ver" data-open="plaza">Ver más</button>
+<a class="cab-zona-focus" 
+   href="https://maps.app.goo.gl/DuXukdJHXhz4MCZr5" 
+   target="_blank" rel="noopener">Ver en mapa</a>
+      </div>
+    </article>
+
+    <article class="cab-zona-card" data-zona="malecon">
+      <div class="cab-zona-media">
+        <img src="gastronomia/boulevard.jpg" alt="Malecón de Cabimas" loading="lazy">
+        <span class="cab-zona-badge">Orilla del lago</span>
+      </div>
+      <h3>Boulevard Costanero</h3>
+      <p>Pescado frito, sopas marineras y aire fresco del Lago de Maracaibo.</p>
+      <ul class="cab-zona-platos">
+        <li>Pescado frito</li><li>Sopa marinera</li><li>Arepa asada</li>
+      </ul>
+      <div class="cab-zona-actions">
+        <button class="cab-zona-ver" data-open="malecon">Ver más</button>
+<a class="cab-zona-focus" 
+   href="https://maps.app.goo.gl/RrkHizipuoYA9uQc7" 
+   target="_blank" rel="noopener">Ver en mapa</a>
+      </div>
+    </article>
+
+    <article class="cab-zona-card" data-zona="rosa">
+      <div class="cab-zona-media">
+        <img src="img/rosa.jpg" alt="Sector La Rosa" loading="lazy">
+        <span class="cab-zona-badge">Tradición obrera</span>
+      </div>
+      <h3>Sector La Rosa</h3>
+      <p>Guisos contundentes y bollos servidos con historia petrolera.</p>
+      <ul class="cab-zona-platos">
+        <li>Bollos pelones</li><li>Guiso de carne</li><li>Sopa espesa</li>
+      </ul>
+      <div class="cab-zona-actions">
+        <button class="cab-zona-ver" data-open="rosa">Ver más</button>
+<a class="cab-zona-focus" 
+   href="https://maps.app.goo.gl/RcZwn9aRhxyo8zBUA" 
+   target="_blank" rel="noopener">Ver en mapa</a>
+      </div>
+    </article>
+    <article class="cab-zona-card" data-zona="costamall">
+  <div class="cab-zona-media">
+    <img src="https://rossettiangelo.com/wp-content/uploads/2023/04/340841965_6001108906608842_4668782970855510273_n-gigapixel-standard-width-1240px.jpg" alt="Costa Mall Cabimas" loading="lazy">
+    <span class="cab-zona-badge">Centro moderno</span>
+  </div>
+  <h3>Costa Mall</h3>
+  <p>Restaurantes de comida rápida y cafés en un ambiente moderno.</p>
+  <ul class="cab-zona-platos">
+    <li>Comida rápida</li><li>Cafés</li><li>Postres</li>
+  </ul>
+  <div class="cab-zona-actions">
+    <button class="cab-zona-ver" data-open="costamall">Ver más</button>
+    <a class="cab-zona-focus" href="https://maps.app.goo.gl/TZMjehrtJSG6gqaK9" target="_blank" rel="noopener">Ver en mapa</a>
+  </div>
+</article>
+
+<article class="cab-zona-card" data-zona="boulevard">
+  <div class="cab-zona-media">
+    <img src="https://diarioelregionaldelzulia.com/wp-content/uploads/2024/12/CABIMAS-GENERAL-16-nombre-r.jpg" alt="Boulevard Pedro O. Hernández" loading="lazy">
+    <span class="cab-zona-badge">Cultura y calle</span>
+  </div>
+  <h3>Boulevard San José</h3>
+  <p>Puestos de comida callejera y ambiente cultural con música.</p>
+  <ul class="cab-zona-platos">
+    <li>Comida callejera</li><li>Arepas</li><li>Jugos frescos</li>
+  </ul>
+  <div class="cab-zona-actions">
+    <button class="cab-zona-ver" data-open="boulevard">Ver más</button>
+    <a class="cab-zona-focus" href="https://maps.app.goo.gl/jMZJ7dHooJXacQUM7" target="_blank" rel="noopener">Ver en mapa</a>
+  </div>
+</article>
+
+<article class="cab-zona-card" data-zona="estrella">
+  <div class="cab-zona-media">
+    <img href="img/estrella.jpg" alt="Parque La Estrella" loading="lazy">
+    <span class="cab-zona-badge">Recreación</span>
+  </div>
+  <h3>Parque La Estrella</h3>
+  <p>Zona recreativa con helados, jugos y snacks típicos.</p>
+  <ul class="cab-zona-platos">
+    <li>Helados</li><li>Jugos naturales</li><li>Snacks</li>
+  </ul>
+  <div class="cab-zona-actions">
+    <button class="cab-zona-ver" data-open="estrella">Ver más</button>
+    <a class="cab-zona-focus" href="https://maps.app.goo.gl/5y13NhrgMQh9kuns7" target="_blank" rel="noopener">Ver en mapa</a>
+  </div>
+</article>
+
+  </div>
+  
+  <!-- Panel de datos culturales -->
+  <div class="cab-zonas-data">
+    <div class="cab-data-card">
+      <h4>Popularidad de las zonas</h4>
+      <canvas id="cab-zonas-donut" width="260" height="260" aria-label="Popularidad por zona"></canvas>
+      <ul class="cab-donut-legend">
+  <li><span class="legend-dot legend-mercado"></span>Mercado (28%)</li>
+  <li><span class="legend-dot legend-avenida"></span>Av. Independencia (24%)</li>
+  <li><span class="legend-dot legend-plaza"></span>Plaza Bolívar (18%)</li>
+  <li><span class="legend-dot legend-malecon"></span>Malecón (20%)</li>
+  <li><span class="legend-dot legend-rosa"></span>La Rosa (10%)</li>
+  <li><span class="legend-dot legend-costamall"></span>Costa Mall (12%)</li>
+  <li><span class="legend-dot legend-boulevard"></span>Boulevard Pedro O. Hernández (15%)</li>
+  <li><span class="legend-dot legend-estrella"></span>Parque La Estrella (10%)</li>
+</ul>
+
+    </div>
+
+  
+
+  <!-- Modal inmersivo -->
+  <div id="cab-zona-modal" class="cab-zona-modal" aria-hidden="true">
+    <div class="cab-zona-modal-inner" role="dialog" aria-modal="true" aria-labelledby="cab-zona-title">
+      <button class="cab-zona-close" aria-label="Cerrar">×</button>
+      <div class="cab-zona-modal-content">
+        <!-- Se llena dinámicamente -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-callejera">
+  <canvas id="stars-bg"></canvas>
+  <div class="cab-callejera-header">
+    <h2>🌮 Comida Callejera de Cabimas 🍔</h2>
+    <p class="cab-callejera-intro">
+      La noche cabimera se enciende con patacones crujientes, arepas fritas rebosantes y jugos frescos que iluminan la avenida...
+    </p>
+  </div>
+
+  <!-- Tarjetas de platos -->
+  <div class="cab-callejera-grid">
+    <article class="cab-plato-card" data-plato="patacon">
+      <img src="https://comidasvenezolanas.org/assets/images/patacones-venezolanos_800x534.webp" alt="Patacón zuliano">
+      <h3>Patacón Zuliano</h3>
+      <p>Crujiente doble de plátano con carne, queso y salsas artesanales.</p>
+      <div class="cab-plato-actions">
+        <button class="cab-plato-ver" data-open="patacon">Ver más</button>
+      </div>
+    </article>
+
+    <article class="cab-plato-card" data-plato="arepa">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2NFuwER_Ge9yh--Hwft5NBSKECzZIlYx2RGRROBSPBIIQGpC3_EpBi-B8NERVBP1MyRRjqk4CnF9foFQ2IJhk2hY3UORQ5HiLcigEJug4IZM3t_yVp2FrJEMrYNYsxITHA7Z8GlUNe--OjekPuw0RK2S9bpYla9wJ0SbtYibuMoxZFUWs-8XqOgKA/s1600/arepa-cabimera.jpg" alt="Arepa frita cabimera">
+      <h3>Arepa Frita Cabimera</h3>
+      <p>Rellena abundante, frita y servida con salsas vibrantes.</p>
+      <div class="cab-plato-actions">
+        <button class="cab-plato-ver" data-open="arepa">Ver más</button>
+      </div>
+    </article>
+
+    <article class="cab-plato-card" data-plato="jugos">
+      <img src="https://www.saborvenezolanokendall.com/cdn/shop/products/JUGOS2-min_1024x.jpg?v=1612747720" alt="Jugos naturales">
+      <h3>Jugos Naturales</h3>
+      <p>Piña, lechosa, patilla... frescos y servidos en vasos grandes.</p>
+      <div class="cab-plato-actions">
+        <button class="cab-plato-ver" data-open="jugos">Ver más</button>
+      </div>
+    </article>
+
+    <article class="cab-plato-card" data-plato="hamburguesa">
+      <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/store/header/6ed9bb72-8f0c-4db6-a45b-b29997d3fd58.jpeg" alt="Hamburguesa callejera">
+      <h3>Hamburguesa Callejera</h3>
+      <p>Pan suave, carne jugosa y salsas caseras que conquistan la noche.</p>
+      <div class="cab-plato-actions">
+        <button class="cab-plato-ver" data-open="hamburguesa">Ver más</button>
+      </div>
+    </article>
+
+   <article class="cab-plato-card" data-plato="perrocallejero">
+  <img src="https://img-global.cpcdn.com/recipes/c0fe44cdfbada2e1/680x781cq80/perros-calientes-venezolanos-foto-principal.jpg" alt="Perro caliente callejero">
+  <h3>Perro Caliente Callejero</h3>
+  <p>Pan suave, salchicha y salsas infinitas al gusto.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="perrocallejero">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="chawarma">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcU-yGDlpPHWouC48DobwaCFeYw6nUmoYWQ&s" alt="Chawarma">
+  <h3>Chawarma</h3>
+  <p>Carne sazonada en pan árabe con vegetales y salsas.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="chawarma">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="pizza">
+  <img src="https://64.media.tumblr.com/8ae5584e52e314d81bde69cd88098d0a/tumblr_mir28jtKle1qzgwk1o1_640.jpg" alt="Pizza callejera">
+  <h3>Pizza Callejera</h3>
+  <p>Porciones generosas servidas en cajas improvisadas.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="pizza">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="cachapa">
+  <img src="https://www.saborvenezolanokendall.com/cdn/shop/products/CACHAPA3-min_2400x.jpg?v=1612292928" alt="Cachapa">
+  <h3>Cachapa</h3>
+  <p>Tortilla de maíz dulce rellena de queso de mano y mantequilla.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="cachapa">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="pepitos">
+  <img src="https://www.cinco8.com/wp-content/uploads/2019/11/2bab81ac-b428-499a-a208-0238fd4026c5.jpg" alt="Pepitos">
+  <h3>Pepitos</h3>
+  <p>Pan largo relleno de carne, pollo y salsas abundantes.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="pepitos">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="sombreros">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdd7et07t2q-TRsz-qXJRyYvi1FPUMzc9MuA&s" alt="Sombreros">
+  <h3>Sombreros</h3>
+  <p>Plato típico zuliano con un parecido a la hamburguesa en forma de sombrero.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="sombreros">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="arrozchino">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz5MdAiwV5_rqDQzkaqcyuV0a8RjhicqqFeQSQEbD4RlM2Z-BEJZ7O5cuBRW2jhyCiwxPDKkqC3EBraPQeJXEOCxVxPsLnqEQSUdfrq7npuSE1swaUT4JyYogNWLRSEAGWRHT0K-ZOjXI/s1600/P2060101.JPG" alt="Arroz chino frito">
+  <h3>Arroz Chino Frito</h3>
+  <p>Mezcla de arroz, vegetales, pollo y salsa de soya.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="arrozchino">Ver más</button>
+  </div>
+</article>
+
+<article class="cab-plato-card" data-plato="parrillas">
+  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/f6/58/97/parrilla.jpg" alt="Parrillas">
+  <h3>Parrillas</h3>
+  <p>Carnes a la brasa servidas con yuca, ensalada y guasacaca.</p>
+  <div class="cab-plato-actions">
+    <button class="cab-plato-ver" data-open="parrillas">Ver más</button>
+  </div>
+</article>
+
+
+  <!-- Modal inmersivo -->
+  <div id="cab-plato-modal" class="cab-plato-modal" aria-hidden="true">
+    <div class="cab-plato-modal-inner">
+      <button class="cab-plato-close">✖</button>
+      <div class="cab-plato-modal-content"></div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-dulces">
+  <!-- Fondo animado -->
+  <canvas id="dulces-bg"></canvas>
+
+  <div class="cab-dulces-header">
+    <h2>🍬 Dulces Locales de Cabimas 🍮</h2>
+    <p class="cab-dulces-intro">
+      Los sabores dulces de Cabimas son tradición, fiesta y memoria familiar...
+    </p>
+  </div>
+
+  <!-- Tarjetas -->
+  <div class="cab-dulces-grid">
+    <article class="cab-dulce-card" data-dulce="lechosa">
+      <img src="https://comidasvenezolanas.org/assets/images/dulce-de-lechosa_800x534.webp" alt="Dulce de lechosa">
+      <h3>Dulce de Lechosa</h3>
+      <p>Papaya confitada en almíbar, típica en Semana Santa.</p>
+      <button class="cab-dulce-ver" data-open="lechosa">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="arrozleche">
+      <img src="https://www.bekiacocina.com/images/cocina/0000/96-h.jpg" alt="Arroz con leche">
+      <h3>Arroz con Leche</h3>
+      <p>Arroz cremoso con leche, canela y azúcar.</p>
+      <button class="cab-dulce-ver" data-open="arrozleche">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="coco">
+      <img src="https://i.ytimg.com/vi/7x2tRl579BU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCqDzYy2I_fe9ftXUyqFl7ZV_pIrA" alt="Besitos de coco">
+      <h3>Besitos de Coco</h3>
+      <p>Bocados dulces de coco rallado y azúcar.</p>
+      <button class="cab-dulce-ver" data-open="coco">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="guayaba">
+      <img src="https://cdn.recetasderechupete.com/wp-content/uploads/2024/03/Bocadillo-veleno-de-guayaba.jpg" alt="Dulce de guayaba">
+      <h3>Dulce de Guayaba</h3>
+      <p>Confitura espesa de guayaba, servida en bloques.</p>
+      <button class="cab-dulce-ver" data-open="guayaba">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="mani">
+      <img src="https://www.infobae.com/resizer/v2/BHKMCMSO5FE7TC5YFNNIO4OFUM.jpg?auth=0a306145786e7f0c5fe42257687e52636ca350f7cfd940abdac14a3d71976e42&smart=true&width=1200&height=1200&quality=85" alt="Conservas de maní">
+      <h3>Conservas de Maní</h3>
+      <p>Caramelizadas y crujientes, típicas de ferias.</p>
+      <button class="cab-dulce-ver" data-open="mani">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="quesillo">
+      <img src="https://images.aws.nestle.recipes/original/0f31d65b31758692fcb2c85b7657cb56_quesillo-carnation-recetas-nestle-venezuela.jpg" alt="Quesillo cabimero">
+      <h3>Quesillo Cabimero</h3>
+      <p>Flan tradicional con caramelo dorado.</p>
+      <button class="cab-dulce-ver" data-open="quesillo">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="turron">
+      <img src="https://cuk-it.com/wp-content/uploads/2021/12/turron-mani-blando-ig02.webp" alt="Turrón criollo">
+      <h3>Turrón Criollo</h3>
+      <p>Dulce compacto de maní y miel.</p>
+      <button class="cab-dulce-ver" data-open="turron">Ver más</button>
+    </article>
+
+    <article class="cab-dulce-card" data-dulce="chicha">
+      <img src="https://www.laylita.com/recetas/wp-content/uploads/2021/03/Receta-de-la-chicha-criolla-venezolana.jpg" alt="Chicha dulce">
+      <h3>Chicha Dulce</h3>
+      <p>Bebida espesa de arroz con leche y vainilla.</p>
+      <button class="cab-dulce-ver" data-open="chicha">Ver más</button>
+    </article>
+  </div>
+
+  <!-- Quiz -->
+  <div class="cab-dulces-quiz">
+    <h3>🍭 ¿Qué dulce cabimero eres?</h3>
+    <button data-result="lechosa">Dulce de Lechosa</button>
+    <button data-result="arrozleche">Arroz con Leche</button>
+    <button data-result="coco">Besitos de Coco</button>
+    <button data-result="guayaba">Dulce de Guayaba</button>
+    <button data-result="mani">Conservas de Maní</button>
+    <button data-result="quesillo">Quesillo</button>
+    <button data-result="turron">Turrón Criollo</button>
+    <button data-result="chicha">Chicha Dulce</button>
+    <p class="cab-quiz-result"></p>
+  </div>
+
+  <!-- Modal -->
+  <div id="cab-dulce-modal" class="cab-dulce-modal" aria-hidden="true">
+    <div class="cab-dulce-modal-inner">
+      <button class="cab-dulce-close">✖</button>
+      <div class="cab-dulce-modal-content"></div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#F54927', '#F5BE27', '#000000', '#F52768']; 
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+
+animar();
+</script>
+
+<script>
+(function() {
+  const section = document.getElementById('cab-platos');
+  const toggleBtns = section.querySelectorAll('.cab-toggle-btn');
+  const modal = section.querySelector('#cab-plato-modal');
+  const modalContent = modal.querySelector('.cab-plato-modal-content');
+  const modalClose = modal.querySelector('.cab-plato-close');
+
+  let currentView = 'historia';
+
+  // Toggle Historia / Receta
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const nextView = btn.dataset.view;
+      currentView = nextView;
+      toggleBtns.forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+
+      section.querySelectorAll('.cab-plato-card').forEach(card => {
+        const receta = card.querySelector('.cab-plato-receta');
+        const concepto = card.querySelector('.cab-plato-concepto');
+        const showReceta = nextView === 'receta';
+        receta.hidden = !showReceta;
+        concepto.hidden = showReceta;
+      });
+    });
+  });
+
+  // Favoritos (localStorage)
+  const favKey = 'cab_gastro_favs';
+  const favs = new Set(JSON.parse(localStorage.getItem(favKey) || '[]'));
+  section.querySelectorAll('.cab-plato-card').forEach(card => {
+    const plato = card.dataset.plato;
+    const favBtn = card.querySelector('.cab-fav-btn');
+    if (favs.has(plato)) favBtn.classList.add('active');
+    favBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (favs.has(plato)) { favs.delete(plato); favBtn.classList.remove('active'); }
+      else { favs.add(plato); favBtn.classList.add('active'); }
+      localStorage.setItem(favKey, JSON.stringify([...favs]));
+    });
+  });
+
+  // Timer por pasos
+  function setupTimers() {
+    section.querySelectorAll('.cab-pasos').forEach(block => {
+      const timeEl = block.querySelector('.cab-timer-time');
+      const startBtn = block.querySelector('.cab-timer-start');
+      const stopBtn = block.querySelector('.cab-timer-stop');
+      const pasos = [...block.querySelectorAll('.cab-pasos-list li')];
+
+      let interval = null;
+      let remaining = 0;
+
+      function format(s){ const m = Math.floor(s/60), sec = s%60; return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`; }
+
+      startBtn.addEventListener('click', () => {
+        const next = pasos.find(li => !li.classList.contains('done'));
+        const mins = next ? parseInt(next.dataset.min,10) : 0;
+        remaining = (mins || 1) * 60;
+        clearInterval(interval);
+        interval = setInterval(() => {
+          remaining--; timeEl.textContent = format(Math.max(remaining,0));
+          if (remaining <= 0) {
+            clearInterval(interval);
+            if (next) next.classList.add('done');
+          }
+        }, 1000);
+      });
+
+      stopBtn.addEventListener('click', () => { clearInterval(interval); timeEl.textContent = '00:00'; });
+    });
+  }
+  setupTimers();
+
+  // Modal inmersivo
+  function openModal(platoId) {
+    const card = section.querySelector(`.cab-plato-card[data-plato="${platoId}"]`);
+    const title = card.querySelector('.cab-plato-nombre').textContent;
+    const imgSrc = card.querySelector('.cab-plato-img').src;
+    const concept = card.querySelector('.cab-plato-concepto').textContent;
+    const ingredItems = [...card.querySelectorAll('.cab-ingred-list li')].map(li => li.textContent.trim());
+    const pasosItems = [...card.querySelectorAll('.cab-pasos-list li')].map(li => li.textContent.trim());
+
+    modalContent.innerHTML = `
+      <div class="cab-modal-hero" style="position:relative;">
+        <img src="${imgSrc}" alt="${title}" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="position:absolute;left:1rem;bottom:1rem;background:rgba(0,0,0,.45);color:#fff;padding:.6rem .8rem;border-radius:10px;">${title}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem;">
+        <div style="background:#fff7f0;padding:.8rem;border-radius:12px;">
+          <h4 style="margin:.2rem 0;">Concepto</h4>
+          <p style="color:#5a3826;">${concept}</p>
+          <h4 style="margin:.4rem 0;">Ingredientes</h4>
+          <ul style="padding-left:1rem;color:#5a3826;">
+            ${ingredItems.map(i=>`<li>${i}</li>`).join('')}
+          </ul>
+        </div>
+        <div style="background:#fff7f0;padding:.8rem;border-radius:12px;">
+          <h4 style="margin:.2rem 0;">Pasos</h4>
+          <ol style="padding-left:1rem;color:#5a3826;">
+            ${pasosItems.map(i=>`<li>${i}</li>`).join('')}
+          </ol>
+        </div>
+      </div>
+    `;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+  }
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden','true');
+    }
+  });
+
+  // Botón “Ver en modo inmersivo”
+  section.querySelectorAll('.cab-plato-ver').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.open));
+  });
+
+  // Quiz
+  const quizRes = section.querySelector('.cab-quiz-result');
+  section.querySelectorAll('.cab-quiz-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const choice = btn.dataset.choice;
+      const names = {
+        arepa: 'Arepa cabimera',
+        patacon: 'Patacón zuliano',
+        bollos: 'Bollos pelones',
+        mandoca: 'Mandoca zuliana'
+      };
+      quizRes.textContent = `¡Excelente elección! ${names[choice]} es puro sabor cabimense.`;
+    });
+  });
+
+  // Animación de entrada sutil para tarjetas
+  const cards = section.querySelectorAll('.cab-plato-card');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animation = 'cabPop .6s ease both';
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .2 });
+  cards.forEach(c => {
+    c.style.opacity = 0;
+    io.observe(c);
+  });
+  const style = document.createElement('style');
+  style.textContent = `@keyframes cabPop { from { opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }`;
+  document.head.appendChild(style);
+})();
+</script>
+
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.getElementById('cab-platos');
+  const { jsPDF } = window.jspdf;
+
+  section.addEventListener('click', (e) => {
+    const btn = e.target.closest('.cab-download-btn');
+    if (!btn) return;
+
+    const platoId = btn.dataset.download;
+    const card = section.querySelector(`.cab-plato-card[data-plato="${platoId}"]`);
+    if (!card) return;
+
+    const title = card.querySelector('.cab-plato-nombre')?.textContent || 'Receta';
+
+    // Links de video por plato
+    const videoLinks = {
+      arepa: "https://www.youtube.com/watch?v=Fl_eJ22t1xo&t=15s&pp=ygUVYXJlcGEgY2FiaW1lcmEgcmVjZXRh",
+      patacon: "https://www.youtube.com/watch?v=9n-wx_vJJMU&t=11s&pp=ygUVcGF0YWNvbmVzIHZlbmV6b2xhbm9z",
+      bollos: "https://www.youtube.com/watch?v=VrMQzzTd6TU&pp=ygUaYm9sbG9zIHBlbG9uZXMgdmVuZXpvbGFub3M%3D",
+      mandoca: "https://www.youtube.com/watch?v=EYFxcSMReHE&t=25s",
+      pescado: "https://www.youtube.com/watch?v=GhPpKw-xnB8&pp=ygUTcGVzY2FkbyBmcml0byB6dWxpYQ%3D%3D",
+      chivo: "https://www.youtube.com/watch?v=lu8ToTxxX98&pp=ygUNY2hpdm8gZW4gY29jbw%3D%3D"
+      
+    };
+    const videoLink = videoLinks[platoId] || "";
+
+    // Recetas detalladas
+    const recetasDetalladas = {
+      arepa: [
+        "Mezcla la harina de maíz con agua y sal hasta obtener una masa suave y manejable.",
+        "Forma discos gruesos y fríelos en aceite caliente hasta que estén dorados y crujientes.",
+        "Prepara el relleno: carne mechada jugosa, queso de mano fresco y huevo cocido en rodajas.",
+        "Coloca el relleno sobre la arepa frita y añade mayonesa y kétchup al gusto.",
+        "Sirve inmediatamente para disfrutar la textura crujiente con el relleno abundante."
+      ],
+      patacon: [
+        "Pela y corta el plátano verde en trozos grandes, fríelos hasta que estén dorados.",
+        "Aplasta cada trozo y vuelve a freírlo para lograr una base crujiente.",
+        "Prepara el relleno con carne o pollo desmechado, ensalada fresca y queso rallado.",
+        "Coloca el relleno sobre el plátano y baña con salsas de ajo, tártara y kétchup.",
+        "Sirve caliente, asegurándote de que el plátano esté crujiente y el relleno jugoso."
+      ],
+      bollos: [
+        "Mezcla la harina de maíz con agua y sal hasta obtener una masa firme.",
+        "Prepara un guiso con carne, pollo o vegetales, sazonado con cebolla, ajo y comino.",
+        "Forma bolitas de masa, rellénalas con el guiso y ciérralas bien.",
+        "Cuece los bollos en agua con sal hasta que floten y estén firmes.",
+        "Sirve con salsa de tomate casera y espolvorea comino para realzar el sabor."
+      ],
+      mandoca: [
+        "Haz puré de plátano maduro y mézclalo con queso costeño rallado y papelón derretido.",
+        "Agrega harina de maíz poco a poco hasta obtener una masa consistente.",
+        "Forma anillos gruesos y deja reposar unos minutos.",
+        "Fríe las mandocas en abundante aceite caliente hasta que estén doradas y crujientes.",
+        "Escúrrelas en papel absorbente y sírvelas calientes, acompañadas de queso fresco."
+      ],
+      pescado: [
+        "Limpieza del pescado: Lava bien el pescado, retira escamas, tripas y branquias. Haz cortes diagonales en ambos lados para que se impregne bien el aliño.",
+        "Adobo: Frota el pescado con ajo machacado, jugo de limón, sal y las especias opcionales. Deja reposar unos 15–30 minutos para que tome sabor.",
+        "Enharinado: Pasa el pescado por harina de trigo, asegurándote de cubrirlo ligeramente. Esto ayuda a que quede crujiente al freír.",
+        "Fritura: Calienta suficiente aceite en una sartén grande. Fríe el pescado por ambos lados hasta que esté dorado y crujiente (unos 5–7 minutos por lado, dependiendo del tamaño).",
+        "Montaje: Sirve el pescado caliente acompañado de patacones, ensalada fresca y, si deseas, arepitas o yuca."
+      ],
+       chivo: [
+        "Limpieza del chivo: Lava la carne con agua y jugo de limón para reducir el sabor fuerte. Enjuaga bien.",
+        "Adobo: Sazona con ajo, comino, orégano, sal y pimienta. Deja reposar al menos 30 minutos.",
+        "Sofrito: En una olla, calienta aceite onotado. Sofríe cebolla, pimentón, ají dulce, cebollín y ajo hasta que estén dorados.",
+        "Sellado: Agrega la carne de chivo al sofrito y dóralo por todos lados.",
+        "Cocción: Añade la hoja de laurel y suficiente agua para cubrir la carne. Cocina a fuego medio hasta que esté suave (aprox. 1 hora).",
+        "Leche de coco: Cuando el chivo esté tierno y el líquido se haya reducido, incorpora la leche de coco. Cocina a fuego bajo hasta que la salsa espese y se torne cremosa (unos 20 minutos)."
+      ]
+    };
+
+    const pasosDetallados = recetasDetalladas[platoId] || [];
+
+    // Crear PDF
+    const doc = new jsPDF();
+
+    // Encabezado
+    doc.setFontSize(22);
+    doc.setTextColor(247, 127, 0);
+    doc.text(title, 20, 20);
+
+    doc.setDrawColor(255, 183, 3);
+    doc.setLineWidth(1);
+    doc.line(20, 25, 190, 25);
+
+    // Ingredientes
+    const ingredItems = [...card.querySelectorAll('.cab-ingred-list li')].map(li => li.textContent.trim());
+    doc.setFontSize(16);
+    doc.setTextColor(0, 0, 0);
+    doc.text("Ingredientes:", 20, 40);
+
+    doc.setFontSize(12);
+    ingredItems.forEach((ing, i) => {
+      doc.text(`• ${ing}`, 25, 50 + i*8);
+    });
+
+    // Pasos detallados
+    let y = 50 + ingredItems.length*8 + 20;
+    doc.setFontSize(16);
+    doc.text("Pasos de preparación:", 20, y);
+    y += 10;
+
+    doc.setFontSize(12);
+    pasosDetallados.forEach((p, i) => {
+      doc.text(`${i+1}. ${p}`, 25, y, { maxWidth: 160 });
+      y += 15;
+    });
+
+    // Enlace clicable al video
+    if (videoLink) {
+      y += 10;
+      doc.setTextColor(0, 0, 255);
+      doc.textWithLink(" Ver video de preparación", 25, y, { url: videoLink });
+    }
+
+    // Pie de página
+    doc.setFontSize(10);
+    doc.setTextColor(100);
+    doc.text("Cabimas Cultural - Recetario", 20, 280);
+
+    // Descargar
+    doc.save(`${platoId}.pdf`);
+  });
+});
+</script>
+
+<script>// script-zonas.js
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.getElementById('cab-zonas');
+  if (!section) return;
+
+  // ===== Datos base de zonas =====
+  const ZONAS = {
+    mercado: {
+      nombre: 'Mercado Municipal',
+      concepto: 'Cocina popular en su máxima expresión: temprano, abundante y con voces que mezclan ofertas y risas.',
+      platos: ['Mandoca','Bollos pelones','Jugos naturales'],
+      imagen: 'gastronomia/mercado centro.jpg',
+      video: 'videos/mercado.mp4',
+      popularidad: 28,
+      frases: [
+        'A primera hora, el olor a masa y a papelón se mezcla con el vapor de las ollas.',
+        'Los puestos de jugos son estaciones de pausa: piña, lechosa, patilla; todo fresco.'
+      ],
+      curiosidades: [
+        'Los bollos pelones suelen servirse con salsa de tomate casera espesa.',
+        'La mandoca cambia de textura según la estación: más crujiente en días secos.'
+      ]
+    },
+    avenida: {
+      nombre: 'Avenida Independencia',
+      concepto: 'Ruta nocturna donde la arepa cabimera y el patacón son protagonistas de la calle.',
+      platos: ['Arepa cabimera','Patacón zuliano','Salsas artesanales'],
+      imagen: 'gastronomia/calle idependencia.jpg',
+      video: 'gastronomia/video calle idependencia.mp4',
+      popularidad: 24,
+      frases: [
+        'Después de las diez, la avenida brilla y el aceite caliente cuenta historias.',
+        'Las salsas se convierten en firma personal: ajo suave, tártara cítrica, picante audaz.'
+      ],
+      curiosidades: [
+        'La arepa frita se sirve con el relleno encima para comer rápido y con abundancia.',
+        'Los patacones dobles conquistan a quienes aman el crujiente prolongado.'
+      ]
+    },
+    plaza: {
+      nombre: 'La H',
+      concepto: 'Amplia y diversa oferta gastronómica, que va desde la comida rápida tradicional hasta restaurantes más formales con distintos tipos de cocina.',
+      platos: ['Patacones','Parrillas','Pizzas'],
+      imagen: 'img/plaza.jpg',
+      video: 'videos/plaza.mp4',
+      popularidad: 18,
+      frases: [
+        'La gastronomía en la Carretera H se caracteriza por ser un punto de referencia para los amantes de la buena comida en la ciudad.',
+      ],
+      curiosidades: [
+        'Por las mañanas y tardes, es un área comercial con opciones de almuerzos ejecutivos y panaderías concurridas',
+        'Por las noches, se convierte en un centro de entretenimiento con locales de comida rápida, bares, y restaurantes con música en vivo o un ambiente más festivo, especialmente los fines de semana. '
+      ]
+    },
+    malecon: {
+      nombre: 'Boulevard Costanero',
+      concepto: 'Orilla del lago con platos marinos y brisa que enfría la tarde.',
+      platos: ['Pescado frito','Sopa marinera','Arepa asada'],
+      imagen: 'https://diarioelregionaldelzulia.com/wp-content/uploads/2025/02/Boulevard-Costanero-de-Cabimas-t.jpg',
+      video: 'videos/malecon.mp4',
+      popularidad: 20,
+      frases: [
+        'El chisporroteo del pescado en la plancha compite con las olas.',
+        'La sopa marinera reconforta: caldo espeso, cilantro y conversaciones lentas.'
+      ],
+      curiosidades: [
+        'El dorado y la corvina son favoritos por su textura firme al freír.',
+        'La arepa asada acompaña sin restar protagonismo al pescado.'
+      ]
+    },
+    rosa: {
+      nombre: 'Sector La Rosa',
+      concepto: 'Tradición obrera: platos contundentes, guisos bien sazonados y sobremesa sincera.',
+      platos: ['Bollos pelones','Guiso de carne','Sopa espesa'],
+      imagen: 'img/rosa.jpg',
+      video: 'videos/rosa.mp4',
+      popularidad: 10,
+      frases: [
+        'El comino y la cebolla son la base del relato doméstico.',
+        'Los almuerzos se alargan con historias de trabajo y familia.'
+      ],
+      curiosidades: [
+        'Los bollos grandes se prefieren los domingos, cuando hay tiempo para guisos largos.',
+        'La sopa espesa gana carácter con hueso y verduras locales.'
+      ]
+    },
+    costamall: {
+  nombre: 'Costa Mall',
+  concepto: 'Centro comercial moderno con restaurantes, cafés y postres.',
+  platos: ['Comida rápida','Cafés','Postres'],
+  imagen: 'https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/estefania3/23r1q97F1exTgGsDpTsPzQ7HyaWV3wnVA3fHx7xZ2AGzgQRUkUsTS5u2JWiFhghxefS3X.jpg',
+  video: 'videos/costamall.mp4',
+  popularidad: 12,
+  frases: [
+    'El bullicio moderno se mezcla con aromas de café y hamburguesas.',
+    'Los pasillos invitan a probar postres y helados en cada esquina.'
+  ],
+  curiosidades: [
+    'Es uno de los puntos más concurridos por jóvenes.',
+    'Los cafés locales ofrecen recetas con toque zuliano.'
+  ]
+},
+boulevard: {
+  nombre: 'Boulevard San José',
+  concepto: 'Espacio cultural y gastronómico con puestos de comida callejera.',
+  platos: ['Comida callejera','Arepas','Jugos frescos'],
+  imagen: 'img/boulevard.jpg',
+  video: 'videos/boulevard.mp4',
+  popularidad: 15,
+  frases: [
+    'La música en vivo acompaña el sabor de las arepas callejeras.',
+    'El boulevard San José es un punto de encuentro cultural y gastronómico.'
+  ],
+  curiosidades: [
+    'Los jugos naturales se sirven en vasos grandes para compartir.',
+  ]
+},
+estrella: {
+  nombre: 'Parque La Estrella',
+  concepto: 'Zona recreativa con helados, jugos y snacks típicos.',
+  platos: ['Helados','Jugos naturales','Snacks'],
+  imagen: 'img/estrella.jpg',
+  video: 'videos/estrella.mp4',
+  popularidad: 10,
+  frases: [
+    'Los niños disfrutan helados mientras los adultos conversan bajo los árboles.',
+    'El parque es ideal para tardes familiares con jugos frescos.'
+  ],
+  curiosidades: [
+    'Los vendedores ofrecen helados artesanales con sabores locales.',
+    'Es un punto tradicional de paseo en Cabimas.'
+  ]
+}
+
+  };
+
+  // ===== Referencias =====
+  const mapa = section.querySelector('.cab-mapa');
+  const markers = section.querySelectorAll('.cab-marker');
+  const modal = section.querySelector('#cab-zona-modal');
+  const modalInner = modal?.querySelector('.cab-zona-modal-inner');
+  const modalContent = modal?.querySelector('.cab-zona-modal-content');
+  const donutCanvas = section.querySelector('#cab-zonas-donut');
+  const quizResult = section.querySelector('.cab-quiz-result');
+
+  // ===== Utilidades =====
+  function focusMarker(zonaId) {
+  const g = mapa.querySelector(`.cab-marker[data-zona="${zonaId}"]`);
+  if (!g) return;
+  const circle = g.querySelector('circle');
+  // animación de resaltado
+  circle?.animate([{ r: 8, fill:'#ef6c00' }, { r: 14, fill:'#e63946' }, { r: 8, fill:'#ef6c00' }], {
+    duration: 1000,
+    easing: 'ease-out'
+  });
+  // scroll automático hacia el mapa
+  mapa.scrollIntoView({ behavior:'smooth', block:'center' });
+}
+
+  function buildZonaHTML(zonaId) {
+    const z = ZONAS[zonaId];
+    if (!z) return '';
+    const platosHTML = z.platos.map(p => `<li>${p}</li>`).join('');
+    const frasesHTML = z.frases.map(f => `<blockquote>${f}</blockquote>`).join('');
+    const curiosHTML = z.curiosidades.map(c => `<li>${c}</li>`).join('');
+    return `
+      <div class="cab-zona-hero">
+        <img src="${z.imagen}" alt="${z.nombre}">
+        <video src="${z.video}" controls preload="metadata"></video>
+      </div>
+      <h3 id="cab-zona-title" class="cab-zona-title">${z.nombre}</h3>
+      <p class="cab-zona-concepto">${z.concepto}</p>
+      <div class="cab-zona-body">
+        <div>
+          <h4>Platos representativos</h4>
+          <ul class="cab-zona-tags">${platosHTML}</ul>
+          <h4>Ambiente y narración</h4>
+          ${frasesHTML}
+          <h4>Curiosidades</h4>
+          <ul class="cab-zona-facts">${curiosHTML}</ul>
+        </div>
+        <div>
+          <h4>Popularidad estimada</h4>
+          <div class="cab-zona-pop">
+            <canvas id="cab-zona-pop-canvas" width="220" height="220"></canvas>
+            <p style="text-align:center; font-weight:700; color:#374151;">${z.popularidad}%</p>
+          </div>
+          <h4>Explora recetas relacionadas</h4>
+          <ul class="cab-zona-links">
+            <li><a href="#cab-platos">Ir a recetas típicas</a></li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+
+  // ===== Modal =====
+  function openModal(zonaId) {
+    if (!modal || !modalContent || !modalInner) return;
+    modalContent.innerHTML = buildZonaHTML(zonaId);
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+
+    modalInner.style.opacity = '0';
+    modalInner.style.transform = 'scale(.96) translateY(8px)';
+    requestAnimationFrame(() => {
+      modalInner.style.transition = 'opacity .25s ease, transform .25s ease';
+      modalInner.style.opacity = '1';
+      modalInner.style.transform = 'scale(1) translateY(0)';
+    });
+
+    const z = ZONAS[zonaId];
+    const c = modalContent.querySelector('#cab-zona-pop-canvas');
+    if (c && z) drawDonut(c, [z.popularidad, 100 - z.popularidad], ['#f59e0b', '#e5e7eb']);
+  }
+
+  function closeModal() {
+    if (!modal || !modalInner) return;
+    modalInner.style.transition = 'opacity .22s ease, transform .22s ease';
+    modalInner.style.opacity = '0';
+    modalInner.style.transform = 'scale(.96) translateY(8px)';
+    setTimeout(() => {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      modalInner.style.opacity = '';
+      modalInner.style.transform = '';
+      modalInner.style.transition = '';
+    }, 220);
+  }
+
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  section.addEventListener('click', (e) => {
+    const openBtn = e.target.closest('.cab-zona-ver');
+    if (openBtn) {
+      openModal(openBtn.dataset.open);
+      return;
+    }
+    const focusBtn = e.target.closest('.cab-zona-focus');
+    if (focusBtn) {
+      focusMarker(focusBtn.dataset.focus);
+      return;
+    }
+    const closeBtn = e.target.closest('.cab-zona-close');
+    if (closeBtn) {
+      closeModal();
+      return;
+    }
+  });
+
+  // ===== Mapa: eventos de marcadores =====
+  markers.forEach(m => {
+    m.addEventListener('click', () => openModal(m.dataset.zona));
+    m.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(m.dataset.zona);
+      }
+    });
+  });
+
+  // ===== Donut global de popularidad =====
+ if (donutCanvas) {
+  const valores = [28, 24, 18, 20, 10, 12, 15, 10];
+  const colores = [
+    '#ef6c00', // Mercado
+    '#f59e0b', // Av. Independencia
+    '#10b981', // Plaza Bolívar
+    '#3b82f6', // Malecón
+    '#8b5cf6', // La Rosa
+    '#d946ef', // Costa Mall
+    '#f43f5e', // Boulevard
+    '#22c55e'  // La Estrella
+  ];
+  drawDonut(donutCanvas, valores, colores, true);
+}
+
+
+  // ===== Quiz zonas =====
+  const QUIZ_MAP = {
+    nocturna: { zona: 'avenida', texto: 'Eres ruta nocturna: Av. Independencia te espera con crujientes patacones y arepas abundantes.' },
+    popular:  { zona: 'mercado',  texto: 'Eres bullicio y sabor popular: el Mercado Municipal es tu casa.' },
+    familiar: { zona: 'plaza',    texto: 'Eres paseo y sobremesa: la Plaza Bolívar te va a encantar.' },
+    lago:     { zona: 'malecon',  texto: 'Eres brisa y mar: el Malecón tiene tu mesa lista.' },
+    obrera:   { zona: 'rosa',     texto: 'Eres trabajo y sazón casera: Sector La Rosa te alimenta sin rodeos.' }
+  };
+
+  section.querySelectorAll('.cab-quiz-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      const r = QUIZ_MAP[b.dataset.style];
+      if (!r || !quizResult) return;
+      quizResult.style.opacity = '0';
+      quizResult.style.transform = 'scale(.96)';
+      setTimeout(() => {
+        quizResult.textContent = r.texto;
+        quizResult.style.opacity = '1';
+        quizResult.style.transform = 'scale(1)';
+        focusMarker(r.zona);
+      }, 140);
+    });
+  });
+
+  // ===== Donut chart: función de dibujo =====
+  function drawDonut(canvas, values, colors, animate = false) {
+    const ctx = canvas.getContext('2d');
+    const total = values.reduce((a, b) => a + b, 0);
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    const r = Math.min(canvas.width, canvas.height) / 2 - 8;
+    const inner = r * 0.58;
+    let start = -Math.PI / 2;
+
+    const frames = animate ? 40 : 1;
+    let frame = 0;
+
+    function step() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let s = start;
+      const progress = animate ? frame / frames : 1;
+
+      values.forEach((v, i) => {
+        const angle = (v / total) * Math.PI * 2 * progress;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, s, s + angle);
+        ctx.lineWidth = r - inner;
+        ctx.strokeStyle = colors[i];
+        ctx.stroke();
+        s += angle;
+      });
+
+      // Centro
+      ctx.beginPath();
+      ctx.arc(cx, cy, inner, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff';
+      ctx.fill();
+
+      frame++;
+      if (frame <= frames) requestAnimationFrame(step);
+    }
+
+    step();
+  }
+}); // ← cierre único del DOMContentLoaded
+</script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  // Inicializar mapa centrado en Cabimas
+  const map = L.map('cab-mapa-real').setView([10.399, -71.447], 13); // coordenadas de Cabimas
+
+  // Cargar tiles de OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Lista de zonas con coordenadas y direcciones reales
+  const zonas = [
+    {
+      nombre: "Mercado Municipal",
+      coords: [10.3995, -71.4520],
+      direccion: "Mercado Municipal de Cabimas, Calle Independencia"
+    },
+    {
+      nombre: "Av. Independencia",
+      coords: [10.4030, -71.4450],
+      direccion: "Avenida Independencia, Cabimas"
+    },
+    {
+      nombre: "Plaza Bolívar",
+      coords: [10.4015, -71.4390],
+      direccion: "Plaza Bolívar, Cabimas"
+    },
+    {
+      nombre: "Malecón",
+      coords: [10.3950, -71.4500],
+      direccion: "Malecón de Cabimas, Orilla del Lago"
+    },
+    {
+      nombre: "Sector La Rosa",
+      coords: [10.4100, -71.4600],
+      direccion: "Sector La Rosa, Cabimas"
+    }
+  ];
+
+  // Crear marcadores con tooltip
+  zonas.forEach(z => {
+    L.marker(z.coords)
+      .addTo(map)
+      .bindTooltip(`<b>${z.nombre}</b><br>${z.direccion}`, {permanent:false});
+  });
+});
+</script>
+
+<script>// cab-callejera.js
+document.addEventListener('DOMContentLoaded', () => {
+  // ====== Datos de platos (puedes ampliar libremente) ======
+  const PLATOS = {
+    patacon: {
+      nombre: 'Patacón Zuliano',
+      concepto: 'Crujiente doble de plátano con carne, queso y salsas artesanales.',
+      detalles: [
+        'El doble crujiente de plátano sostiene rellenos generosos.',
+        'La tártara y el ajo crean el contraste perfecto con el picante.'
+      ],
+      imagen: 'https://cdn0.recetasgratis.net/es/posts/4/9/7/tostones_venezolanos_56794_orig.jpg',
+      tips: ['Sirve caliente', 'No escatimes en salsas', 'Busca el balance crujiente-suave']
+    },
+    arepa: {
+      nombre: 'Arepa Frita Cabimera',
+      concepto: 'Rellena abundante, frita y servida con salsas vibrantes.',
+      detalles: [
+        'El relleno se coloca encima para comer rápido y con abundancia.',
+        'Cada puesto firma su identidad con la mezcla de salsas.'
+      ],
+      imagen: 'https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/gorayii/23uQzxran3yt2zPejkVVu5PQ3sYw4MgSNCFJWiwYXi9zXM2zuWjtr2bWzx2m1PFbk6qG8.jpg',
+      tips: ['Frita a temperatura constante', 'Relleno visible', 'Salsa al gusto']
+    },
+    jugos: {
+      nombre: 'Jugos Naturales',
+      concepto: 'Piña, lechosa, patilla... frescos y servidos en vasos grandes.',
+      detalles: [
+        'Los jugos son pausa y frescura entre el bullicio nocturno.',
+        'La fruta local marca el carácter de cada vaso.'
+      ],
+      imagen: 'https://133579593.cdn6.editmysite.com/uploads/1/3/3/5/133579593/7S2L4OBZ67ETWYX2TD4QEENR.jpeg?width=2400&optimize=medium',
+      tips: ['Fruta madura', 'Hielo justo', 'Dulzor equilibrado']
+    },
+    hamburguesa: {
+      nombre: 'Hamburguesa Callejera',
+      concepto: 'Pan suave, carne jugosa y salsas caseras que conquistan la noche.',
+      detalles: [
+        'La salsa secreta de cada puesto es su orgullo.',
+        'El pan se tuesta levemente para sostener los jugos.'
+      ],
+      imagen: 'https://api.loyverse.com/image/d1a20bfd-271b-4ddc-8213-77e2eadcf7fb',
+      tips: ['Pan tostado', 'Carne jugosa', 'Salsa protagonista']
+    },
+  perrocallejero: {
+    nombre: 'Perro Caliente Callejero',
+    concepto: 'Pan suave, salchicha y salsas infinitas al gusto.',
+    detalles: [
+      'Cada puesto tiene su mezcla de salsas únicas.',
+      'El queso rallado y las papitas son infaltables.'
+    ],
+    imagen: 'https://asgastronomico.com/wp-content/uploads/2025/02/paladar-perro.png',
+    tips: ['Extra queso rallado', 'Papitas crujientes', 'Salsas variadas']
+  },
+  chawarma: {
+    nombre: 'Chawarma',
+    concepto: 'Carne sazonada en pan árabe con vegetales y salsas.',
+    detalles: [
+      'El ajo y el tahini marcan el sabor.',
+      'Se sirve envuelto para comer caminando.'
+    ],
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNm1ybVpy78Rq7-pw8yqV0qjca_FCr5AlQ&s',
+    tips: ['Salsa de ajo extra', 'Pan árabe suave', 'Vegetales frescos']
+  },
+  pizza: {
+    nombre: 'Pizza Callejera',
+    concepto: 'Porciones generosas servidas en cajas improvisadas.',
+    detalles: [
+      'El queso se estira al levantar la porción.',
+      'Es común ver sabores creativos locales.'
+    ],
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObOgS5VIa6dnDjMoFobcMf644gEsNKkkhXH319AvgtDOKdZqXVw3TSE-xgasJ-aqyILs&usqp=CAU',
+    tips: ['Recién horneada', 'Porciones grandes', 'Sabores locales']
+  },
+  cachapa: {
+    nombre: 'Cachapa',
+    concepto: 'Tortilla de maíz dulce rellena de queso de mano y mantequilla.',
+    detalles: [
+      'El maíz fresco le da dulzor único.',
+      'El queso de mano se derrite suavemente.'
+    ],
+    imagen: 'https://img-global.cpcdn.com/recipes/9c8bb02af981c080/1200x630cq80/photo.jpg',
+    tips: ['Servir caliente', 'Acompañar con nata', 'Queso de mano fresco']
+  },
+  pepitos: {
+    nombre: 'Pepitos',
+    concepto: 'Pan largo relleno de carne, pollo y salsas abundantes.',
+    detalles: [
+      'Se sirven con papitas y queso rallado.',
+      'Son populares en la avenida nocturna.'
+    ],
+    imagen: 'https://eldiario.com/wp-content/uploads/2023/02/Pepito.jpg',
+    tips: ['Pan suave', 'Carne abundante', 'Salsas variadas']
+  },
+  sombreros: {
+    nombre: 'Sombreros',
+    concepto: 'Plato típico con un parecido a la hamburguesa en forma de sombrero.',
+    detalles: [
+      'Gigante porcion de hamburguesa, para compartir en trozos',
+      'Son un ícono de la comida rápida zuliana.'
+    ],
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdp4Ft4adcqaX8co6AP-8PTofNLvwo-t07aU62K1CrkqXugMg_29DkZeyfOFAT80PpAvQ&usqp=CAU',
+    tips: ['Montañas de salsas', 'Abundante relleno', 'Ideal para compartir']
+  },
+  arrozchino: {
+    nombre: 'Arroz Chino Frito',
+    concepto: 'Mezcla de arroz, vegetales, pollo y salsa de soya.',
+    detalles: [
+      'Se cocina en wok a fuego alto.',
+      'La salsa de soya le da el sabor característico.'
+    ],
+    imagen: 'https://i.pinimg.com/736x/ce/9b/9f/ce9b9f861779342a440884c5a62483b1.jpg',
+    tips: ['Extra camarones', 'Acompañar con lumpias', 'Salsa de soya justa']
+  },
+  parrillas: {
+    nombre: 'Parrillas',
+    concepto: 'Carnes a la brasa servidas con yuca, ensalada y guasacaca.',
+    detalles: [
+      'La guasacaca es el acompañante infaltable.',
+      'Se sirven en grandes bandejas para compartir.'
+    ],
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELJQ1mJx_1tQjYKldzcb6twHhKeIAoCnIhQ&s',
+    tips: ['Variedad de carnes', 'Yuca suave', 'Guasacaca fresca']
+  }
+};
+
+
+  // ====== Referencias ======
+  const section = document.getElementById('cab-callejera');
+  if (!section) return;
+
+  const modal = section.querySelector('#cab-plato-modal');
+  const modalInner = modal?.querySelector('.cab-plato-modal-inner');
+  const modalContent = modal?.querySelector('.cab-plato-modal-content');
+  const closeBtn = modal?.querySelector('.cab-plato-close');
+
+  let lastTrigger = null;
+
+  // ====== Utilidades ======
+  function buildModalHTML(platoId) {
+    const p = PLATOS[platoId];
+    if (!p) return '';
+    const detalles = p.detalles.map(d => `<li>${d}</li>`).join('');
+    const tips = p.tips.map(t => `<span class="cab-tip">✨ ${t}</span>`).join(' ');
+    return `
+      <div class="cab-plato-hero">
+        <img src="${p.imagen}" alt="${p.nombre}">
+      </div>
+      <h3 class="cab-plato-title">${p.nombre}</h3>
+      <p class="cab-plato-concepto">${p.concepto}</p>
+      <div class="cab-plato-body">
+        <div>
+          <h4>Lo que hace único a este plato</h4>
+          <ul class="cab-plato-detalles">${detalles}</ul>
+          <div class="cab-plato-tips">${tips}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function animateButton(btn) {
+    btn.style.transform = 'scale(1.06) rotate(-1deg)';
+    btn.style.filter = 'brightness(1.1)';
+    setTimeout(() => {
+      btn.style.transform = '';
+      btn.style.filter = '';
+    }, 200);
+  }
+
+  function openModal(platoId, trigger = null) {
+    if (!modal || !modalInner || !modalContent) return;
+    lastTrigger = trigger || null;
+
+    modalContent.innerHTML = buildModalHTML(platoId);
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+
+    // Animación de entrada (refuerzo adicional al @keyframes del CSS)
+    modalInner.style.opacity = '0';
+    modalInner.style.transform = 'scale(.92) translateY(12px)';
+    requestAnimationFrame(() => {
+      modalInner.style.transition = 'opacity .28s ease, transform .28s ease';
+      modalInner.style.opacity = '1';
+      modalInner.style.transform = 'scale(1) translateY(0)';
+    });
+
+    // Enfocar el botón de cerrar para accesibilidad
+    closeBtn?.focus();
+  }
+
+  function closeModal() {
+    if (!modal || !modalInner) return;
+
+    modalInner.style.transition = 'opacity .22s ease, transform .22s ease';
+    modalInner.style.opacity = '0';
+    modalInner.style.transform = 'scale(.96) translateY(10px)';
+
+    setTimeout(() => {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      modalInner.style.opacity = '';
+      modalInner.style.transform = '';
+      modalInner.style.transition = '';
+      // devolver foco al último disparador
+      lastTrigger?.focus?.();
+      lastTrigger = null;
+    }, 220);
+  }
+
+  // ====== Eventos globales de la sección ======
+  section.addEventListener('click', (e) => {
+    const verBtn = e.target.closest('.cab-plato-ver');
+    if (verBtn) {
+      animateButton(verBtn);
+      const platoId = verBtn.dataset.open;
+      openModal(platoId, verBtn);
+      return;
+    }
+
+    const ctaBtn = e.target.closest('.cab-plato-cta-btn');
+    if (ctaBtn) {
+      animateButton(ctaBtn);
+      const type = ctaBtn.dataset.cta;
+      // Mensajes breves y animados dentro del modal
+      const msg = document.createElement('div');
+      msg.className = 'cab-plato-cta-msg';
+      msg.textContent = type === 'receta'
+      msg.style.marginTop = '.6rem';
+      msg.style.padding = '.6rem';
+      msg.style.background = '#111827';
+      msg.style.border = '1px solid #374151';
+      msg.style.borderRadius = '10px';
+      msg.style.color = '#e5e7eb';
+      msg.style.animation = 'fadeIn .4s ease';
+
+      ctaBtn.parentElement.appendChild(msg);
+      setTimeout(() => msg.remove(), 2200);
+      return;
+    }
+
+    const close = e.target.closest('.cab-plato-close');
+    if (close) {
+      animateButton(close);
+      closeModal();
+      return;
+    }
+  });
+
+  // Cerrar por click en overlay
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('show')) {
+      closeModal();
+    }
+  });
+
+  // ====== Accesibilidad: abrir con Enter/Espacio desde tarjetas ======
+  section.querySelectorAll('.cab-plato-card').forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const id = card.dataset.plato;
+        const triggerBtn = card.querySelector('.cab-plato-ver');
+        openModal(id, triggerBtn || card);
+      }
+    });
+  });
+});
+</script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('stars-bg');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+  stars = [];
+  for (let i = 0; i < 120; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: 1.5 + Math.random() * 2.5, // ⭐ más grandes
+      alpha: Math.random(),
+      speed: 0.02 + Math.random() * 0.02
+    });
+  }
+}
+
+function animateStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(star => {
+    star.alpha += star.speed * (Math.random() > 0.5 ? 1 : -1);
+    if (star.alpha < 0) star.alpha = 0;
+    if (star.alpha > 1) star.alpha = 1;
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+
+    // 🌟 efecto de volumen con sombra difusa
+    ctx.shadowColor = 'rgba(255,255,255,0.8)';
+    ctx.shadowBlur = 8; // brillo alrededor
+    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(animateStars);
+}
+
+  resizeCanvas();
+  animateStars();
+  window.addEventListener('resize', resizeCanvas);
+});
+</script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  const DULCES = {
+    lechosa: {
+      nombre:'Dulce de Lechosa',
+      concepto:'Papaya confitada en almíbar, típica en Navidad.',
+      detalles:['Se prepara en fiestas decembrinas.','Su aroma dulce llena las casas.'],
+      video:'https://www.youtube.com/embed/g9zgWu1HTO0?start=43',
+      tips:['Servir frío','Acompañar con queso blanco','Ideal para compartir']
+    },
+    arrozleche: {
+    nombre:'Arroz con Leche',
+    concepto:'Arroz cremoso con leche, canela y azúcar.',
+    detalles:['Tradicional en meriendas familiares.','La canela le da el toque especial.'],
+    video:'https://www.youtube.com/embed/Mrx_1QsXdo0',
+    tips:['Espolvorear canela','Servir tibio','Acompañar con galletas']
+  },
+  coco: {
+    nombre:'Besitos de Coco',
+    concepto:'Bocados dulces de coco rallado y azúcar.',
+    detalles:['Crujientes por fuera, suaves por dentro.','Se venden en bolsitas en las calles.'],
+    video:'https://www.youtube.com/embed/Jlz_vQNg6ps',
+    tips:['Usar coco fresco','Agregar un toque de vainilla','Servir en porciones pequeñas']
+  },
+  guayaba: {
+    nombre:'Dulce de Guayaba',
+    concepto:'Confitura espesa de guayaba, servida en bloques.',
+    detalles:['Se corta en cuadros y se acompaña con queso.','Muy popular en desayunos.'],
+    video:'https://www.youtube.com/embed/YIKKstjJL0w',
+    tips:['Combinar con queso blanco','Guardar en envase hermético','Servir en rodajas']
+  },
+  mani: {
+    nombre:'Conservas de Maní',
+    concepto:'Caramelizadas y crujientes, típicas de ferias.',
+    detalles:['Se preparan con azúcar derretida.','Son infaltables en fiestas patronales.'],
+    video:'https://www.youtube.com/embed/zTLNTU1gMQY',
+    tips:['Usar maní tostado','Caramelo dorado','Servir en trozos']
+  },
+  quesillo: {
+    nombre:'Quesillo Cabimero',
+    concepto:'Flan tradicional con caramelo dorado.',
+    detalles:['Se cocina al baño de María.','El caramelo le da el sabor único.'],
+    video:'https://www.youtube.com/embed/9Gjt4KLazFc',
+    tips:['Servir frío','Caramelo abundante','Acompañar con café']
+  },
+  turron: {
+    nombre:'Turrón Criollo',
+    concepto:'Dulce compacto de maní y miel.',
+    detalles:['Se corta en barras.','Muy energético y popular en ferias.'],
+    video:'https://www.youtube.com/embed/j7SVwYXiRMo',
+    tips:['Usar miel fresca','Compactar bien','Servir en trozos']
+  },
+  chicha: {
+    nombre:'Chicha Dulce',
+    concepto:'Bebida espesa de arroz con leche y vainilla.',
+    detalles:['Se sirve fría con hielo.','Decorada con canela en polvo.'],
+    video:'https://www.youtube.com/embed/4YmJzNLWxHM',
+    tips:['Servir fría','Espolvorear canela','Acompañar con hielo picado']
+  
+    }
+  };
+
+  const modal = document.getElementById('cab-dulce-modal');
+  const modalContent = modal.querySelector('.cab-dulce-modal-content');
+  const closeBtn = modal.querySelector('.cab-dulce-close');
+
+  // ====== Construcción del modal ======
+   function buildModalHTML(dulceId) {
+    const d = DULCES[dulceId];
+    if (!d) return '';
+    const detalles = d.detalles.map(det => `<li>${det}</li>`).join('');
+    const tips = d.tips.map(t => `<span class="cab-tip">✨ ${t}</span>`).join(' ');
+    return `
+      <div class="cab-dulce-hero">
+      <iframe width="100%" height="315"
+        src="${d.video}" 
+        title="${d.nombre}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <h3 class="cab-dulce-title">${d.nombre}</h3>
+    <p class="cab-dulce-concepto">${d.concepto}</p>
+    <div class="cab-dulce-body">
+      <h4>Lo que hace único a este dulce</h4>
+      <ul class="cab-dulce-detalles">${detalles}</ul>
+      <div class="cab-dulce-tips">${tips}</div>
+    </div>
+  `;
+}
+
+  function openModal(dulceId) {
+    modalContent.innerHTML = buildModalHTML(dulceId);
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+    modalContent.innerHTML = '';
+  }
+
+    // ====== Eventos de los botones ======
+  document.querySelectorAll('.cab-dulce-ver').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.open;   // lee el data-open
+      openModal(id);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+  });
+
+  // ====== Quiz ======
+  const quizButtons = document.querySelectorAll('.cab-dulces-quiz button');
+  const quizResult = document.querySelector('.cab-quiz-result');
+  quizButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.result;
+      const d = DULCES[id];
+      quizResult.textContent = `¡Eres como ${d.nombre}! ${d.concepto}`;
+    });
+  });
+
+  // ====== Fondo animado (confeti/estrellas dulces) ======
+  const canvas = document.getElementById('dulces-bg');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: 2 + Math.random() * 3,
+        alpha: Math.random(),
+        speed: 0.02 + Math.random() * 0.02
+      });
+    }
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p => {
+      p.alpha += p.speed * (Math.random() > 0.5 ? 1 : -1);
+      if (p.alpha < 0) p.alpha = 0;
+      if (p.alpha > 1) p.alpha = 1;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+      ctx.shadowColor = 'rgba(255,182,193,0.8)'; // rosa pastel
+      ctx.shadowBlur = 8;
+      ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  resizeCanvas();
+  animateParticles();
+  window.addEventListener('resize', resizeCanvas);
+});
+</script>
+
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

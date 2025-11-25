@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Eventos - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/eventos.css">
+  </head>
+
+  <body>
+
+  <nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <seccion class="banner-patrimonio">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="Eventos img/eventos banner.png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+
+
+ <nav class="menu-cultura">
+  <ul>
+    <li><a href="#cab-eventos">🎊 Introducción</a></li>
+    <li><a href="#eventos-actuales">📣 Eventos Actuales</a></li>
+    <li><a href="#cab-eventos-culturales">🎭 Eventos Culturales</a></li>
+    <li><a href="#eventos-deportivos">⚽ Eventos Deportivos</a></li>
+    
+  </ul>
+</nav>
+
+
+<section id="cab-eventos">
+  <div class="cab-eventos-header">
+    <h2>🎊 Eventos en Cabimas</h2>
+    <p class="cab-eventos-intro">
+      Cabimas vibra con fiestas, tradiciones y encuentros culturales que llenan de alegría nuestras calles. 
+      Desde el Carnaval y la Semana Santa, hasta las ferias gastronómicas y los festivales musicales, 
+      cada evento es una oportunidad para celebrar nuestra identidad y compartir con la comunidad.
+    </p>
+
+  </div>
+</section>
+
+<section id="eventos-actuales">
+  <h2 class="actual-title">📅 Eventos Actuales en Cabimas</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev">◀</button>
+    <div class="carousel-track">
+      
+      <!-- Evento 1 -->
+      <div class="actual-card" data-event="arte">
+        <div class="card-banner" style="background-image:url('https://somosnoticiascol.com/wp-content/uploads/2022/09/307541570_634933328254779_8950473218820057252_n-1024x576.jpg')">
+          <h3>Exposición de Arte Cabimense</h3>
+          <span class="date">12 de Marzo</span>
+          <span class="place">Casa de la Cultura</span>
+        </div>
+      </div>
+
+      <!-- Evento 2 -->
+      <div class="actual-card" data-event="gaitas">
+        <div class="card-banner" style="background-image:url('https://media.diarioversionfinal.com/wp-content/uploads/2025/07/Festival-Gaitas-19-07-2025.jpeg')">
+          <h3>Festival de Gaitas</h3>
+          <span class="date">18 de Noviembre</span>
+          <span class="place">Plaza Bolívar</span>
+        </div>
+      </div>
+
+      <!-- Evento 3 -->
+      <div class="actual-card" data-event="teatro">
+        <div class="card-banner" style="background-image:url('https://somosnoticiascol.com/wp-content/uploads/2022/04/8c928d11-bb46-43e6-8762-9456105248d6.jpg')">
+          <h3>Obra de Teatro Comunitaria</h3>
+          <span class="date">5 de Junio</span>
+          <span class="place">Teatro Municipal</span>
+        </div>
+      </div>
+
+      <!-- Evento 3 -->
+      <div class="actual-card" data-event="cover">
+        <div class="card-banner" style="background-image:url('https://somosnoticiascol.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-10-at-8.14.51-PM-1-918x1024.jpeg')">
+          <h3> Cover Gaitero 2025</h3>
+          <span class="date">20 de diciembre de 2025</span>
+          <span class="place">Concejo Municipal de Cabimas</span>
+        </div>
+      </div>
+
+      <!-- Evento 3 -->
+      <div class="actual-card" data-event="latido">
+        <div class="card-banner" style="background-image:url('https://confirmado.com.ve/conf/conf-upload/uploads/2025/11/WhatsApp-Image-2025-11-18-at-11.25.26-AM-e1763481340197.jpeg')">
+          <h3>Latido Music Fest 2025</h3>
+          <span class="date">18 de noviembre</span>
+          <span class="place">Teatro Municipal Javier Fernández</span>
+        </div>
+      </div>
+
+      <!-- Evento 3 -->
+      <div class="actual-card" data-event="black">
+        <div class="card-banner" style="background-image:url('https://multimax.com.ve/wp-content/uploads/2022/11/MULTIMAX-BLACK-FRIDAY-2.jpg')">
+          <h3>Black Friday</h3>
+          <span class="date">28 de noviembre</span>
+          <span class="place">Ofertas en MultiMax, Traki y tiendas locales.</span>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-btn next">▶</button>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="event-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-date"></p>
+    <p id="modal-place"></p>
+    <p id="modal-desc"></p>
+    <p id="modal-time"></p>
+    <a id="modal-link" href="#" target="_blank">Más información</a>
+  </div>
+</div>
+
+
+
+
+<section id="cab-eventos-culturales">
+  <div class="hero-intro">
+    <h2>🎊 Festividades de Cabimas</h2>
+    <p>Explora las celebraciones culturales, patrias y religiosas que iluminan nuestra ciudad cada año.</p>
+  </div>
+
+  <!-- Tarjetas festivas -->
+  <div class="cards-container">
+    <!-- Día de Reyes -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://diocesisvitoria.org/wp-content/uploads/2024/01/3217960-1600x1067.jpg')">
+        <h3>Día de Reyes</h3>
+      </div>
+      <div class="card-back">
+        <h4>6 de Enero</h4>
+        <p>Se celebra la llegada de los Reyes Magos con actividades infantiles, cantos tradicionales y representaciones teatrales. En muchas comunidades se organizan juegos, se entregan regalos simbólicos a los niños y se realizan misas especiales.</p>
+      </div>
+    </div>
+
+    <!-- Carnaval -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://digital58.com.ve/site/wp-content/uploads/2025/03/carnaval-alcaldia-3-800x445.webp')">
+        <h3>Carnaval</h3>
+      </div>
+      <div class="card-back">
+        <h4>Febrero</h4>
+        <p>Una de las fiestas más coloridas del año. Se organizan desfiles con carrozas, comparsas y disfraces. Las calles se llenan de música, bailes y conciertos comunitarios. Es un tiempo de alegría, creatividad y celebración popular que antecede a la Cuaresma.</p>
+      </div>
+    </div>
+
+    <!-- Semana Santa -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://i0.wp.com/cronica.uno/wp-content/uploads/2022/04/Misa-Semana-Santa-A.jpg?fit=2500%2C1667&quality=89&ssl=1')">
+        <h3>Semana Santa</h3>
+      </div>
+      <div class="card-back">
+        <h4>Marzo/Abril</h4>
+        <p>Se viven días de recogimiento y fe. Se realizan procesiones religiosas como el Vía Crucis, misas solemnes, vigilias y actos de reflexión. En Cabimas, las comunidades se organizan para representar escenas bíblicas y acompañar las celebraciones con cantos y rezos.</p>
+      </div>
+    </div>
+
+    <!-- Independencia -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Cristobal_Rojas_01.JPG/250px-Cristobal_Rojas_01.JPG')">
+        <h3>Independencia</h3>
+      </div>
+      <div class="card-back">
+        <h4>5 de Julio</h4>
+        <p>Día de orgullo patrio. Se celebran actos oficiales, desfiles escolares y militares, izada de bandera y actividades culturales en plazas públicas. Es una fecha que recuerda la firma del Acta de Independencia y refuerza el sentido de libertad y soberanía.</p>
+      </div>
+    </div>
+
+    <!-- raza -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://avn.info.ve/wp-content/uploads/2024/10/Resistencia-Indigena-scaled-1.jpeg')">
+        <h3>Día de la Resistencia Indígena</h3>
+      </div>
+      <div class="card-back">
+        <h4>12 de octubre</h4>
+        <p>Sustituye al antiguo “Día de la Raza”, conmemorando la lucha de los pueblos originarios</p>
+      </div>
+    </div>
+
+    <!-- simon bolivr -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno%2C_Luis._1922%2C_Legislative_Palace%2C_La_Paz.png/250px-Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno%2C_Luis._1922%2C_Legislative_Palace%2C_La_Paz.png')">
+        <h3>Natalicio de Simón Bolívar</h3>
+      </div>
+      <div class="card-back">
+        <h4>24 de Julio</h4>
+        <p>Se honra al Libertador con actividades culturales, escolares y actos oficiales. </p>
+      </div>
+    </div>
+
+    <!-- Chinita -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://www.venelogia.com/uploads/Chinita.jpg')">
+        <h3> Feria de la Virgen de Chiquinquirá</h3>
+      </div>
+      <div class="card-back">
+        <h4>18 de Noviembre</h4>
+        <p>Una de las fiestas más grandes del Zulia. Se realizan misas solemnes, procesiones multitudinarias y conciertos de gaitas. Es el día en que la devoción mariana se une con la música tradicional, convirtiéndose en un símbolo cultural de la región.</p>
+      </div>
+    </div>
+
+    <!-- San Benito -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://i.ytimg.com/vi/_jWrZjICo7M/maxresdefault.jpg')">
+        <h3>Feria de San Benito</h3>
+      </div>
+      <div class="card-back">
+        <h4>27 de Diciembre</h4>
+        <p>Procesiones con tambores, danzas y celebraciones populares.</p>
+      </div>
+    </div>
+
+    <!-- Navidad -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://laverdad.com/wp-content/uploads/2024/10/ENCENDIDO-CABIMAS-9-R.webp')">
+        <h3>Navidad Cabimera</h3>
+      </div>
+      <div class="card-back">
+        <h4>24-25 de Diciembre</h4>
+        <p>Se realizan misas de aguinaldo, cantos de gaitas, encendido de luces y encuentros familiares. Es un día de celebración cristiana que conmemora el nacimiento de Jesús, acompañado de tradiciones locales que refuerzan la identidad cultural.</p>
+      </div>
+    </div>
+
+  <!-- fin de año -->
+    <div class="card">
+      <div class="card-front" style="background-image:url('https://i.pinimg.com/736x/87/44/e0/8744e06c2f2fcda62b5e08e785ae8d1a.jpg')">
+        <h3>Fin de año</h3>
+      </div>
+      <div class="card-back">
+        <h4>31 de Diciembre</h4>
+        <p>Se despide el año con reuniones familiares, cena especial, fuegos artificiales y tradiciones como comer las 12 uvas a la medianoche para pedir deseos. Es un momento de reflexión y celebración colectiva.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="calendar-section">
+  <h2 class="calendar-title">📅 Calendario Cultural de Cabimas</h2>
+  <div class="modern-calendar">
+    <div class="calendar-header">
+      <button id="prev-month">◀ Mes anterior</button>
+      <h3 id="calendar-label"></h3>
+      <button id="next-month">Mes siguiente ▶</button>
+    </div>
+    <div class="month-grid" id="calendar-grid"></div>
+  </div>
+</section>
+
+</section>
+
+
+<section id="eventos-deportivos">
+  <h2 class="sports-title">🏆 Eventos Deportivos de Cabimas</h2>
+  <p class="sports-intro">Descubre las competencias que llenan de energía y pasión nuestras calles y comunidades.</p>
+
+  <div class="sports-cards">
+    <!-- Fútbol -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://miradorinformativo.com/wp-content/uploads/2025/11/img-20251102-wa0313.jpg?w=863')">
+        <h3>Fútbol</h3>
+      </div>
+      <div class="card-back">
+        <h4>Torneos escolares y ligas menores</h4>
+        <p>Campeonatos de fútbol menor en Cabimas, partidos amistosos locales y torneos intercolegiales.</p>
+        <div class="mini-calendar">
+  <h5>Marzo</h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="empty"></div><div class="empty"></div><div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell event">15 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Béisbol -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://lh6.googleusercontent.com/proxy/WEczGm_4AnCzk4RwinLzsUNTommfeIILg6aN7HQiTU5HR0MdCTjEur7yQdDwEp7459AkssP7PqATuhNpjK32n03sW6gAYF_fSpfwSEwf5Ns7CGgD')">
+        <h3>Béisbol</h3>
+      </div>
+      <div class="card-back">
+        <h4>Ligas comunitarias y juveniles</h4>
+        <p>Juegos de ligas comunitarias y campeonatos juveniles que reúnen a la fanaticada local.</p>
+        <div class="mini-calendar">
+  <h5>Mayo</h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">20 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Baloncesto -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://diarioelregionaldelzulia.com/wp-content/uploads/2025/02/Cancha-Oscar-Cordero-de-Cabimas-sera-inaugurada-el-proximo-11-de-febrero-1-t.jpg')">
+        <h3>Baloncesto</h3>
+      </div>
+      <div class="card-back">
+        <h4>Torneos intercolegiales</h4>
+        <p>Competencias municipales e intercolegiales con equipos juveniles y adultos.</p>
+        <div class="mini-calendar">
+  <h5>Julio</h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">10 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Voleibol -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://diarioelregionaldelzulia.com/wp-content/uploads/2023/04/Campeonato-de-Voleibol-infantil-femenino-1-T.jpg')">
+        <h3>Voleibol</h3>
+      </div>
+      <div class="card-back">
+        <h4>Competencias playeras y escolares</h4>
+        <p>Torneos de voleibol en playas y canchas escolares, con gran participación juvenil.</p>
+        <div class="mini-calendar">
+  <h5>Agosto</h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">22 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Ciclismo -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://suresnoticia.com/wp-content/uploads/2025/09/IMG-20250901-WA0044.jpg')">
+        <h3>Ciclismo</h3>
+      </div>
+      <div class="card-back">
+        <h4>Vueltas ciclísticas locales</h4>
+        <p>Carreras urbanas y vueltas ciclísticas que recorren las principales avenidas de Cabimas.</p>
+        <div class="mini-calendar">
+  <h5>Septiembre </h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">12 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Maratones -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2024/06/Maraton-10K-Colegio-de-Medicos-Costa-Oriental-del-Lago-COMEZUCOL-2024-5-1.jpeg?fit=800%2C282&ssl=1')">
+        <h3>Maratones</h3>
+      </div>
+      <div class="card-back">
+        <h4>Maratón Virgen de la Chinita</h4>
+        <p>Caminatas y maratones vinculadas a fechas culturales, con participación masiva.</p>
+        <div class="mini-calendar">
+  <h5>Noviembre </h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">18 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Juegos tradicionales -->
+    <div class="sport-card">
+      <div class="card-front" style="background-image:url('https://i0.wp.com/mindeporte.gob.ve/wp-content/uploads/2024/10/IMG_1357.jpeg?fit=448%2C302&ssl=1')">
+        <h3>Juegos Tradicionales</h3>
+      </div>
+      <div class="card-back">
+        <h4>Bolas criollas y dominó</h4>
+        <p>Competiciones populares que forman parte de la identidad deportiva local.</p>
+       <div class="mini-calendar">
+  <h5>Diciembre</h5>
+  <div class="calendar-grid">
+    <div class="day">Lu</div><div class="day">Ma</div><div class="day">Mi</div><div class="day">Ju</div><div class="day">Vi</div><div class="day">Sa</div><div class="day">Do</div>
+    <div class="day-cell">1</div><div class="day-cell">2</div><div class="day-cell">3</div><div class="day-cell">4</div><div class="day-cell">5</div><div class="day-cell">6</div><div class="day-cell">7</div>
+    <div class="day-cell event">27 📍</div>
+    <!-- resto de días -->
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#F54927', '#F5BE27', '#000000', '#F52768']; 
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+
+animar();
+</script>
+
+<script>/* Calendario mural mes a mes con fechas fijas y navegación */
+const MONTH_NAMES = [
+  "Enero","Febrero","Marzo","Abril","Mayo","Junio",
+  "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+];
+let CURRENT_DATE = new Date(); // mes y año actual
+
+/* Fechas fijas que se repiten cada año */
+const FIXED_EVENTS = [
+  // Enero
+  { day: 6,  month: 1,  title: "Día de Reyes" },
+  { day: 28, month: 1,  title: "Día de la Zulianidad" },
+  // Febrero
+  { day: 2,  month: 2,  title: "Virgen de la Candelaria" },
+  // Marzo
+  { day: 12, month: 3,  title: "Día de la Bandera" },
+  // Julio
+  { day: 5,  month: 7,  title: "Independencia de Venezuela" },
+  { day: 16, month: 7,  title: "Virgen del Carmen" },
+  // Septiembre
+  { day: 24, month: 9,  title: "Nuestra Señora de las Mercedes" },
+  // Octubre (referencia al primer domingo)
+  { day: 1,  month: 10, title: "Virgen del Rosario (primer domingo)" },
+  // Noviembre
+  { day: 18, month: 11, title: "Virgen de Chiquinquirá (Chinita)" },
+  // Diciembre
+  { day: 24, month: 12, title: "Nochebuena" },
+  { day: 25, month: 12, title: "Navidad Cabimera" },
+  { day: 27, month: 12, title: "San Benito" },
+  { day: 31, month: 12, title: "Fin de Año" }
+];
+
+/* Ajuste: lunes como primer día */
+function mondayIndex(date) {
+  return (date.getDay() + 6) % 7;
+}
+
+/* Renderizar un mes */
+function renderMonth(date) {
+  const grid = document.getElementById('calendar-grid');
+  const label = document.getElementById('calendar-label');
+  grid.innerHTML = '';
+
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  label.textContent = `${MONTH_NAMES[month]} ${year}`;
+
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month+1, 0);
+  const startIndex = mondayIndex(firstDay);
+
+  // Relleno inicial
+  for (let i=0; i<startIndex; i++) {
+    const empty = document.createElement('div');
+    empty.className = 'day-cell empty';
+    grid.appendChild(empty);
+  }
+
+  // Días del mes
+  for (let d=1; d<=lastDay.getDate(); d++) {
+    const cell = document.createElement('div');
+    cell.className = 'day-cell';
+
+    const num = document.createElement('div');
+    num.className = 'day-number';
+    num.textContent = d;
+    cell.appendChild(num);
+
+    // Buscar evento fijo
+    const evt = FIXED_EVENTS.find(e => e.day===d && e.month===month+1);
+    if (evt) {
+      const marker = document.createElement('span');
+      marker.className = 'event-marker';
+      marker.textContent = '📍';
+      cell.appendChild(marker);
+
+      const title = document.createElement('div');
+      title.className = 'event-title';
+      title.textContent = evt.title;
+      cell.appendChild(title);
+    }
+
+    grid.appendChild(cell);
+  }
+}
+
+/* Navegación entre meses */
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('prev-month').addEventListener('click', () => {
+    CURRENT_DATE = new Date(CURRENT_DATE.getFullYear(), CURRENT_DATE.getMonth()-1, 1);
+    renderMonth(CURRENT_DATE);
+  });
+  document.getElementById('next-month').addEventListener('click', () => {
+    CURRENT_DATE = new Date(CURRENT_DATE.getFullYear(), CURRENT_DATE.getMonth()+1, 1);
+    renderMonth(CURRENT_DATE);
+  });
+  renderMonth(CURRENT_DATE);
+});
+
+
+</script>
+
+
+
+<script>
+  const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const cards = document.querySelectorAll('.actual-card');
+
+let index = 0;
+
+function updateCarousel() {
+  const cardWidth = document.querySelector('.actual-card').offsetWidth + 32;
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (index < track.children.length - 1) {
+    index++;
+    updateCarousel();
+  }
+});
+prevBtn.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+/* Modal */
+const modal = document.getElementById('event-modal');
+const closeBtn = document.querySelector('.close');
+const modalTitle = document.getElementById('modal-title');
+const modalDate = document.getElementById('modal-date');
+const modalPlace = document.getElementById('modal-place');
+const modalDesc = document.getElementById('modal-desc');
+const modalTime = document.getElementById('modal-time');
+const modalLink = document.getElementById('modal-link');
+
+const eventDetails = {
+  arte: {
+    title: "Exposición de Arte Cabimense",
+    date: "12 de Marzo",
+    place: "Casa de la Cultura",
+    desc: "Muestra de artistas locales con pintura, escultura y fotografía.",
+    time: "Horario: 10:00 AM - 6:00 PM",
+    link: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsomosnoticiascol.com%2Fzulia%2Fmunicipio-cabimas-presentan-exposicion-artistica-cultural-en-cabimas-en-el-marco-del-dia-internacional-de-la-paz%2F69886%2F&psig=AOvVaw35zAvcUyrpLqfP8Pba5-U1&ust=1764014134190000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCLj2pcGGiZEDFQAAAAAdAAAAABAE"
+  },
+  gaitas: {
+    title: "Festival de Gaitas",
+    date: "18 de Noviembre",
+    place: "Plaza Bolívar",
+    desc: "Concierto de agrupaciones gaiteras en honor a la Virgen de Chiquinquirá.",
+    time: "Horario: 7:00 PM",
+    link: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdiarioversionfinal.com%2Fciudad%2Ffinalistas-del-i-festival-nacional-de-gaitas-son-de-maracaibo-san-francisco-mara-y-cabimas%2F&psig=AOvVaw0kHN9sMQ-qkUMA9tw8h-L9&ust=1764014087158000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCNDT86qGiZEDFQAAAAAdAAAAABAR"
+  },
+  teatro: {
+    title: "Obra de Teatro Comunitaria",
+    date: "5 de Junio",
+    place: "Teatro Municipal",
+    desc: "Presentación teatral con actores locales, enfocada en tradiciones cabimenses.",
+    time: "Horario: 6:30 PM",
+    link: "https://somosnoticiascol.com/principal/realizan-obra-de-teatro-las-ensenanzas-de-jesus-en-el-marco-de-los-domingos-culturales/54003/"
+  },
+
+  cover: {
+    title: "Cover Gaitero 2025",
+    date: "20 de diciembre de 2025",
+    place: "Concejo Municipal de Cabimas",
+    desc: "Lanzamiento del Cover Gaitero 2025 en honor al 267° aniversario de Cabimas y al 70° aniversario del Barrio Obrero, ícono gaitero de la región.",
+    time: "Horario: 6:30 PM",
+    link: "https://somosnoticiascol.com/principal/municipio-cabimas-nuevo-cover-gaitero-homenajeara-a-la-ciudad-por-su-aniversario-267/226238/"
+  },
+
+  latido: {
+    title: "Latido Music Fest 2025",
+    date: "18 de noviembre",
+    place: "Teatro Municipal Javier Fernández, en la avenida Independencia, Cabimas.",
+    desc: "Festival musical con artistas nacionales e internacionales, promoviendo valores de esperanza y unión familiar.",
+    time: "Horario: 6:30 PM",
+    link: "https://noticias24venezuela.net/2025/11/18/latido-music-fest-2025-reunio-a-miles-en-zulia/"
+  },
+
+  black: {
+    title: "Black Friday",
+    date: "28 de noviembre de 2025",
+    place: "Ofertas en MultiMax, Traki y tiendas locales.",
+    desc: "El Black Friday 2025 será el viernes 28 de noviembre, y en Cabimas los comercios locales suelen sumarse con ofertas durante todo ese fin de semana",
+    time: "Promociones hasta el fin de semana (29–30 noviembre)",
+    link: "https://multimax.com.ve/black-friday-multimax-desbordo-venezuela/"
+  }
+};
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const eventKey = card.getAttribute('data-event');
+    const details = eventDetails[eventKey];
+
+    // Insertar detalles en el modal
+    modalTitle.textContent = details.title;
+    modalDate.textContent = "📅 " + details.date;
+    modalPlace.textContent = "📍 " + details.place;
+    modalDesc.textContent = details.desc;
+    modalTime.textContent = details.time;
+    modalLink.href = details.link;
+
+    // Mostrar modal con animación
+    modal.style.display = "block";
+  });
+});
+
+// Cerrar modal al presionar la X
+closeBtn.addEventListener('click', () => {
+  modal.style.display = "none";
+});
+
+// Cerrar modal al hacer clic fuera del contenido
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+
+  let autoScroll; // variable para el intervalo automático
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    index++;
+    if (index >= track.children.length) {
+      index = 0; // 🔄 volver al inicio
+    }
+    updateCarousel();
+  }, 3000); // cada 3 segundos se mueve
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScroll);
+}
+
+// Iniciar auto scroll al cargar
+startAutoScroll();
+
+// Pausar cuando el usuario pasa el mouse sobre el carrusel
+track.addEventListener('mouseenter', stopAutoScroll);
+track.addEventListener('mouseleave', startAutoScroll);
+
+});
+
+
+
+
+</script>
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+</body>
+
+</html>

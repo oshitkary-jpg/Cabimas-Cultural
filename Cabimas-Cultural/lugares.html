@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>lugares - Cabimas Cultural</title>
+  <link rel="stylesheet" href="css/lugares.css">
+  </head>
+
+  <body>
+
+  <nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú horizontal (PC) -->
+  <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <seccion class="banner-patrimonio">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="lugares img/lugares banner.png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+
+
+ <nav class="menu-cultura">
+  <ul>
+    <li><a href="#cab-gastro-intro">🛣️ Introducción</a></li>
+    <li><a href="#plazas-carrusel">🛝 Plazas</a></li>
+    <li><a href="#mapa-historico"> 🕌 Lugares Históricos</a></li>
+    <li><a href="#galeria-cultural">🎴 Zonas culturales y recreacionales</a></li>
+    
+  </ul>
+</nav>
+
+<!-- Introducción Gastronomía -->
+<section id="cab-gastro-intro">
+  <div class="cab-gastro-overlay">
+    <h2 class="cab-gastro-titulo">🌇 Lugares de Cabimas</h2>
+    <p class="cab-gastro-texto">
+      Cabimas es una ciudad que vibra con historia, cultura y paisajes únicos. 
+      Sus plazas, monumentos y rincones nos invitan a descubrir la esencia zuliana 
+      en cada paso.
+    </p>
+  </div>
+</section>
+
+<section id="plazas-carrusel">
+  <h2 class="plazas-title">🌳 Plazas Emblemáticas de Cabimas</h2>
+  
+  <div class="carousel-container">
+    <button class="carousel-btn prev">🌳</button>
+    <div class="carousel-track">
+      
+      <!-- Plaza Bolívar -->
+      <div class="plaza-slide" style="background-image:url('https://images.hive.blog/DQmfTxcGjbsopcYs4vwhikSGAqrR4XMhL7P8Cyzh3QjqWWn/20240113_105938.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza Bolívar</h3>
+          <p class="poetic">“Donde la historia respira y la patria se celebra.”</p>
+          <p class="details">
+            📍 Dirección: Centro de Cabimas, frente a la Catedral.<br>
+            🏛️ Fundada: Siglo XX, en honor a Simón Bolívar.<br>
+            ✨ Significado: Escenario de actos patrios y símbolo de identidad nacional.
+          </p>
+          <a class="map-btn" href="https://maps.google.com?q=Plaza+Bolivar+Cabimas" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza Concordia -->
+      <div class="plaza-slide" style="background-image:url('https://primeraedicioncol.com/wp-content/uploads/2022/11/wp-1669221327870.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza Alí Primera</h3>
+          <p class="poetic">“Donde la fe y la comunidad se abrazan.”</p>
+          <p class="details">
+            📍 Dirección: Sector Concordia, Cabimas.<br>
+            🏛️ Fundada: Iniciativa comunitaria en el siglo XX.<br>
+            ✨ Significado: Espacio de celebraciones religiosas y ferias populares.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/BYuz7H3n6quyvh818" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+       <!-- plaza ecologica -->
+      <div class="plaza-slide" style="background-image:url('https://pbs.twimg.com/media/EMEWZXkX0AI0izc.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza ecológica de Cabimas</h3>
+          <p class="poetic">“Un respiro verde en medio del petróleo.”</p>
+          <p class="details">
+            📍 Dirección: Av. Intercomunal, cerca del Colegio Fe y Alegría.<br>
+            🏛️ Fundada: Creada como espacio verde urbano en las últimas décadas.<br>
+            ✨ Significado: Representa el compromiso ambiental de la ciudad, ofreciendo un pulmón natural y un lugar de encuentro comunitario en medio de la expansión petrolera.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/LWWwe79m3i35jRZ46" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+       <!-- Plaza barroso -->
+      <div class="plaza-slide" style="background-image:url('https://revista.drclas.harvard.edu/files/2021/06/Plaza-el-Barroso.jpeg')">
+        <div class="plaza-overlay">
+          <h3>Plaza El Barroso</h3>
+          <p class="poetic">“Aquí nació la Venezuela petrolera.”</p>
+          <p class="details">
+            📍 Dirección: Av. Intercomunal, Sector Santa Clara (frente al pozo histórico Barroso II)<br>
+            🏛️ Fundada:  Conmemora el reventón del pozo Barroso II en 1922.<br>
+            ✨ Significado: Marca el inicio de la era petrolera en Venezuela, recordando cómo Cabimas se convirtió en epicentro de la industria energética.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/PgAXsqEH5rjPbtQS6" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza el leon y la cruz -->
+      <div class="plaza-slide" style="background-image:url('https://pbs.twimg.com/media/DmbbDEXX4AA4w6Q.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza El León y La Cruz</h3>
+          <p class="poetic">“Fuerza y fe, símbolos de Cabimas.”</p>
+          <p class="details">
+            📍 Dirección: Av. Andrés Bello, diagonal a la Catedral de Cabimas<br>
+            🏛️ Fundada: Vinculada a la tradición religiosa local.<br>
+            ✨ Significado: El león simboliza fuerza y la cruz la fe cristiana, reflejando la unión de valores espirituales y culturales.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/N1feYEyWszuZMfa67" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza estrada de cabimas -->
+      <div class="plaza-slide" style="background-image:url('https://pbs.twimg.com/media/DVW3UEXXcAIxKAh.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza Entrada a CABIMAS</h3>
+          <p class="poetic">“La puerta que anuncia identidad cabimense.”</p>
+          <p class="details">
+            📍 Dirección: Av. Intercomunal, límite con el municipio Lagunillas<br>
+            🏛️ Fundada: Diseñada como punto de bienvenida a la ciudad.<br>
+            ✨ Significado: Representa la identidad cabimense y funciona como hito urbano para quienes ingresan al municipio.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/dPJ48HJFZjUjtDrz9" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza corito -->
+      <div class="plaza-slide" style="background-image:url('img/plaza-concordia.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza La Cruz de Corito</h3>
+          <p class="poetic">- “Devoción popular que une generaciones.”</p>
+          <p class="details">
+            📍 Dirección:Barrio Corito, Calle Principal<br>
+            🏛️ Fundada: Erigida en torno a la devoción popular a la Cruz de Corito.<br>
+            ✨ Significado: Espacio de peregrinación y fe, donde se celebran actos religiosos que refuerzan la tradición espiritual de Cabimas.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/P9oLVs7v1kkz5xzt5" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza galileo -->
+      <div class="plaza-slide" style="background-image:url('img/plaza-concordia.jpg')">
+        <div class="plaza-overlay">
+          <h3>C.C. Galileo Plaza</h3>
+          <p class="poetic">“Encuentro moderno con alma de plaza.”</p>
+          <p class="details">
+            📍 Dirección: Av. Intercomunal, Sector Las 40<br>
+            🏛️ Fundada: Construida como parte del desarrollo comercial moderno.<br>
+            ✨ Significado: Aunque es un centro comercial, su nombre y diseño evocan la idea de plaza como espacio de encuentro, mezclando consumo y convivencia.
+          </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/j6w3qG47t8nFU5sXA" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza del amor -->
+      <div class="plaza-slide" style="background-image:url('img/plaza-concordia.jpg')">
+        <div class="plaza-overlay">
+          <h3>La plaza del amor</h3>
+          <p class="poetic">“Un rincón para celebrar la unión.”</p>
+          <p class="details">
+            📍 Dirección:  Calle 5, Sector La Rosa Vieja<br>
+            🏛️ Fundada: Creada como espacio comunitario reciente.<br>
+            ✨ Significado: Su nombre refleja la intención de ser un lugar de unión, paz y afecto entre los habitantes.</p>
+          <a class="map-btn" href="https://maps.app.goo.gl/38UpkaawXiRJUeZu5" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+       <!-- Plaza Rafael urdaneta -->
+      <div class="plaza-slide" style="background-image:url('img/plaza-concordia.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza Rafael Urdaneta</h3>
+          <p class="poetic">“Un respiro verde en medio del petróleo.”</p>
+          <p class="details">
+            📍 Dirección: -  Av. Independencia, diagonal al Liceo Rafael Urdaneta<br>
+            🏛️ Fundada: Erigida en honor al prócer zuliano Rafael Urdaneta, uno de los más fieles oficiales de Simón Bolívar<br>
+            ✨ Significado: Representa la memoria histórica y el orgullo zuliano, recordando la lealtad y disciplina de Urdaneta como símbolo de identidad regional.</p>
+          <a class="map-btn" href="https://maps.app.goo.gl/trj4paNDLeVoCMF99" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza infantil el solito -->
+      <div class="plaza-slide" style="background-image:url('img/plaza-concordia.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza infantil El Solito</h3>
+          <p class="poetic">“El Solito: donde la infancia juega con la memoria del barrio.”</p>
+          <p class="details">
+            📍 Dirección: Sector El Solito, entrada principal por la Calle Carabobo, entre Barrio Obrero y Miraflores.<br>
+            🏛️ Fundada: Creada como espacio recreativo para los niños del sector, en una zona que nació de viviendas construidas por el INAVI en las décadas recientes.<br>
+            ✨ Significado: Su nombre proviene del antiguo abasto “El Solito”, único establecimiento en el terreno antes de urbanizarse. </p>
+          <a class="map-btn" href="https://maps.app.goo.gl/4yacHNg1SwuqWzJD6" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+      <!-- Plaza San Benito -->
+      <div class="plaza-slide" style="background-image:url('https://primeraedicioncol.com/wp-content/uploads/2023/12/IMG_20231226_122548.jpg')">
+        <div class="plaza-overlay">
+          <h3>Plaza San Benito</h3>
+          <p class="poetic">“Tambor resonante.”</p>
+          <p class="details">
+            📍 Dirección: Av. Principal de la Urbanización San Benito (“Las Casitas”), cerca del CEI Santo Domingo Savio<br>
+            🏛️ Fundada: - Construida como espacio comunitario en la urbanización fundada en el año 2000, dedicada al santo de gran devoción popular, San Benito de Palermo.<br>
+            ✨ Significado:Es epicentro de las fiestas de San Benito, donde la música de tambores y la fe afrovenezolana se mezclan con la identidad cabimense.</p>
+          <a class="map-btn" href="https://maps.app.goo.gl/KsgvYULovPRcNH9c8" target="_blank">Ver ubicación</a>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-btn next">🏛️</button>
+  </div>
+</section>
+
+<section id="mapa-historico">
+  <h2 class="map-title">🏛️ Lugares históricos de Cabimas</h2>
+
+  <div class="map-wrapper">
+    <div class="map-viewport">
+      <!-- Imagen estilizada del mapa (reemplaza por tu render) -->
+      <img class="map-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Panoramica_de_cabimas_hacia_el_oeste.png" alt="Mapa estilizado de Cabimas" />
+
+      <!-- Marcadores (se insertan por JS) -->
+      <div class="markers-layer"></div>
+    </div>
+
+    <!-- Popup de lugar -->
+    <div class="popup-card" aria-hidden="true">
+      <button class="popup-close" aria-label="Cerrar">×</button>
+      <div class="popup-media">
+        <img id="popup-photo" src="" alt="Foto histórica" />
+      </div>
+      <div class="popup-content">
+        <h3 id="popup-title"></h3>
+        <p id="popup-history" class="popup-text"></p>
+        <p id="popup-significance" class="popup-text"></p>
+        <div class="popup-actions">
+          <a id="popup-route" class="route-btn" target="_blank">Ver ruta en Google Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles de zoom y reset -->
+    <div class="map-controls">
+      <button class="zoom-btn in" aria-label="Acercar">＋</button>
+      <button class="zoom-btn out" aria-label="Alejar">－</button>
+      <button class="zoom-btn reset" aria-label="Reiniciar">⟲</button>
+    </div>
+  </div>
+</section>
+
+<section id="galeria-cultural">
+  <h2 class="galeria-title">🎭 Lugares culturales y recreacionales de Cabimas</h2>
+  <div class="galeria-grid">
+    
+    <!-- Boulevard Costanero -->
+    <div class="galeria-card">
+      <img src="img/boulevard-costanero.jpg" alt="Boulevard Costanero">
+      <div class="card-overlay">
+        <h3>Boulevard Costanero</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Orilla del Lago de Maracaibo, Cabimas.</p>
+        <p><strong>Fundación:</strong> Década de 1990.</p>
+        <p><strong>Historia:</strong> Paseo urbano creado para el disfrute frente al lago.</p>
+        <p><strong>Significado:</strong> Símbolo de recreación y contacto con la naturaleza.</p>
+        <a href="https://maps.google.com?q=Boulevard+Costanero+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Boulevard San José -->
+    <div class="galeria-card">
+      <img src="img/boulevard-san-jose.jpg" alt="Boulevard San José">
+      <div class="card-overlay">
+        <h3>Boulevard San José</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Sector San José, Cabimas.</p>
+        <p><strong>Fundación:</strong> Finales del siglo XX.</p>
+        <p><strong>Historia:</strong> Espacio comunitario para ferias y actividades culturales.</p>
+        <p><strong>Significado:</strong> Punto de encuentro popular y festivo.</p>
+        <a href="https://maps.google.com?q=Boulevard+San+Jose+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Muelle de Cabimas -->
+    <div class="galeria-card">
+      <img src="https://i0.wp.com/primeraedicioncol.com/wp-content/uploads/2024/02/Ruta-lacustre-Cabimas-Maracaibo-1.jpeg?fit=800%2C284&ssl=1" alt="Muelle de Cabimas">
+      <div class="card-overlay">
+        <h3>Muelle de Cabimas</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Costanera del Lago de Maracaibo.</p>
+        <p><strong>Fundación:</strong> Siglo XX.</p>
+        <p><strong>Historia:</strong> Punto de embarque y conexión con el lago.</p>
+        <p><strong>Significado:</strong> Símbolo de la relación de Cabimas con el Lago.</p>
+        <a href="https://maps.app.goo.gl/1LRRvDTPA2KW9Ek29" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Museo Petrolero -->
+    <div class="galeria-card">
+      <img src="https://diarioelregionaldelzulia.com/wp-content/uploads/2025/02/Restauran-Museo-Petrolero-Alberto-Lovera-de-la-Terminal-de-Cabimas-1-t.jpg" alt="Museo Petrolero de Cabimas">
+      <div class="card-overlay">
+        <h3>Museo Petrolero</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Sector La Rosa, Cabimas.</p>
+        <p><strong>Fundación:</strong> Década de 1980.</p>
+        <p><strong>Historia:</strong> Espacio dedicado a la memoria de la industria petrolera.</p>
+        <p><strong>Significado:</strong> Testimonio del impacto del petróleo en la ciudad.</p>
+        <a href="https://maps.app.goo.gl/3QmfzK7eeaGgSKmQ6" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Parque La Vereda del Lago -->
+    <div class="galeria-card">
+      <img src="img/vereda-lago.jpg" alt="Parque La Vereda del Lago Cabimas">
+      <div class="card-overlay">
+        <h3>Parque La Vereda del Lago</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Costanera del Lago, Cabimas.</p>
+        <p><strong>Fundación:</strong> Siglo XXI.</p>
+        <p><strong>Historia:</strong> Parque recreacional inspirado en el de Maracaibo.</p>
+        <p><strong>Significado:</strong> Espacio verde para la familia y el deporte.</p>
+        <a href="https://maps.google.com?q=Parque+La+Vereda+del+Lago+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Costa Mall -->
+    <div class="galeria-card">
+      <img src="https://rossettiangelo.com/wp-content/uploads/2023/04/340841965_6001108906608842_4668782970855510273_n-gigapixel-standard-width-1240px.jpg" alt="Centro Comercial Costa Mall">
+      <div class="card-overlay">
+        <h3>Costa Mall</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Av. Intercomunal, Cabimas.</p>
+        <p><strong>Fundación:</strong> 2000s.</p>
+        <p><strong>Historia:</strong> Centro comercial moderno con tiendas y entretenimiento.</p>
+        <p><strong>Significado:</strong> Símbolo de modernidad y consumo urbano.</p>
+        <a href="https://maps.google.com?q=Costa+Mall+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Laguna Azul -->
+    <div class="galeria-card">
+      <img src="https://diarioversionfinal.com/wp-content/uploads/2017/04/WhatsApp-Image-2017-04-06-at-6.42.29-PM.jpeg" alt="Laguna Azul Cabimas">
+      <div class="card-overlay">
+        <h3>Laguna Azul</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Sector Lagunillas, Cabimas.</p>
+        <p><strong>Fundación:</strong> Espacio natural.</p>
+        <p><strong>Historia:</strong> Laguna natural convertida en atractivo recreacional.</p>
+        <p><strong>Significado:</strong> Contacto con la naturaleza y turismo local.</p>
+        <a href="https://maps.google.com?q=Laguna+Azul+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- CC Borjas -->
+    <div class="galeria-card">
+      <img src="https://cdn.remax.com.ve/api/novus/inmuebles_usados/295862/G_0_c955b8a3426752d67fba9507b7f1bf.jpeg" alt="Centro Comercial Borjas">
+      <div class="card-overlay">
+        <h3>CC Borjas</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Av. Principal Borjas, Cabimas.</p>
+        <p><strong>Fundación:</strong> 2000s.</p>
+        <p><strong>Historia:</strong> Centro comercial con tiendas locales.</p>
+        <p><strong>Significado:</strong> Espacio de comercio y encuentro social.</p>
+        <a href="https://maps.google.com?q=CC+Borjas+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+
+    <!-- Estadio Víctor Dabalillo -->
+    <div class="galeria-card">
+      <img src="https://diarioelregionaldelzulia.com/wp-content/uploads/2022/10/ESTADIO-VICTOR-DAVALILLO-1-T.jpg" alt="Estadio Víctor Dabalillo">
+      <div class="card-overlay">
+        <h3>Estadio Víctor Dabalillo</h3>
+        <button class="info-btn">Ver más</button>
+      </div>
+      <div class="card-info">
+        <p><strong>Dirección:</strong> Av. Intercomunal, Cabimas.</p>
+        <p><strong>Fundación:</strong> Siglo XX.</p>
+        <p><strong>Historia:</strong> Estadio deportivo para béisbol y eventos.</p>
+        <p><strong>Significado:</strong> Símbolo del deporte y orgullo cabimense.</p>
+        <a href="https://maps.google.com?q=Estadio+Victor+Dabalillo+Cabimas" target="_blank" class="map-btn">Ubicación</a>
+      </div>
+    </div>
+  </div>
+</section>
+        
+ <!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#F54927', '#F5BE27', '#000000', '#F52768']; 
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+
+animar();
+</script>
+
+<script>// Carrusel inmersivo de plazas con bucle infinito, auto-scroll, pausa en hover, teclado y swipe
+
+const track = document.querySelector('#plazas-carrusel .carousel-track');
+const slides = document.querySelectorAll('#plazas-carrusel .plaza-slide');
+const prevBtn = document.querySelector('#plazas-carrusel .carousel-btn.prev');
+const nextBtn = document.querySelector('#plazas-carrusel .carousel-btn.next');
+const container = document.querySelector('#plazas-carrusel .carousel-container');
+
+let index = 0;
+let autoScroll = null;
+const intervalMs = 5000;
+
+// Actualiza la posición del carrusel (cada slide ocupa 100% del ancho)
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Mover a la siguiente/previa plaza con bucle infinito
+function goNext() {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+}
+function goPrev() {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+// Auto-scroll
+function startAutoScroll() {
+  stopAutoScroll();
+  autoScroll = setInterval(goNext, intervalMs);
+}
+function stopAutoScroll() {
+  if (autoScroll) clearInterval(autoScroll);
+  autoScroll = null;
+}
+
+// Pausa al pasar el mouse por el carrusel
+container.addEventListener('mouseenter', stopAutoScroll);
+container.addEventListener('mouseleave', startAutoScroll);
+
+// Navegación con botones
+nextBtn.addEventListener('click', goNext);
+prevBtn.addEventListener('click', goPrev);
+
+// Navegación con teclado (izquierda/derecha)
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') goNext();
+  if (e.key === 'ArrowLeft') goPrev();
+});
+
+// Pausar auto-scroll si la pestaña no está visible
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopAutoScroll();
+  } else {
+    startAutoScroll();
+  }
+});
+
+// Touch/Swipe en móviles
+let startX = 0;
+let isSwiping = false;
+
+container.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+    stopAutoScroll(); // pausamos mientras se hace swipe
+  }
+}, { passive: true });
+
+container.addEventListener('touchmove', (e) => {
+  // Opcional: podrías añadir arrastre visual aquí
+}, { passive: true });
+
+container.addEventListener('touchend', (e) => {
+  if (!isSwiping) return;
+  const endX = e.changedTouches[0].clientX;
+  const delta = endX - startX;
+
+  // Umbral de swipe para evitar falsos positivos
+  const threshold = 40;
+  if (delta < -threshold) {
+    goNext();
+  } else if (delta > threshold) {
+    goPrev();
+  }
+  isSwiping = false;
+  startAutoScroll();
+});
+
+// Ajuste inicial
+updateCarousel();
+startAutoScroll();
+
+// Mejora: al redimensionar, mantener posición (por si cambian estilos)
+window.addEventListener('resize', () => {
+  updateCarousel();
+});
+</script>
+
+<script>// Data de lugares históricos: nombre, posición relativa (x,y en %), imagen, historia, significado y link
+const lugares = [
+  { nombre: "Catedral de la virgen del Rosario", x: 20, y: 30,
+    foto: "https://images.hive.blog/DQmT6kPWgamheD586WExwya4RAJ3s55uNnsNbrRbGCiC4rg/20240113_105202.jpg",
+    historia: "Templo emblemático de Cabimas, punto de encuentro espiritual y cultural.",
+    significado: "Símbolo de fe y tradición, epicentro de celebraciones religiosas.",
+    link: "https://www.google.com/maps/search/?api=1&query=Catedral+de+Nuestra+Se%C3%B1ora+del+Rosario+Cabimas" },
+
+  { nombre: "Pozo Barroso II", x: 65, y: 25,
+    foto: "https://pbs.twimg.com/media/BsIXy1TIUAAbrTF.png",
+    historia: "Conocido por el reventón petrolero de 1922 que marcó la historia energética del país.",
+    significado: "Hito del boom petrolero y del desarrollo industrial zuliano.",
+    link: "https://www.google.com/maps/search/?api=1&query=Pozo+Barroso+II+Cabimas" },
+
+  { nombre: "Campo Hollywood (antiguo campamento petrolero)", x: 75, y: 40,
+    foto: "https://c.files.bbci.co.uk/A888/production/_90444134_2.jpg",
+    historia: "Antiguo asentamiento de trabajadores petroleros, con arquitectura de época.",
+    significado: "Memoria de la vida obrera y de la industria en expansión.",
+    link: "https://www.google.com/maps/search/?api=1&query=Campo+Hollywood+Cabimas" },
+
+  { nombre: "Las Cúpulas", x: 30, y: 45,
+    foto: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgN3sJeoSqwxCscaDaSRHatDZdBUE-CbCPrm0InP1a0kb7aJ2d5IQRVYPCYQ4VCxSjWZoOeH0QXbjNqVFkmrudOMItSSkP7S5Z5bfheJXiIRty9_PIjtg4j0d6O1EUuCf8ua1DPQgsZReM/s1600/IMG_6010.JPG",
+    historia: "Estructuras distintivas asociadas a la tradición urbana cabimense.",
+    significado: "Iconos arquitectónicos de identidad local.",
+    link: "https://www.google.com/maps/search/?api=1&query=Las+C%C3%BApulas+Cabimas" },
+
+  { nombre: "Casa Parroquial de La Rosa", x: 40, y: 35,
+    foto: "img/historico/casa-parroquial-rosa.jpg",
+    historia: "Espacio clerical histórico vinculado a la vida comunitaria de La Rosa.",
+    significado: "Testimonio de organización parroquial y tejido social.",
+    link: "https://www.google.com/maps/search/?api=1&query=Casa+Parroquial+de+La+Rosa+Cabimas" },
+
+  { nombre: "Centro Histórico de La Rosa", x: 55, y: 43,
+    foto: "img/historico/centro-historico-rosa.jpg",
+    historia: "Núcleo urbano tradicional con comercio, culto y encuentro.",
+    significado: "Corazón histórico y cultural del sector La Rosa.",
+    link: "https://www.google.com/maps/search/?api=1&query=Centro+Hist%C3%B3rico+de+La+Rosa+Cabimas" },
+
+  { nombre: "Iglesia San Juan Bautista", x: 50, y: 45,
+    foto: "https://diocesisdecabimas.com/wp-content/uploads/2023/08/photo_2023-08-23_09-11-25.jpg",
+    historia: "Templo con arraigo comunitario y celebraciones tradicionales.",
+    significado: "Lugar de fe que articula la vida barrial.",
+    link: "https://www.google.com/maps/search/?api=1&query=Iglesia+San+Juan+Bautista+Cabimas" },
+
+  { nombre: "Antiguo Cine Teatro Cabimas", x: 58, y: 47,
+    foto: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjb9pgl0ZMxKl-f9XhX5oztrtvNL-vdjfJS5eRbXBNc2U6OE6_gVqfMWib7Y1ODCyuKb5vUelh_uOA_CW69TkDolrOzXIlj-BYZi9k9pWyoAmYzFyD3T8MoN3PoIZkiWjsxVgur6RKi3w/s320/cine+la+fuente.jpg",
+    historia: "Emblemático recinto de artes escénicas y cine del siglo XX.",
+    significado: "Memoria de la vida cultural y entretenimiento de la ciudad.",
+    link: "https://www.google.com/maps/search/?api=1&query=Cine+Teatro+Cabimas" },
+
+
+  { nombre: "Antiguo Mercado Municipal de Cabimas", x: 48, y: 50,
+    foto: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCZ6pFs3_xyoS_Sb-5enmfcd6PF1dZSKAbBxW29ZGjG7kgwLewQQ7ixlcqAWXemkwYJtNo_wqCfMJPdBEIzx33-IL-PyXnWHMBVMGaR0MZFmQEpZEHi01-kBTOX-6UDhxZuLMkYMAfIN0/s1600/mercado+libre+cabimas.jpg",
+    historia: "Centro tradicional de intercambio comercial.",
+    significado: "Espacio de vida cotidiana y economía local.",
+    link: "https://www.google.com/maps/search/?api=1&query=Mercado+Municipal+de+Cabimas" },
+
+  { nombre: "Iglesia San José Obrero", x: 46, y: 54,
+    foto: "https://diarioelregionaldelzulia.com/wp-content/uploads/2024/08/4.jpg",
+    historia: "Templo asociado a la devoción y al trabajo comunitario.",
+    significado: "Referente de espiritualidad obrera.",
+    link: "https://www.google.com/maps/search/?api=1&query=Iglesia+San+Jos%C3%A9+Obrero+Cabimas" },
+
+  { nombre: "Pozo La Rosa N°1 (primer pozo perforado)", x: 57, y: 58,
+    foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtK_i8YMV6wvUo53UGUv4uoqaEA5DGVvvNmVYkWFFy-evTLTJhR1Hl0pvjwTm1ZaSc9m4&usqp=CAU",
+    historia: "Primer pozo perforado en Cabimas, antecedente del auge petrolero.",
+    significado: "Orígenes de la industria y transformación urbana.",
+    link: "https://www.google.com/maps/search/?api=1&query=Pozo+La+Rosa+Cabimas" },
+
+  { nombre: "Hospital de Cabimas", x: 51, y: 60,
+    foto: "https://diarioelregionaldelzulia.com/wp-content/uploads/2025/04/Hospital-de-Cabimas-celebra-58-anos-de-historia-y-servicio-en-la-Costa-Oriental-del-Lago-1-t.jpg",
+    historia: "Infraestructura sanitaria histórica de la ciudad.",
+    significado: "Memoria de la atención en salud y servicio público.",
+    link: "https://www.google.com/maps/search/?api=1&query=Hospital+de+Cabimas" },
+
+  { nombre: "Escuela Básica Rafael Urdaneta", x: 64, y: 48,
+    foto: "https://primeraedicioncol.com/wp-content/uploads/2023/10/Escuela-Rafael-Urdaneta-5.jpg",
+    historia: "Centro educativo con tradición formativa.",
+    significado: "Forja de generaciones cabimenses.",
+    link: "https://www.google.com/maps/search/?api=1&query=Escuela+B%C3%A1sica+Rafael+Urdaneta+Cabimas" },
+
+  { nombre: "Barrio Obrero (primer barrio obrero organizado)", x: 40, y: 52,
+    foto: "https://diarioelregionaldelzulia.com/wp-content/uploads/2023/04/Cancha-de-Usos-Multiples-de-Barrio-Obrero-ABRE.jpg",
+    historia: "Primer barrio obrero organizado vinculado a la actividad petrolera.",
+    significado: "Identidad de clase trabajadora y organización vecinal.",
+    link: "https://www.google.com/maps/search/?api=1&query=Barrio+Obrero+Cabimas" },
+
+  { nombre: "Sector Miraflores (expansión petrolera histórica)", x: 68, y: 55,
+    foto: "https://i.pinimg.com/736x/5b/29/44/5b2944f4e4fc4f5e1930e01e8d0180f5.jpg",
+    historia: "Zona clave en la expansión urbana ligada al petróleo.",
+    significado: "Crecimiento y cambio en la geografía de Cabimas.",
+    link: "https://www.google.com/maps/search/?api=1&query=Sector+Miraflores+Cabimas" },
+
+  { nombre: "Antiguo Club de la Creole Petroleum Corporation", x: 59, y: 62,
+    foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQog9DIaDT66mVkkL5yQ9CKH9I6jVrtN9RQqA&s",
+    historia: "Espacio social de la época petrolera administrado por Creole.",
+    significado: "Sociabilidad y cultura empresarial.",
+    link: "https://www.google.com/maps/search/?api=1&query=Club+Creole+Petroleum+Cabimas" },
+
+  { nombre: "Casa de la Cultura de Cabimas", x: 45, y: 40,
+    foto: "https://primeraedicioncol.com/wp-content/uploads/2022/02/casa-de-la-cultura.jpg",
+    historia: "Centro de promoción artística y educativa.",
+    significado: "Dinamo cultural de la ciudad.",
+    link: "https://www.google.com/maps/search/?api=1&query=Casa+de+la+Cultura+Cabimas" },
+
+  { nombre: "Biblioteca Pública de Cabimas", x: 45, y: 25,
+    foto: "https://primeraedicioncol.com/wp-content/uploads/2023/05/biblioteca-publica-infantil.jpg",
+    historia: "Espacio para el acceso al conocimiento y la lectura.",
+    significado: "Memoria, investigación y comunidad lectora.",
+    link: "https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+de+Cabimas" },
+
+  { nombre: "El Domo", x: 56, y: 36,
+    foto: "https://diarioelregionaldelzulia.com/wp-content/uploads/2023/05/Activaran-plan-para-la-recuperacion-del-Domo-de-Cabimas-7-T.jpg",
+    historia: "Estructura distintiva con valor simbólico urbano.",
+    significado: "Punto de referencia y encuentro.",
+    link: "https://www.google.com/maps/search/?api=1&query=El+Domo+Cabimas" },
+];
+
+// Montaje de marcadores
+const viewport = document.querySelector('.map-viewport');
+const markersLayer = document.querySelector('.markers-layer');
+const popup = document.querySelector('.popup-card');
+const photoEl = document.getElementById('popup-photo');
+const titleEl = document.getElementById('popup-title');
+const histEl = document.getElementById('popup-history');
+const sigEl = document.getElementById('popup-significance');
+const routeEl = document.getElementById('popup-route');
+const closeBtn = document.querySelector('.popup-close');
+
+let currentScale = 1;
+let currentTx = 0;
+let currentTy = 0;
+
+// Crear marcadores con posiciones relativas (%)
+lugares.forEach((lugar, i) => {
+  const marker = document.createElement('button');
+  marker.className = 'marker';
+  marker.style.left = `${lugar.x}%`;
+  marker.style.top = `${lugar.y}%`;
+  marker.setAttribute('aria-label', lugar.nombre);
+
+  const label = document.createElement('span');
+  label.className = 'label';
+  label.textContent = lugar.nombre;
+  marker.appendChild(label);
+
+  marker.addEventListener('click', () => {
+    abrirPopup(lugar);
+    zoomA(marker);
+  });
+
+  markersLayer.appendChild(marker);
+});
+
+// Abrir popup con datos
+function abrirPopup(lugar) {
+  photoEl.src = lugar.foto;
+  photoEl.alt = `Foto histórica de ${lugar.nombre}`;
+  titleEl.textContent = lugar.nombre;
+  histEl.textContent = lugar.historia;
+  sigEl.textContent = lugar.significado;
+  routeEl.href = lugar.link;
+
+  popup.classList.add('active');
+  popup.setAttribute('aria-hidden', 'false');
+}
+
+// Cerrar popup y reset opcional
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('active');
+  popup.setAttribute('aria-hidden', 'true');
+});
+
+// Zoom suave hacia el marcador (centra y escala el viewport)
+function zoomA(marker) {
+  const rect = viewport.getBoundingClientRect();
+  const mx = marker.offsetLeft; // posición en px dentro del viewport
+  const my = marker.offsetTop;
+
+  // Convertir a coordenadas relativas al centro del viewport
+  const cx = rect.width / 2;
+  const cy = rect.height / 2;
+
+  // Nueva escala y traslación para centrar el marcador
+  const targetScale = 1.6; // ajustar al gusto
+  const dx = (cx - mx);
+  const dy = (cy - my);
+
+  currentScale = targetScale;
+  currentTx = dx / currentScale;
+  currentTy = dy / currentScale;
+
+  viewport.style.transform = `translate(${currentTx}px, ${currentTy}px) scale(${currentScale})`;
+}
+
+// Controles de zoom
+const btnIn = document.querySelector('.zoom-btn.in');
+const btnOut = document.querySelector('.zoom-btn.out');
+const btnReset = document.querySelector('.zoom-btn.reset');
+
+btnIn.addEventListener('click', () => {
+  currentScale = Math.min(currentScale + 0.2, 2.2);
+  viewport.style.transform = `translate(${currentTx}px, ${currentTy}px) scale(${currentScale})`;
+});
+
+btnOut.addEventListener('click', () => {
+  currentScale = Math.max(currentScale - 0.2, 1);
+  viewport.style.transform = `translate(${currentTx}px, ${currentTy}px) scale(${currentScale})`;
+});
+
+btnReset.addEventListener('click', () => {
+  currentScale = 1; currentTx = 0; currentTy = 0;
+  viewport.style.transform = `translate(0,0) scale(1)`;
+});
+
+// Accesibilidad básica con teclado
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    popup.classList.remove('active');
+    popup.setAttribute('aria-hidden', 'true');
+  }
+});
+</script>
+
+<script>// Seleccionamos todas las tarjetas de la galería
+const cards = document.querySelectorAll('.galeria-card');
+
+cards.forEach(card => {
+  const infoBtn = card.querySelector('.info-btn');
+  const cardInfo = card.querySelector('.card-info');
+
+  // Evento al presionar el botón "Ver más"
+  infoBtn.addEventListener('click', () => {
+    // Si la tarjeta ya está activa, la cerramos
+    if (cardInfo.classList.contains('active')) {
+      cardInfo.classList.remove('active');
+      infoBtn.textContent = "Ver más";
+    } else {
+      // Cerramos cualquier otra tarjeta abierta
+      document.querySelectorAll('.card-info.active').forEach(openCard => {
+        openCard.classList.remove('active');
+        openCard.parentElement.querySelector('.info-btn').textContent = "Ver más";
+      });
+
+      // Abrimos la tarjeta actual
+      cardInfo.classList.add('active');
+      infoBtn.textContent = "Cerrar";
+    }
+  });
+});
+
+// Opcional: cerrar tarjeta al hacer clic fuera de ella
+document.addEventListener('click', (e) => {
+  cards.forEach(card => {
+    const cardInfo = card.querySelector('.card-info');
+    const infoBtn = card.querySelector('.info-btn');
+    if (cardInfo.classList.contains('active') && !card.contains(e.target)) {
+      cardInfo.classList.remove('active');
+      infoBtn.textContent = "Ver más";
+    }
+  });
+});
+</script>
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo cabimas.png" type="image/png">
+  <title>Acerca de Cabimas</title>
+  <link rel="stylesheet" href="css/acerca de.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+<nav class="menu-cabimas">
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle">
+    ☰ <span class="toggle-text">Explora</span>
+  </button>
+
+  <!-- Menú de navegación -->
+ <ul class="menu-lista desktop-menu">
+    <li><a href="indez.html">🏠 Inicio</a></li>
+    <li><a href="acerca de.html">🌞 Cabimas</a></li>
+    <li><a href="historia.html">📜 Historia</a></li>
+    <li><a href="cultura.html">🎭 Cultura</a></li>
+    <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+    <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+    <li><a href="eventos.html">🎉 Eventos</a></li>
+    <li><a href="lugares.html">🌅 Lugares</a></li>
+    <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+  </ul>
+
+  <!-- Overlay emergente (Móvil) -->
+  <div class="menu-overlay">
+    <ul class="menu-lista mobile-menu">
+      <li><a href="inde.html">🏠 Inicio</a></li>
+      <li><a href="acerca de.html">🌞 Cabimas</a></li>
+      <li><a href="historia.html">📜 Historia</a></li>
+      <li><a href="cultura.html">🎭 Cultura</a></li>
+      <li><a href="patrimonio.html">🏛️ Patrimonio</a></li>
+      <li><a href="gastronomia.html">🍲 Gastronomía</a></li>
+      <li><a href="eventos.html">🎉 Eventos</a></li>
+      <li><a href="lugares.html">🌅 Lugares</a></li>
+      <li><a href="curiosidades.html">❓ Curiosidades</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <seccion class="banner-patrimonio">
+  <canvas id="particulas"></canvas>
+  <div class="contenido-banner">
+    <img src="acerca de cabimas/BANNER acerca de .png" alt="Banner Cultura Cabimas">
+  </div>
+</seccion>
+   
+<nav class="menu-cultura">
+  <ul>
+    <li><a href="#intro-cabimas">🏛️ Introducción</a></li>
+    <li><a href="#simbolos-patrios">🔰 Simbolos Patrios</a></li>
+    <li><a href="#cab-parroquias">🌁 Parroquias y sectores</a></li>
+    <li><a href="#cab-naturaleza">☘️ Geologia, flora y Fauna</a></li>
+    <li><a href="#cab-clima">☀️ Clima</a></li>
+    <li><a href="#cab-economia">🪙 Economía</a></li>
+  </ul>
+</nav>
+
+<section id="intro-cabimas">
+    <div class="fondo-particulas">
+  <!-- Se repiten emojis para llenar el espacio -->
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+  <span>🌞</span><span>🌊</span><span>🌅</span><span>🌀</span><span>⚡</span>
+
+</div>
+  <div class="intro-cabimas-contenedor">
+    <div class="intro-cabimas-texto">
+      <h2>🌞Nuestra ciudad Cabimas</h2>
+      <p>
+        Cabimas es una ciudad vibrante ubicada a orillas del Lago de Maracaibo, cuna de tradiciones, música, fe y lucha. Su historia está marcada por el auge petrolero, pero su esencia vive en la calidez de su gente, en sus fiestas populares, en sus sabores y en sus calles llenas de memoria 💫🌅🌊⚡🎉.
+      </p>
+      <p>
+        Desde los cantos de gaita hasta los bailes de San Benito, Cabimas respira cultura y comunidad. Esta tierra zuliana es un mosaico de saberes, colores y sonidos que merecen ser celebrados y preservados 🖼️🎭🎨🪄🥁.
+      </p>
+       <p>
+        Cabimas es una ciudad del estado Zulia, ubicada a orillas del Lago de Maracaibo, en el occidente de Venezuela. Su clima es cálido y su terreno es plano y bajo. Es conocida por su historia petrolera y por ser cuna de la gaita zuliana, una expresión musical que forma parte del alma cultural del país 🚤🌊🏫🎶☀️.
+      </p>
+    <div class="mapa-contenedor">
+  <div id="mapa-cabimas"></div>
+
+  <div class="boton-historia">
+  <a href="historia.html">Conoce su historia</a>
+</div>
+
+</section>
+
+
+<section id="simbolos-patrios">
+  <h2 class="titulo-simbolos">Símbolos Patrios de Cabimas</h2>
+
+  <div class="fichas-simbolos">
+    <!-- Bandera -->
+    <div class="ficha azul" onclick="abrirFicha(this)">
+      <div class="ficha-cabecera">
+        <img src="acerca de cabimas/bandera.png" alt="Bandera de Cabimas">
+        <div>
+          <h3>Bandera de Cabimas</h3>
+          <p>Identidad visual de la ciudad</p>
+        </div>
+      </div>
+      <div class="ficha-contenido">
+        <img src="acerca de cabimas/bandera.png" alt="Bandera ampliada" class="ampliable">
+        <p><strong>Autor:</strong> José Gregorio González</p>
+        <p><strong>Año:</strong> 2005</p>
+        <p><strong>Historia:</strong> La bandera fue creada para representar los valores históricos, culturales y geográficos de Cabimas. Sus colores evocan el Lago de Maracaibo, la riqueza petrolera y la fe popular.</p>
+      </div>
+    </div>
+
+    <!-- Escudo -->
+    <div class="ficha verde" onclick="abrirFicha(this)">
+      <div class="ficha-cabecera">
+        <img src="acerca de cabimas/Escudo_Cabimas.png" alt="Escudo de Cabimas">
+        <div>
+          <h3>Escudo de Cabimas</h3>
+          <p>Emblema oficial de la ciudad</p>
+        </div>
+      </div>
+      <div class="ficha-contenido">
+        <img src="acerca de cabimas/Escudo_Cabimas.png" alt="Escudo ampliado" class="ampliable">
+        <p><strong>Autor:</strong> Luis Guillermo Hernández</p>
+        <p><strong>Año:</strong> 1998</p>
+        <p><strong>Historia:</strong> El escudo sintetiza la historia, cultura y lucha de Cabimas. Incluye símbolos religiosos, agrícolas y petroleros que definen su identidad y evolución.</p>
+      </div>
+    </div>
+
+    <!-- Himno -->
+    <div class="ficha amarillo" onclick="abrirFicha(this)">
+      <div class="ficha-cabecera">
+        <img src="acerca de cabimas/himnoo imagen.png" alt="Himno de Cabimas">
+        <div>
+          <h3>Himno de Cabimas</h3>
+          <p>Canto solemne de la ciudad</p>
+        </div>
+      </div>
+      <div class="ficha-contenido">
+        <video src="acerca de cabimas/HIMNO DE CABIMAS letra y musica.mp4" controls class="ampliable-video"></video>
+        <p><strong>Autor:</strong> Letra de Rafael Hernández, música de Ángel María Ferrer</p>
+        <p><strong>Año:</strong> 1982</p>
+        <p><strong>Historia:</strong> El himno exalta el espíritu de lucha, la fe y el amor por Cabimas. Se interpreta en actos oficiales y escolares como símbolo de unidad y orgullo.</p>
+      </div>
+  </div>
+
+  <div class="boton-patrimonio">
+  <a href="patrimonio.html">Conoce más de sus patrimonios</a>
+</div>
+
+ <!-- Modal para ampliar imagen -->
+<div id="modal-imagen" class="modal">
+  <span class="cerrar" onclick="cerrarModalImagen()">×</span>
+  <img id="modal-img" src="" alt="">
+  <a id="descargar-imagen" class="boton-descarga" download>Descargar imagen</a>
+</div>
+
+<!-- Modal para ampliar video -->
+<div id="modal-video" class="modal">
+  <span class="cerrar" onclick="cerrarModalVideo()">×</span>
+  <video id="modal-video-player" controls autoplay></video>
+  <div class="botones-video">
+    <a href="acerca de cabimas/HIMNO DE CABIMAS letra y musica.mp4" class="boton-descarga" download>Descargar video</a>
+    <a href="simbolos/letra_himno.pdf" class="boton-descarga" download>Descargar letra (PDF)</a>
+  </div>
+</div>
+
+</section>
+
+<section id="ss-simbolos-significados">
+  <h2 class="ss-titulo">☀️Símbolos y Significados de Cabimas☀️</h2>
+
+  <div class="ss-tarjetas">
+    <div class="ss-tarjeta" data-simbolo="cruz">
+      <img src="que simbolo errs/cruz.png" alt="Cruz">
+      <h3>Cruz</h3>
+    </div>
+    <div class="ss-tarjeta" data-simbolo="tambor">
+      <img src="que simbolo errs/tambor.png" alt="Tambor">
+      <h3>Tambor</h3>
+    </div>
+    <div class="ss-tarjeta" data-simbolo="lago">
+      <img src="que simbolo errs/lago.png" alt="Lago">
+      <h3>Lago</h3>
+    </div>
+    <div class="ss-tarjeta" data-simbolo="sol">
+      <img src="que simbolo errs/sol.png" alt="Sol">
+      <h3>Sol</h3>
+    </div>
+    <div class="ss-tarjeta" data-simbolo="iglesia">
+      <img src="que simbolo errs/iglesia.png" alt="Iglesia">
+      <h3>Iglesia</h3>
+    </div>
+    <div class="ss-tarjeta" data-simbolo="palma">
+      <img src="que simbolo errs/palma.png" alt="Palma">
+      <h3>Palma</h3>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="ss-modal" class="ss-modal">
+    <span class="ss-cerrar">×</span>
+    <img id="ss-modal-img" src="" alt="">
+    <h4 id="ss-modal-titulo"></h4>
+    <p id="ss-modal-texto"></p>
+  </div>
+
+  <!-- Juego -->
+  <div class="ss-juego">
+  <h3>🎯 ¿Qué símbolo eres tú?</h3>
+  <p>Responde 3 preguntas y descubre tu símbolo cabimense</p>
+  <button id="ss-jugar">🕹️ Comenzar el juego</button>
+  <div id="ss-preguntas"></div>
+  <div id="ss-resultado"></div>
+</div>
+
+</section>
+
+ <section id="cab-parroquias">
+  <h2 class="cab-parroquia-titulo">📍 Parroquias y sectores de Cabimas</h2>
+
+  <div class="cab-parroquia-lista">
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🏬Germán Ríos Linares</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/german_rios.png" alt="Germán Ríos Linares">
+        <p>Zona residencial y comercial con acceso a servicios públicos, transporte y centros educativos. Es una de las parroquias más dinámicas del municipio.</p>
+        <p><strong>Sectores:</strong>
+          <p>• Los Olivos (Cabimas)</p>
+<p>• Don Bosco (Cabimas)</p>
+<p>• Francisco de Miranda (Cabimas)</p>
+<p>• Bello Monte (Cabimas)</p>
+<p>• Barrio Campo Alegre</p>
+<p>• Barrio 12 de Octubre</p>
+<p>• Barrio 19 de Abril</p>
+<p>• Barrio Getsemaní</p>
+<p>• Los Rosales</p>
+<p>• Plaza Lago</p>
+<p>• Ciudad Sucre (Cabimas)</p>
+<p>• Barrio Simón Bolívar</p>
+<p>• Barrio Sucre</p>
+<p>• Barrio Federación</p>
+<p>• Los Hornitos</p>
+<p>• Los Pozones</p>
+<p>• Urbanización Los Laureles</p>
+<p>• Barrio 10 de Febrero (Monte Verde)</p>
+<p>• Barrio Isabelino Palencia</p>
+<p>• Barrio Luis Fuenmayor</p>
+<p>• Barrio Roberto Lückert</p>
+        
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>⛪Ambrosio</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/ambrosio.png" alt="Ambrosio">
+        <p>Centro histórico de Cabimas, donde se encuentran la plaza Bolívar, la iglesia principal y edificios emblemáticos. Es núcleo de actividad cultural y comercial.</p>
+        <p><strong>Sectores:</strong>
+        <p>• La Misión</p>
+<p>• Ambrosio</p>
+<p>• Sara Reyes</p>
+<p>• Amparito</p>
+<p>• El Amparo</p>
+<p>• La Estrella</p>
+<p>• Miramar</p>
+<p>• Barrio Las Malvinas</p>
+<p>• El Golfito</p>
+<p>• Delicias Nuevas</p>
+<p>• Las 40s</p>
+<p>• Las 50s</p>
+<p>• Barrio Obrero</p>
+<p>• Urbanización La Rosa</p>
+<p>• Punta Icotea</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🏫Carmen Herrera</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/carmen_herrera.png" alt="Carmen Herrera">
+        <p>Parroquia con fuerte presencia educativa y comercial. Alberga instituciones académicas y zonas residenciales consolidadas.</p>
+          <p><strong>Sectores:</strong>
+        <p>• Delicias Viejas</p>
+<p>• Guabina</p>
+<p>• Miraflores</p>
+<p>• El Solito</p>
+<p>• Las 25</p>
+<p>• Concordia</p>
+<p>• América</p>
+<p>• El Dividive</p>
+<p>• Campo Blanco</p>
+<p>• Tierra Negra</p>
+<p>• Campo Refinería o El Campito</p>
+<p>• Buena Vista</p>
+<p>• Barrio La Vereda</p>
+<p>• Las Palmas Campo Staff</p>
+<p>• Las Tierritas</p>
+<p>• Centro Viejo (Cabimas)</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🏘️La Rosa</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/la_rosa.png" alt="La Rosa">
+        <p>Zona residencial con tradición religiosa y espacios comunitarios. Su nombre proviene de la devoción a Santa Rosa de Lima.</p>
+        <p><strong>Sectores:</strong>
+          <p>• La Montañita (Cabimas)</p>
+<p>• Barrio La Rosa</p>
+<p>• Nuevo Juan</p>
+<p>• Las Cabillas</p>
+<p>• Gasplant</p>
+<p>• Campo Hollywood</p>
+<p>• Las Cúpulas</p>
+<p>• Campo Urdaneta</p>
+<p>• La Gloria (Cabimas)</p>
+<p>• Valmore Rodríguez</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🕍San Benito</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/san_benito.png" alt="San Benito">
+        <p>Parroquia profundamente ligada a las festividades religiosas de San Benito. Su identidad gira en torno a la música, la fe y la tradición.</p>
+        <p><strong>Sectores:</strong>
+          <p>• Barrio Campo Elías</p>
+<p>• Barrio Unión</p>
+<p>• Barrio 23 de Enero</p>
+<p>• Barrio 1.º de Mayo</p>
+<p>• Barrio 26 de Julio</p>
+<p>• Bella Vista</p>
+<p>• Barrio 1.º de enero</p>
+<p>• Santa Rosa</p>
+<p>• 1.º de Enero</p>
+<p>• Urbanización San Benito</p>
+<p>• Valle Encantado</p>
+<p>• El Milagro</p>
+<p>• Barrio H5</p>
+<p>• Santa Rosa II</p>
+<p>• Barrio Federación II</p>
+<p>• Barrio San José I</p>
+<p>• Villa Feliz</p>
+<p>• H7</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🏡Jorge Hernández</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/jorge_hernandez.png" alt="Jorge Hernández">
+        <p>Parroquia con fuerte presencia comunitaria y espacios recreativos. Conecta zonas populares con áreas naturales.</p>
+        <p><strong>Sectores:</strong>
+          <p>• Barrio Santa Cruz</p>
+<p>• Barrio El Carmen</p>
+<p>• Barrio Democracia</p>
+<p>• Barrio Nuevo</p>
+<p>• La Pastora</p>
+<p>• Barrio Punto Fijo III</p>
+<p>• Barrio Punto Fijo II</p>
+<p>• Santa Clara</p>
+<p>• Barrio Libertador</p>
+<p>• Campo Lindo</p>
+<p>• Barrio José Félix Rivas</p>
+<p>• Dr Raúl Osorio Lazo</p>
+<p>• Corito</p>
+<p>• Los Postes Negros</p>
+<p>• Monte Claro</p>
+<p>• Barlovento</p>
+<p>• Barrio Nuevo Mundo</p>
+<p>• R10</p>
+<p>• R5</p>
+<p>• El Lucero</p>
+<p>• R1</p>
+<p>• Jorge Hernández</p>
+<p>• Barrio INOS</p>
+<p>• El Porvenir</p>
+<p>• Barrio San Vicente</p>
+<p>• Panamá</p>
+<p>• Encrucijada Las 5 Bocas</p>
+<p>• Sector El Pringamozal</p>
+
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🏘️Rómulo Betancourt</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/romulo_betancourt.png" alt="Rómulo Betancourt">
+        <p>Zona residencial con urbanismos organizados y espacios verdes. Lleva el nombre del expresidente venezolano.</p>
+        <p><strong>Sectores:</strong>
+          <p>• Los Médanos</p>
+<p>• Nueva Cabimas</p>
+<p>• Nueva Rosa</p>
+<p>• Barrio 2 de Mayo</p>
+<p>• Barrio Las Parcelitas</p>
+<p>• Barrio Los Nísperos</p>
+<p>• Barrio Punto Fijo</p>
+<p>• Barrio San José II</p>
+<p>• Urbanización Las Acacias</p>
+<p>• Barrio Cumarebo</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🛶Punta Gorda</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/punta_gorda.png" alt="Punta Gorda">
+        <p>Ubicada en la zona costera del lago, con paisajes naturales y actividad pesquera. Es una de las parroquias más pintorescas.</p>
+        <p><strong>Sectores:</strong>
+          <p>• Punta Gorda</p>
+<p>• El Tropezón</p>
+<p>• El Cilantrillo</p>
+<p>• Agua Clara</p>
+<p>• Los Dulces</p>
+      </div>
+    </div>
+
+    <div class="cab-parroquia-item" onclick="cabToggle(this)">
+      <h3>🌇Arístides Calvani</h3>
+      <div class="cab-parroquia-contenido">
+        <img src="parroquias/aristides_calvani.png" alt="Arístides Calvani">
+        <p>Parroquia periférica con zonas rurales y urbanismos emergentes. Su nombre honra al político y educador venezolano.</p>
+         <p><strong>Sectores:</strong>
+          <p>• Palito Blanco</p>
+<p>• El Martillito</p>
+<p>• Las Cúpulas</p>
+<p>• Campo Hollywood</p>
+<p>• Calle Miranda</p>
+<p>• Plaza Bolívar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cab-naturaleza">
+  <h2 class="cab-naturaleza-titulo">🌿 Geología, Flora y Fauna de Cabimas</h2>
+
+  <div class="cab-naturaleza-fichas">
+    <!-- Geología -->
+    <div class="cab-naturaleza-ficha">
+      <h3>🪨 Geología</h3>
+      <p>Cabimas se asienta sobre terrenos sedimentarios de baja altitud, con influencia lacustre y petrolera. Forma parte de la cuenca del Lago de Maracaibo, rica en hidrocarburos y fósiles marinos.</p>
+      <img src="acerca de cabimas/Geologico_Cabimas.png" alt="Geología de Cabimas">
+      <button onclick="abrirGaleria(['acerca de cabimas/Geologico_Cabimas.png'])">Ver fotos</button>
+    </div>
+
+    <!-- Flora -->
+    <div class="cab-naturaleza-ficha">
+      <h3>🌳 Flora</h3>
+      <p>El árbol emblemático es el <strong>Cabimo</strong> (Copaifera officinalis), conocido por sus propiedades medicinales y su resistencia al clima seco. También abundan ceibas, mangles y plantas ornamentales.</p>
+      <img src="acerca de cabimas/cabimo.jpg" alt="Árbol Cabimo">
+      <button onclick="abrirGaleria(['acerca de cabimas/cabimo.jpg','acerca de cabimas/flora 1.jpeg','acerca de cabimas/flora 2.jpeg', 'acerca de cabimas/flora 3.png', 'acerca de cabimas/flora 4.png'])">Ver fotos</button>
+    </div>
+
+    <!-- Fauna -->
+    <div class="cab-naturaleza-ficha">
+      <h3>🦜 Fauna</h3>
+      <p>Entre las especies más representativas están la <strong>garza blanca</strong>, el <strong>búho criollo</strong>, la <strong>iguana</strong>, el <strong>pez bocachico</strong> y la <strong>ardilla</strong>. Habitan en zonas costeras, urbanas y rurales.</p>
+      <img src="acerca de cabimas/Garza-blanca.png" alt="Fauna de Cabimas">
+      <button onclick="abrirGaleria(['acerca de cabimas/Garza-blanca.png','acerca de cabimas/buho.png','acerca de cabimas/bocachico.png','acerca de cabimas/loros.png', 'acerca de cabimas/loro.png', 'acerca de cabimas/iguana-cuidados-manejo.png'])">Ver fotos</button>
+    </div>
+  </div>
+  <div id="cab-galeria-modal" class="cab-galeria-modal">
+  <span class="cab-galeria-cerrar" onclick="cerrarGaleria()">×</span>
+  <img id="cab-galeria-img" src="" alt="">
+  <div class="cab-galeria-controles">
+    <button onclick="cambiarImagen(-1)">←</button>
+    <button onclick="cambiarImagen(1)">→</button>
+  </div>
+</div>
+</section>
+
+<section id="cab-clima">
+  <h2 class="cab-clima-titulo">🌤️ Clima en Cabimas</h2>
+   <div class="cab-clima-intro-contenido">
+    <p>
+      Cabimas, en la costa oriental del Lago de Maracaibo, disfruta de un 
+      <strong>clima cálido tropical</strong> con temperaturas que suelen oscilar 
+      entre <strong>28 °C y 34 °C</strong> durante gran parte del año.
+    </p>
+    <ul>
+      <li>🌞 <strong>Veranos prolongados</strong> con días soleados y cielos despejados.</li>
+      <li>🌧️ <strong>Lluvias estacionales</strong> entre mayo y noviembre que refrescan la ciudad.</li>
+      <li>🌬️ <strong>Brisas lacustres</strong> que moderan el calor en las tardes y noches.</li>
+    </ul>
+    <p>
+      Este clima ha marcado la vida cotidiana, la música, la gastronomía y hasta 
+      las celebraciones religiosas de la ciudad.
+    </p>
+  
+
+  <!-- Emojis de fondo -->
+
+  <!-- Clima actual -->
+  <div class="cab-clima-actual">
+    <div class="cab-clima-actual-izq">
+      <div class="cab-clima-icono" id="cab-clima-icono" title="Condición actual"></div>
+      <div class="cab-clima-temp">
+        <span id="cab-clima-temp">--°</span>
+        <span id="cab-clima-sens">Sensación: --°</span>
+      </div>
+    </div>
+    <div class="cab-clima-actual-der">
+      <ul class="cab-clima-detalles">
+        <li><strong>Humedad:</strong> <span id="cab-clima-hum">--%</span></li>
+        <li><strong>Viento:</strong> <span id="cab-clima-viento">-- km/h</span></li>
+        <li><strong>Condición:</strong> <span id="cab-clima-cond">--</span></li>
+        <li><strong>Actualizado:</strong> <span id="cab-clima-actualizado">--:--</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Pronóstico 5 días -->
+  <div class="cab-clima-pronostico" id="cab-clima-pronostico">
+    <!-- Tarjetas se llenan por JS -->
+  </div>
+
+  <!-- Mapa mini (decorativo/estático) -->
+<div class="cab-clima-mapa" id="cab-clima-mapa">
+  <div class="cab-clima-mapa-header">
+    <strong id="cab-mapa-texto">Cabimas • Zulia</strong>
+  </div>
+  <div class="cab-clima-mapa-body">
+    <div class="cab-clima-punto" title="Cabimas">
+      <div class="cab-clima-ondas"></div>
+      <div class="cab-clima-emojis" id="cab-mapa-emojis"></div>
+    </div>
+    <div class="cab-clima-isobara cab-iso1"></div>
+    <div class="cab-clima-isobara cab-iso2"></div>
+    <div class="cab-clima-isobara cab-iso3"></div>
+  </div>
+   </div>
+
+  <!-- Controles -->
+  <div class="cab-clima-controles">
+    <button id="cab-clima-refrescar">🔄 Actualizar ahora</button>
+    <span class="cab-clima-auto">Actualiza cada 10 min automáticamente</span>
+  </div>
+
+  <div class="cab-clima-trivia">
+  <h3>🌤️ Trivia del Clima Cabimense</h3>
+  <button id="cab-trivia-btn">Jugar Trivia</button>
+  <div id="cab-trivia-pregunta"></div>
+  <div id="cab-trivia-opciones"></div>
+  <div id="cab-trivia-resultado"></div>
+</div>
+
+</section>
+
+<section id="cab-economia">
+  <h2 class="cab-economia-titulo">💰 Economía de Cabimas</h2>
+
+  <!-- Introducción -->
+  <p class="cab-economia-intro">
+    La economía de Cabimas se articula alrededor de la <strong>industria petrolera</strong>,
+    sostenida por el <strong>comercio y servicios</strong>, la <strong>agricultura y pesca</strong>,
+    y el <strong>turismo cultural</strong>. Ajusta los porcentajes y observa cómo el gráfico reacciona.
+  </p>
+
+  <!-- Tarjetas de sectores (sin botones) -->
+  <div class="cab-economia-sectores">
+    <div class="cab-economia-card" data-sector="petroleo">
+      <div class="cab-economia-card-img">
+        <img src="https://www.foronuclear.org/wp-content/uploads/2010/06/petroleo-854x465.jpg" alt="Petróleo y energía en Cabimas" loading="lazy">
+      </div>
+      <div class="cab-economia-card-head">🛢️ Petróleo y energía</div>
+      <div class="cab-economia-card-body">
+        <p>Motor histórico que concentra la mayor actividad económica local, con servicios y logística asociada.</p>
+      </div>
+    </div>
+
+    <div class="cab-economia-card" data-sector="comercio">
+      <div class="cab-economia-card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDlxtZeJFJe_4EDoRiW7JAXIUxv4A91kzDZQ&s" alt="Comercio y servicios en Cabimas" loading="lazy">
+      </div>
+      <div class="cab-economia-card-head">🛒 Comercio y servicios</div>
+      <div class="cab-economia-card-body">
+        <p>Actividad urbana cotidiana: mercados, transporte, salud, educación y comercio local resiliente.</p>
+      </div>
+    </div>
+
+    <div class="cab-economia-card" data-sector="agro">
+      <div class="cab-economia-card-img">
+        <img src="https://agraria.pe/imgs/a/lx/pesca-y-agricultura-seran-los-sectores-que-impulsaran-la-eco-33074.jpg" alt="Agricultura y pesca en Cabimas" loading="lazy">
+      </div>
+      <div class="cab-economia-card-head">🌾🐟 Agricultura y pesca</div>
+      <div class="cab-economia-card-body">
+        <p>Producción agrícola local y pesca ribereña vinculada al Lago de Maracaibo abastecen cadenas cortas.</p>
+      </div>
+    </div>
+
+    <div class="cab-economia-card" data-sector="cultura">
+      <div class="cab-economia-card-img">
+        <img src="https://www.isyvac.com/wp-content/uploads/2025/03/image-1.png" alt="Cultura y turismo en Cabimas" loading="lazy">
+      </div>
+      <div class="cab-economia-card-head">🎶🍲 Cultura y turismo</div>
+      <div class="cab-economia-card-body">
+        <p>Sector emergente impulsado por festividades, artes, gastronomía y turismo cultural con identidad propia.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualización y leyenda -->
+   <div class="cab-economia-visual-box">
+  <div class="cab-economia-visual">
+    <canvas id="cab-economia-grafico" width="420" height="420" aria-label="Participación sectorial"></canvas>
+    <div class="cab-economia-legend">
+      <div class="cab-leg-item"><span class="cab-leg-color cab-petroleo"></span> Petróleo y energía — <strong id="cab-val-petroleo">60%</strong></div>
+      <div class="cab-leg-item"><span class="cab-leg-color cab-comercio"></span> Comercio y servicios — <strong id="cab-val-comercio">25%</strong></div>
+      <div class="cab-leg-item"><span class="cab-leg-color cab-agro"></span> Agricultura y pesca — <strong id="cab-val-agro">10%</strong></div>
+      <div class="cab-leg-item"><span class="cab-leg-color cab-cultura"></span> Cultura y turismo — <strong id="cab-val-cultura">5%</strong></div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Controles interactivos (porcentajes reales iniciales) -->
+  <div class="cab-economia-controles">
+    <div class="cab-economia-slider">
+      <label>🛢️ Petróleo y energía</label>
+      <input type="range" id="cab-range-petroleo" min="0" max="80" value="60" step="1">
+    </div>
+    <div class="cab-economia-slider">
+      <label>🛒 Comercio y servicios</label>
+      <input type="range" id="cab-range-comercio" min="0" max="80" value="25" step="1">
+    </div>
+    <div class="cab-economia-slider">
+      <label>🌾🐟 Agricultura y pesca</label>
+      <input type="range" id="cab-range-agro" min="0" max="80" value="10" step="1">
+    </div>
+    <div class="cab-economia-slider">
+      <label>🎶🍲 Cultura y turismo</label>
+      <input type="range" id="cab-range-cultura" min="0" max="80" value="5" step="1">
+    </div>
+    <div class="cab-economia-tip">Los valores se normalizan automáticamente para sumar 100% y el gráfico se actualiza en tiempo real.</div>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+
+<div class="onda-footer">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="transform: scaleX(-1) scaleY(-1);">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#014f2b"></path>
+  </svg>
+</div>
+
+<footer class="footer-cabimas">
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <div class="logo-titulo">
+        <img src="img/logo cabimas.png" alt="Logo Cabimas Cultural" class="logo-footer">
+        <h3>Cabimas Cultural</h3>
+      </div>
+      <p>Celebrando nuestras raíces con tecnología y corazón.</p>
+    </div>
+
+   <div class="footer-enlaces">
+      <h4>Explora</h4>
+      <ul>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+        <li><a href="patrimonio.html">Patrimonio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>cabimascultural@email.com</p>
+      <p>Cabimas, Estado Zulia</p>
+    </div>
+  </div>
+
+  <div class="footer-creditos">
+    <p>Diseñado con 💚 por <strong>Adalbelyn Añez</strong> · © 2025</p>
+  </div>
+</footer>
+
+<script>
+const canvas = document.getElementById('particulas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const colores = ['#00ff00', '#0000ff', '#000000', '#ffcc00']; 
+const particulas = [];
+
+for (let i = 0; i < 80; i++) {
+  particulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    color: colores[Math.floor(Math.random() * colores.length)],
+    dx: (Math.random() - 0.5) * 0.8,
+    dy: (Math.random() - 0.5) * 0.8
+  });
+}
+
+function animar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particulas) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // rebote
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animar);
+}
+animar();
+</script>
+
+<script>
+  const fondo = document.querySelector('.fondo-particulas');
+  const emojis = fondo.querySelectorAll('span');
+
+  emojis.forEach((emoji) => {
+    emoji.style.top = `${Math.random() * 100}%`;
+    emoji.style.left = `${Math.random() * 100}%`;
+    emoji.style.animationDuration = `${8 + Math.random() * 6}s`;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+
+    emojis.forEach((emoji) => {
+      const offsetX = (Math.random() - 0.5) * 30 * x;
+      const offsetY = (Math.random() - 0.5) * 30 * y;
+      emoji.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+  });
+</script>
+
+
+<script>
+  function abrirFicha(elemento) {
+    const todas = document.querySelectorAll('.ficha');
+    todas.forEach(f => {
+      if (f !== elemento) f.classList.remove('abierta');
+    });
+    elemento.classList.toggle('abierta');
+  }
+</script>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+
+  const mapa = L.map('mapa-cabimas').setView([10.4011, -71.4461], 13);
+
+  // Carto Light tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a> & contributors',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(mapa);
+
+  // Marcador en Cabimas
+  L.marker([10.4011, -71.4461]).addTo(mapa)
+    .bindPopup('<b>Cabimas</b><br>Estado Zulia, Venezuela')
+    .openPopup();
+
+
+</script>
+
+<script>
+  // Imágenes dentro de la ficha
+  document.querySelectorAll('.ficha-contenido img.ampliable').forEach(img => {
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      abrirModalImagen(img.src);
+    });
+  });
+
+  function abrirModalImagen(src) {
+    const modal = document.getElementById('modal-imagen');
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = src;
+    modal.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modal.classList.add('abierto');
+    });
+  }
+
+  function cerrarModalImagen() {
+    const modal = document.getElementById('modal-imagen');
+    modal.classList.remove('abierto');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.getElementById('modal-img').src = "";
+    }, 400);
+  }
+
+  // Video dentro de la ficha
+  document.querySelectorAll('.ficha-contenido video.ampliable-video').forEach(video => {
+    video.addEventListener('click', e => {
+      e.stopPropagation();
+      abrirModalVideo(video.src);
+    });
+  });
+
+  function abrirModalVideo(src) {
+    const modal = document.getElementById('modal-video');
+    const videoPlayer = document.getElementById('modal-video-player');
+    videoPlayer.src = src;
+    modal.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modal.classList.add('abierto');
+    });
+  }
+
+  function cerrarModalVideo() {
+    const modal = document.getElementById('modal-video');
+    const videoPlayer = document.getElementById('modal-video-player');
+    modal.classList.remove('abierto');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      videoPlayer.pause();
+      videoPlayer.src = "";
+    }, 400);
+  }
+</script>
+
+<script>
+  function abrirModalImagen(src) {
+    const modal = document.getElementById('modal-imagen');
+    const modalImg = document.getElementById('modal-img');
+    const descargarBtn = document.getElementById('descargar-imagen');
+
+    modalImg.src = src;
+    descargarBtn.href = src;
+
+    modal.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modal.classList.add('abierto');
+    });
+  }
+
+  function cerrarModalImagen() {
+    const modal = document.getElementById('modal-imagen');
+    modal.classList.remove('abierto');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.getElementById('modal-img').src = "";
+      document.getElementById('descargar-imagen').href = "";
+    }, 400);
+  }
+
+  function abrirModalVideo(src) {
+    const modalVideo = document.getElementById('modal-video');
+    const videoPlayer = document.getElementById('modal-video-player');
+
+    videoPlayer.src = src;
+    modalVideo.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modalVideo.classList.add('abierto');
+    });
+  }
+
+  function cerrarModalVideo() {
+    const modalVideo = document.getElementById('modal-video');
+    const videoPlayer = document.getElementById('modal-video-player');
+
+    modalVideo.classList.remove('abierto');
+    setTimeout(() => {
+      modalVideo.style.display = 'none';
+      videoPlayer.pause();
+      videoPlayer.src = "";
+    }, 400);
+  }
+</script>
+
+<script>
+  // Abrir modal al hacer clic en tarjeta
+  document.querySelectorAll('.ss-tarjeta').forEach(tarjeta => {
+    tarjeta.addEventListener('click', () => {
+      const clave = tarjeta.getAttribute('data-simbolo');
+      const simbolo = ssSimbolos[clave];
+
+      document.getElementById('ss-modal-img').src = simbolo.img;
+      document.getElementById('ss-modal-titulo').textContent = simbolo.titulo;
+      document.getElementById('ss-modal-texto').textContent = simbolo.texto;
+
+      const modal = document.getElementById('ss-modal');
+      modal.style.display = 'flex';
+      requestAnimationFrame(() => {
+        modal.classList.add('abierto');
+      });
+    });
+  });
+
+  // Cerrar modal
+  document.querySelector('.ss-cerrar').addEventListener('click', () => {
+    const modal = document.getElementById('ss-modal');
+    modal.classList.remove('abierto');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.getElementById('ss-modal-img').src = "";
+      document.getElementById('ss-modal-titulo').textContent = "";
+      document.getElementById('ss-modal-texto').textContent = "";
+    }, 400);
+  });
+
+</script>
+
+<script>
+  const ssPreguntas = [
+    {
+      texto: "¿Qué te inspira más?",
+      opciones: ["🎶 Música", "🙏 Fe", "🌊 Naturaleza"]
+    },
+    {
+      texto: "¿Qué valor te define?",
+      opciones: ["💪 Fuerza", "🎨 Creatividad", "🧠 Sabiduría"]
+    },
+    {
+      texto: "¿Qué lugar prefieres?",
+      opciones: ["⛪ Iglesia", "🏞️ Lago", "🎉 Plaza"]
+    },
+    {
+      texto: "¿Qué símbolo te atrae?",
+      opciones: ["🥁 Tambor", "🌞 Sol", "🌴 Palma"]
+    },
+    {
+      texto: "¿Qué emoción te guía?",
+      opciones: ["❤️ Amor", "🔥 Pasión", "😌 Serenidad"]
+    },
+    {
+      texto: "¿Qué tradición te conmueve?",
+      opciones: ["🕊️ Procesión", "🎺 Gaita", "🪘 San Benito"]
+    },
+    {
+      texto: "¿Qué elemento te representa?",
+      opciones: ["💧 Agua", "🌿 Tierra", "🌬️ Aire"]
+    },
+    {
+      texto: "¿Qué te conecta con Cabimas?",
+      opciones: ["📖 Historia", "🎭 Cultura", "👨‍👩‍👧 Comunidad"]
+    },
+    {
+      texto: "¿Qué ritmo te mueve?",
+      opciones: ["🎵 Gaita", "🥁 Tambor", "🎼 Himno"]
+    },
+    {
+      texto: "¿Qué símbolo te gustaría portar?",
+      opciones: ["🌞 Sol", "✝️ Cruz", "🌴 Palma"]
+    }
+  ];
+
+  const ssSimbolos = {
+    cruz: {
+      titulo: "✝️ Cruz",
+      texto: "Símbolo de fe, protección y espiritualidad cabimense.",
+      img: "que simbolo errs/cruz.png"
+    },
+    tambor: {
+      titulo: "🥁 Tambor",
+      texto: "Símbolo de ritmo, energía y tradición ancestral.",
+      img: "que simbolo errs/tambor.png"
+    },
+    lago: {
+      titulo: "🌊 Lago",
+      texto: "Símbolo de geografía, historia y memoria petrolera.",
+      img: "que simbolo errs/lago.png"
+    },
+    sol: {
+      titulo: "🌞 Sol",
+      texto: "Símbolo de luz, esperanza y renovación zuliana.",
+      img: "que simbolo errs/sol.png"
+    },
+    iglesia: {
+      titulo: "⛪ Iglesia",
+      texto: "Símbolo de espiritualidad y comunidad.",
+      img: "que simbolo errs/iglesia.png"
+    },
+    palma: {
+      titulo: "🌴 Palma",
+      texto: "Símbolo de naturaleza, fertilidad y resistencia.",
+      img: "que simbolo errs/palma.png"
+    }
+  };
+
+  let ssRespuestas = [];
+  let ssIndice = 0;
+  let ssSeleccionadas = [];
+
+  document.getElementById('ss-jugar').addEventListener('click', () => {
+    ssRespuestas = [];
+    ssIndice = 0;
+    ssSeleccionadas = ssPreguntas.sort(() => 0.5 - Math.random()).slice(0, 3);
+    mostrarPregunta();
+  });
+
+  function mostrarPregunta() {
+    const contenedor = document.getElementById('ss-preguntas');
+    contenedor.innerHTML = "";
+
+    if (ssIndice < ssSeleccionadas.length) {
+      const pregunta = ssSeleccionadas[ssIndice];
+      const titulo = document.createElement('h4');
+      titulo.textContent = pregunta.texto;
+      contenedor.appendChild(titulo);
+
+      const opciones = document.createElement('div');
+      opciones.className = 'ss-opciones';
+
+      pregunta.opciones.forEach(opcion => {
+        const btn = document.createElement('button');
+        btn.textContent = opcion;
+        btn.onclick = () => {
+          ssRespuestas.push(opcion);
+          ssIndice++;
+          mostrarPregunta();
+        };
+        opciones.appendChild(btn);
+      });
+
+      contenedor.appendChild(opciones);
+    } else {
+      mostrarResultado();
+    }
+  }
+
+  function mostrarResultado() {
+    const claves = Object.keys(ssSimbolos);
+    const aleatorio = claves[Math.floor(Math.random() * claves.length)];
+    const simbolo = ssSimbolos[aleatorio];
+
+    document.getElementById('ss-preguntas').innerHTML = "";
+    document.getElementById('ss-resultado').innerHTML = `
+      <img src="${simbolo.img}" alt="${simbolo.titulo}" style="width:100px; margin-bottom:1rem;">
+      <h4>${simbolo.titulo}</h4>
+      <p>${simbolo.texto}</p>
+    `;
+  }
+</script>
+
+<script>
+  function cabToggle(element) {
+    document.querySelectorAll('.cab-parroquia-item').forEach(item => {
+      if (item !== element) item.classList.remove('activa');
+    });
+    element.classList.toggle('activa');
+  }
+</script>
+
+<script>
+  let cabGaleriaImagenes = [];
+  let cabGaleriaIndice = 0;
+
+  function abrirGaleria(imagenes) {
+    cabGaleriaImagenes = imagenes;
+    cabGaleriaIndice = 0;
+    document.getElementById('cab-galeria-img').src = cabGaleriaImagenes[0];
+    const modal = document.getElementById('cab-galeria-modal');
+    modal.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modal.classList.add('abierto');
+    });
+  }
+
+  function cerrarGaleria() {
+    const modal = document.getElementById('cab-galeria-modal');
+    modal.classList.remove('abierto');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.getElementById('cab-galeria-img').src = "";
+    }, 400);
+  }
+
+  function cambiarImagen(direccion) {
+    cabGaleriaIndice += direccion;
+    if (cabGaleriaIndice < 0) cabGaleriaIndice = cabGaleriaImagenes.length - 1;
+    if (cabGaleriaIndice >= cabGaleriaImagenes.length) cabGaleriaIndice = 0;
+    document.getElementById('cab-galeria-img').src = cabGaleriaImagenes[cabGaleriaIndice];
+  }
+</script>
+
+<script>
+  // Coordenadas aproximadas de Cabimas
+  const CABIMAS = { lat: 10.403, lon: -71.439 };
+
+  // URL de API (Open-Meteo: servicio abierto y sin clave)
+  const apiUrl = (lat, lon) =>
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+    `&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m,weather_code` +
+    `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum` +
+    `&timezone=America%2FCaracas`;
+
+  // Mapeo de códigos de clima a icono, etiqueta y estado visual (para el fondo)
+  const codeToInfo = (code) => {
+    if (code === 0) return { icon: "☀️", label: "Despejado", state: "sol" };
+    if ([1,2,3].includes(code)) return { icon: "⛅", label: "Parcialmente nublado", state: "nube" };
+    if ([45,48].includes(code)) return { icon: "🌫️", label: "Niebla", state: "nube" };
+    if ([51,53,55,61,63,65,66,67,80,81,82].includes(code)) return { icon: "🌧️", label: "Lluvia", state: "lluvia" };
+    if ([95,96,99].includes(code)) return { icon: "⛈️", label: "Tormenta", state: "tormenta" };
+    return { icon: "☁️", label: "Nublado", state: "nube" };
+  };
+
+  // Formato de fecha corta (ej. "vie, 14")
+  const fmtDate = (iso) => {
+    const d = new Date(iso);
+    return d.toLocaleDateString("es-VE", { weekday: "short", day: "numeric" });
+  };
+
+  // Render del clima actual
+  const renderActual = (current) => {
+    const info = codeToInfo(current.weather_code);
+
+    // Fondo adaptativo del contenedor
+    const cont = document.getElementById("cab-clima");
+    if (cont) {
+      cont.classList.remove("sol", "nube", "lluvia", "tormenta");
+      cont.classList.add(info.state);
+    }
+
+    // Icono animado según estado
+    const icono = document.getElementById("cab-clima-icono");
+    if (icono) {
+      icono.classList.remove("nublado", "lluvia", "tormenta");
+      icono.textContent = ""; // estilos visuales manejan el ícono/efectos
+      if (info.state === "nube") icono.classList.add("nublado");
+      else if (info.state === "lluvia") icono.classList.add("lluvia");
+      else if (info.state === "tormenta") icono.classList.add("tormenta");
+    }
+
+    // Datos
+    const t = Math.round(current.temperature_2m);
+    const s = Math.round(current.apparent_temperature);
+    const h = Math.round(current.relative_humidity_2m);
+    const v = Math.round(current.wind_speed_10m);
+
+    const setText = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
+
+    setText("cab-clima-temp", `${t}°`);
+    setText("cab-clima-sens", `Sensación: ${s}°`);
+    setText("cab-clima-hum", `${h}%`);
+    setText("cab-clima-viento", `${v} km/h`);
+    setText("cab-clima-cond", info.label);
+    setText("cab-clima-actualizado",
+      new Date().toLocaleTimeString("es-VE", { hour: "2-digit", minute: "2-digit" })
+    );
+  };
+
+  // Render del pronóstico de 5 días con tarjetas desplegables
+  const renderPronostico = (daily) => {
+    const cont = document.getElementById("cab-clima-pronostico");
+    if (!cont) return;
+    cont.innerHTML = "";
+
+    const days = daily.time.slice(0, 5);
+    for (let i = 0; i < days.length; i++) {
+      const code = daily.weather_code[i];
+      const info = codeToInfo(code);
+      const dmax = Math.round(daily.temperature_2m_max[i]);
+      const dmin = Math.round(daily.temperature_2m_min[i]);
+      const rain = Math.round((daily.precipitation_sum?.[i] ?? 0));
+
+      const card = document.createElement("div");
+      card.className = "cab-clima-dia";
+      card.innerHTML = `
+        <div class="cab-dia-icono" aria-hidden="true">${info.icon}</div>
+        <div class="cab-dia-fecha">${fmtDate(days[i])}</div>
+        <div class="cab-dia-temp"><strong>${dmax}°</strong> / ${dmin}°</div>
+        <div class="cab-dia-detalle">
+          <div><strong>Condición:</strong> ${info.label}</div>
+          <div><strong>Precipitación:</strong> ${rain} mm</div>
+        </div>
+      `;
+      card.addEventListener("click", () => card.classList.toggle("abierto"));
+      cont.appendChild(card);
+    }
+  };
+
+  // Petición de datos y actualización visual
+  const fetchClima = async () => {
+    try {
+      const res = await fetch(apiUrl(CABIMAS.lat, CABIMAS.lon));
+      const data = await res.json();
+      renderActual(data.current);
+      renderPronostico(data.daily);
+       actualizarClimaVisual(data.current);
+        actualizarMapaClima(data.current);
+    } catch (err) {
+      console.error("Error obteniendo clima:", err);
+    }
+  };
+
+  // Inicialización: eventos y auto-actualización
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchClima();
+
+    const btn = document.getElementById("cab-clima-refrescar");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        btn.style.transform = "scale(0.98)";
+        setTimeout(() => { btn.style.transform = ""; }, 120);
+        fetchClima();
+      });
+    }
+
+    // Actualización automática cada 10 minutos
+    setInterval(fetchClima, 10 * 60 * 1000);
+  });
+  
+</script>
+
+<script>
+  const triviaPreguntas = [
+    {
+      pregunta: "¿Cuál es la temperatura promedio anual en Cabimas?",
+      opciones: ["28°C", "22°C", "18°C"],
+      correcta: 0
+    },
+    {
+      pregunta: "¿En qué meses suele llover más en Cabimas?",
+      opciones: ["Mayo - Noviembre", "Diciembre - Febrero", "Marzo - Abril"],
+      correcta: 0
+    },
+    {
+      pregunta: "¿Qué brisa refresca las tardes de Cabimas?",
+      opciones: ["Brisa lacustre", "Brisa marina", "Brisa montañosa"],
+      correcta: 0
+    }
+  ];
+
+  document.getElementById("cab-trivia-btn").addEventListener("click", () => {
+    const q = triviaPreguntas[Math.floor(Math.random() * triviaPreguntas.length)];
+    document.getElementById("cab-trivia-pregunta").textContent = q.pregunta;
+
+    const opcionesDiv = document.getElementById("cab-trivia-opciones");
+    opcionesDiv.innerHTML = "";
+    q.opciones.forEach((op, i) => {
+      const btn = document.createElement("button");
+      btn.textContent = op;
+      btn.onclick = () => {
+        const resDiv = document.getElementById("cab-trivia-resultado");
+        if (i === q.correcta) {
+          resDiv.textContent = "✅ ¡Correcto! 🌞 Cabimas es cálida y vibrante.";
+        } else {
+          resDiv.textContent = "❌ No es correcto. Intenta otra vez 🌧️";
+        }
+      };
+      opcionesDiv.appendChild(btn);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mapaBody = document.querySelector(".cab-clima-mapa-body");
+    const hora = new Date().getHours();
+
+    if (hora >= 6 && hora < 18) {
+      mapaBody.classList.add("dia");
+    } else {
+      mapaBody.classList.add("noche");
+    }
+  });
+</script>
+<script>
+  function actualizarClimaVisual(current) {
+    const info = codeToInfo(current.weather_code); // usamos la función ya creada
+    const climaDiv = document.querySelector(".cab-clima-actual");
+
+    // Fondo según hora
+    const hora = new Date().getHours();
+    climaDiv.classList.remove("dia", "noche");
+    if (hora >= 6 && hora < 18) {
+      climaDiv.classList.add("dia");
+    } else {
+      climaDiv.classList.add("noche");
+    }
+
+    // Emojis según condición
+    let emojis = "☁️";
+    if (info.state === "sol") emojis = "☀️ ☀️ 🌞";
+    else if (info.state === "nube") emojis = "⛅ ☁️ 🌤️";
+    else if (info.state === "lluvia") emojis = "🌧️ 💧 ☔";
+    else if (info.state === "tormenta") emojis = "⛈️ ⚡ 🌩️";
+
+    climaDiv.setAttribute("data-emojis", emojis);
+  };
+</script>
+
+<script>
+  function actualizarMapaClima(current) {
+    const info = codeToInfo(current.weather_code); // usamos la función ya creada
+    const texto = document.getElementById("cab-mapa-texto");
+    const emojisDiv = document.getElementById("cab-mapa-emojis");
+
+    // Texto dinámico
+    texto.textContent = `Cabimas • Zulia — ${info.label}`;
+
+    // Emojis según condición
+    let emojis = "☁️";
+    if (info.state === "sol") emojis = "☀️ 🌞 ☀️";
+    else if (info.state === "nube") emojis = "⛅ ☁️ 🌤️";
+    else if (info.state === "lluvia") emojis = "🌧️ 💧 ☔";
+    else if (info.state === "tormenta") emojis = "⛈️ ⚡ 🌩️";
+
+    emojisDiv.textContent = emojis;
+  };
+</script>
+
+<script>
+(function() {
+  // Selección segura del canvas aislando nombres para evitar conflictos
+  const ecoCanvas = document.getElementById("cab-economia-grafico");
+  if (!ecoCanvas) return;
+  const ecoCtx = ecoCanvas.getContext("2d");
+
+  // Porcentajes reales iniciales (editables con sliders)
+  const ecoDatos = {
+    petroleo: 60,
+    comercio: 25,
+    agro: 10,
+    cultura: 5
+  };
+
+  const ecoColors = {
+    petroleo: "#2e3a59",
+    comercio: "#3e7d5d",
+    agro: "#46a9ff",
+    cultura: "#ffd34d"
+  };
+
+  // Normalizar a 100%
+  const normalizar = (obj) => {
+    const total = Object.values(obj).reduce((a,b)=>a+b,0) || 1;
+    const k = 100 / total;
+    const out = {};
+    for (const key in obj) out[key] = Math.max(0, obj[key] * k);
+    return out;
+  };
+
+  // Dibujar dona animada
+  const center = { x: ecoCanvas.width/2, y: ecoCanvas.height/2 };
+  const radiusOuter = 180, radiusInner = 95;
+
+  function drawArc(cx, cy, r1, r2, start, end, color) {
+    ecoCtx.beginPath();
+    ecoCtx.arc(cx, cy, r2, start, end);
+    ecoCtx.arc(cx, cy, r1, end, start, true);
+    ecoCtx.closePath();
+    ecoCtx.fillStyle = color;
+    ecoCtx.fill();
+  }
+
+  function animateDonut(dataNorm) {
+    const values = [
+      { key: "petroleo", val: dataNorm.petroleo },
+      { key: "comercio", val: dataNorm.comercio },
+      { key: "agro",     val: dataNorm.agro },
+      { key: "cultura",  val: dataNorm.cultura }
+    ];
+    const total = 100;
+    let startAngle = -Math.PI/2;
+    let progress = 0;
+    const steps = 50;
+
+    function frame() {
+      ecoCtx.clearRect(0,0,ecoCanvas.width,ecoCanvas.height);
+
+      ecoCtx.save();
+      ecoCtx.shadowColor = "rgba(0,0,0,0.12)";
+      ecoCtx.shadowBlur = 20;
+
+      let currentStart = startAngle;
+      values.forEach(v => {
+        const portion = (v.val/total) * Math.PI * 2 * progress;
+        drawArc(center.x, center.y, radiusInner, radiusOuter, currentStart, currentStart + portion, ecoColors[v.key]);
+        currentStart += portion;
+      });
+
+      ecoCtx.restore();
+
+      // Texto central
+      ecoCtx.fillStyle = "#2b3f62";
+      ecoCtx.font = "700 18px system-ui, sans-serif";
+      ecoCtx.textAlign = "center";
+      ecoCtx.fillText("Participación sectorial", center.x, center.y - 6);
+      ecoCtx.font = "600 28px system-ui, sans-serif";
+      ecoCtx.fillText("100%", center.x, center.y + 28);
+
+      progress += 1/steps;
+      if (progress <= 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // Actualizar porcentajes visibles
+  function updateLabels(dataNorm) {
+    document.getElementById("cab-val-petroleo").textContent = `${Math.round(dataNorm.petroleo)}%`;
+    document.getElementById("cab-val-comercio").textContent = `${Math.round(dataNorm.comercio)}%`;
+    document.getElementById("cab-val-agro").textContent = `${Math.round(dataNorm.agro)}%`;
+    document.getElementById("cab-val-cultura").textContent = `${Math.round(dataNorm.cultura)}%`;
+  }
+
+  // Sliders: binds en tiempo real
+  function bindSlider(id, key) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("input", () => {
+      ecoDatos[key] = parseInt(el.value, 10) || 0;
+      const n = normalizar(ecoDatos);
+      updateLabels(n);
+      animateDonut(n);
+    });
+  }
+
+  // Inicializar al cargar el DOM
+  document.addEventListener("DOMContentLoaded", () => {
+    bindSlider("cab-range-petroleo", "petroleo");
+    bindSlider("cab-range-comercio", "comercio");
+    bindSlider("cab-range-agro", "agro");
+    bindSlider("cab-range-cultura", "cultura");
+
+    const n = normalizar(ecoDatos);
+    updateLabels(n);
+    animateDonut(n);
+
+    // Resaltar sector al hover de tarjeta (re-animación ligera)
+    document.querySelectorAll(".cab-economia-card").forEach(card => {
+      card.addEventListener("mouseenter", () => animateDonut(normalizar(ecoDatos)));
+    });
+  });
+})();
+</script>
+
+<script>// Selección de elementos
+const toggleBtn = document.querySelector('.menu-toggle');
+const menuOverlay = document.querySelector('.menu-overlay');
+const toggleText = document.querySelector('.toggle-text');
+
+// Función para abrir el menú
+function abrirMenu() {
+  menuOverlay.style.display = "flex"; // muestra overlay
+  menuOverlay.style.animation = "fadeIn 0.4s ease forwards"; // animación entrada
+  toggleText.textContent = ""; // quita texto "Explora"
+}
+
+// Función para cerrar el menú
+function cerrarMenu() {
+  menuOverlay.style.animation = "fadeOut 0.4s ease forwards"; // animación salida
+  toggleText.textContent = "Explora"; // vuelve texto "Explora"
+  setTimeout(() => {
+    menuOverlay.style.display = "none"; // oculta después de animación
+  }, 400);
+}
+
+// Evento click en el botón hamburguesa
+toggleBtn.addEventListener('click', () => {
+  if (menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+// Cerrar al hacer clic fuera del menú (overlay)
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    cerrarMenu();
+  }
+});
+
+// Opcional: cerrar al presionar tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape" && menuOverlay.style.display === "flex") {
+    cerrarMenu();
+  }
+});
+
+
+</script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
