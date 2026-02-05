@@ -650,7 +650,7 @@ html {
 }
 
 .ficha.abierta .ficha-contenido {
-  max-height: 1000px; /* suficiente para cualquier contenido */
+  max-height: 1000px; 
   transform: translateX(0);
   opacity: 1;
   padding: 1rem;
@@ -687,28 +687,31 @@ html {
 
 /* Modal general */
 .modal {
-  display: none;
+  display: none; /* Se mantiene oculto */
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  z-index: 999999;
+  background: rgba(0,0,0,0.9); /* Un poco más oscuro para resaltar */
+  z-index: 99999; /* Un nivel más por si acaso */
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.modal.abierto {
-  display: flex;
-  opacity: 1;
-  transform: scale(1);
   
+  /* Preparación para la animación */
+  opacity: 0;
+  pointer-events: none; /* Evita clics cuando está invisible */
+  transition: opacity 0.4s ease;
 }
 
+/* Cuando el modal tiene la clase 'abierto' */
+.modal.abierto {
+  display: flex; 
+  opacity: 1;
+  pointer-events: auto; /* Permite clics */
+}
+
+/* Animación específica para el contenido (imagen/video) */
 .modal img,
 .modal video {
   max-width: 80%;
@@ -716,22 +719,30 @@ html {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
   
+  /* El zoom lo aplicamos al contenido para que se vea profesional */
+  transform: scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal.abierto img,
+.modal.abierto video {
+  transform: scale(1);
 }
 
 .modal .cerrar {
   position: absolute;
   top: 1rem;
   right: 2rem;
-  font-size: 2rem;
+  font-size: 3rem; /* Un poco más grande para móviles */
   color: white;
   cursor: pointer;
+  z-index: 100000;
   transition: transform 0.3s ease;
 }
 
 .modal .cerrar:hover {
   transform: rotate(90deg) scale(1.2);
 }
-
 .boton-descarga {
   margin-top: 1rem;
   background: #ffd700;
@@ -1024,7 +1035,7 @@ html {
 }
 
 .cab-parroquia-item.activa .cab-parroquia-contenido {
-  max-height: 500px;
+  max-height: 900px;
   opacity: 1;
   margin-top: 1rem;
 }
@@ -1137,41 +1148,59 @@ html {
 
 /* Modal galería */
 .cab-galeria-modal {
-  display: none;
+  display: none; 
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.85);
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  /* Subimos el nivel para que nada lo tape */
+  z-index: 10000; 
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+  
+  /* Estado inicial para la animación */
   opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 .cab-galeria-modal.abierto {
-  display: flex;
+  display: flex; /* Se activa desde el JS */
   opacity: 1;
-  transform: scale(1);
+  pointer-events: auto;
 }
 
+/* Animación de la imagen de la galería */
 .cab-galeria-modal img {
   max-width: 80%;
   max-height: 80vh;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  
+  /* Efecto de escala */
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cab-galeria-modal.abierto img {
+  transform: scale(1);
 }
 
 .cab-galeria-cerrar {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   right: 2rem;
-  font-size: 2rem;
+  font-size: 3rem; /* Más grande para facilitar el cierre */
   color: white;
   cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.3s ease;
+}
+
+.cab-galeria-cerrar:hover {
+  transform: rotate(90deg) scale(1.2);
 }
 
 .cab-galeria-controles {

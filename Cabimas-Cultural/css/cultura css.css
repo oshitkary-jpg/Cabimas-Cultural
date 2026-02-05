@@ -443,8 +443,8 @@ html {
 .tarjeta-gaita {
   background-color: #fff;
   color: #003049;
-  margin-bottom: 35px;
-  padding: 35px;
+  margin-bottom: 30px;
+  padding: 28px;
   border-radius: 19px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   break-inside: avoid;
@@ -458,7 +458,7 @@ html {
 }
 
 .tarjeta-gaita img {
-  width: 100%;
+  width: 80%;
   max-height: 350px;
   object-fit: cover;
   border-radius: 8px;

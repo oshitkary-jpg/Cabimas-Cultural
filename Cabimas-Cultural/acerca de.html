@@ -158,14 +158,14 @@
   <a href="patrimonio.html">Conoce más de sus patrimonios</a>
 </div>
 
- <!-- Modal para ampliar imagen -->
+ <!-- Modal imagen-->
 <div id="modal-imagen" class="modal">
   <span class="cerrar" onclick="cerrarModalImagen()">×</span>
   <img id="modal-img" src="" alt="">
   <a id="descargar-imagen" class="boton-descarga" download>Descargar imagen</a>
 </div>
 
-<!-- Modal para ampliar video -->
+<!-- Modal video -->
 <div id="modal-video" class="modal">
   <span class="cerrar" onclick="cerrarModalVideo()">×</span>
   <video id="modal-video-player" controls autoplay></video>
@@ -609,27 +609,6 @@
     </div>
   </div>
   </div>
-
-  <!-- Controles interactivos (porcentajes reales iniciales) -->
-  <div class="cab-economia-controles">
-    <div class="cab-economia-slider">
-      <label>🛢️ Petróleo y energía</label>
-      <input type="range" id="cab-range-petroleo" min="0" max="80" value="60" step="1">
-    </div>
-    <div class="cab-economia-slider">
-      <label>🛒 Comercio y servicios</label>
-      <input type="range" id="cab-range-comercio" min="0" max="80" value="25" step="1">
-    </div>
-    <div class="cab-economia-slider">
-      <label>🌾🐟 Agricultura y pesca</label>
-      <input type="range" id="cab-range-agro" min="0" max="80" value="10" step="1">
-    </div>
-    <div class="cab-economia-slider">
-      <label>🎶🍲 Cultura y turismo</label>
-      <input type="range" id="cab-range-cultura" min="0" max="80" value="5" step="1">
-    </div>
-    <div class="cab-economia-tip">Los valores se normalizan automáticamente para sumar 100% y el gráfico se actualiza en tiempo real.</div>
-  </div>
 </section>
 
 
@@ -781,8 +760,12 @@ animar();
   function abrirModalImagen(src) {
     const modal = document.getElementById('modal-imagen');
     const modalImg = document.getElementById('modal-img');
+    
     modalImg.src = src;
+    // Asegura que esté por encima de todo
+    modal.style.zIndex = "9999"; 
     modal.style.display = 'flex';
+    
     requestAnimationFrame(() => {
       modal.classList.add('abierto');
     });
@@ -790,6 +773,8 @@ animar();
 
   function cerrarModalImagen() {
     const modal = document.getElementById('modal-imagen');
+    if (!modal) return;
+    
     modal.classList.remove('abierto');
     setTimeout(() => {
       modal.style.display = 'none';
@@ -808,64 +793,21 @@ animar();
   function abrirModalVideo(src) {
     const modal = document.getElementById('modal-video');
     const videoPlayer = document.getElementById('modal-video-player');
+    
     videoPlayer.src = src;
+    // Asegura que esté por encima de todo
+    modal.style.zIndex = "9999";
     modal.style.display = 'flex';
+    
     requestAnimationFrame(() => {
       modal.classList.add('abierto');
     });
   }
 
   function cerrarModalVideo() {
-    const modal = document.getElementById('modal-video');
-    const videoPlayer = document.getElementById('modal-video-player');
-    modal.classList.remove('abierto');
-    setTimeout(() => {
-      modal.style.display = 'none';
-      videoPlayer.pause();
-      videoPlayer.src = "";
-    }, 400);
-  }
-</script>
-
-<script>
-  function abrirModalImagen(src) {
-    const modal = document.getElementById('modal-imagen');
-    const modalImg = document.getElementById('modal-img');
-    const descargarBtn = document.getElementById('descargar-imagen');
-
-    modalImg.src = src;
-    descargarBtn.href = src;
-
-    modal.style.display = 'flex';
-    requestAnimationFrame(() => {
-      modal.classList.add('abierto');
-    });
-  }
-
-  function cerrarModalImagen() {
-    const modal = document.getElementById('modal-imagen');
-    modal.classList.remove('abierto');
-    setTimeout(() => {
-      modal.style.display = 'none';
-      document.getElementById('modal-img').src = "";
-      document.getElementById('descargar-imagen').href = "";
-    }, 400);
-  }
-
-  function abrirModalVideo(src) {
     const modalVideo = document.getElementById('modal-video');
     const videoPlayer = document.getElementById('modal-video-player');
-
-    videoPlayer.src = src;
-    modalVideo.style.display = 'flex';
-    requestAnimationFrame(() => {
-      modalVideo.classList.add('abierto');
-    });
-  }
-
-  function cerrarModalVideo() {
-    const modalVideo = document.getElementById('modal-video');
-    const videoPlayer = document.getElementById('modal-video-player');
+    if (!modalVideo) return;
 
     modalVideo.classList.remove('abierto');
     setTimeout(() => {
@@ -874,7 +816,27 @@ animar();
       videoPlayer.src = "";
     }, 400);
   }
+
+  // --- NUEVAS MEJORAS DE CIERRE ---
+
+  // 1. Cerrar al hacer clic en el fondo oscuro (fuera de la imagen/video)
+  window.addEventListener('click', (e) => {
+    const modalImg = document.getElementById('modal-imagen');
+    const modalVid = document.getElementById('modal-video');
+    
+    if (e.target === modalImg) cerrarModalImagen();
+    if (e.target === modalVid) cerrarModalVideo();
+  });
+
+  // 2. Cerrar con la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      cerrarModalImagen();
+      cerrarModalVideo();
+    }
+  });
 </script>
+
 
 <script>
   // Abrir modal al hacer clic en tarjeta
@@ -1057,9 +1019,16 @@ animar();
   function abrirGaleria(imagenes) {
     cabGaleriaImagenes = imagenes;
     cabGaleriaIndice = 0;
-    document.getElementById('cab-galeria-img').src = cabGaleriaImagenes[0];
+    
     const modal = document.getElementById('cab-galeria-modal');
+    const imgElement = document.getElementById('cab-galeria-img');
+    
+    imgElement.src = cabGaleriaImagenes[0];
+    
+    // Forzamos que esté por encima de todo
+    modal.style.zIndex = "10000";
     modal.style.display = 'flex';
+    
     requestAnimationFrame(() => {
       modal.classList.add('abierto');
     });
@@ -1067,6 +1036,8 @@ animar();
 
   function cerrarGaleria() {
     const modal = document.getElementById('cab-galeria-modal');
+    if (!modal) return;
+
     modal.classList.remove('abierto');
     setTimeout(() => {
       modal.style.display = 'none';
@@ -1080,13 +1051,41 @@ animar();
     if (cabGaleriaIndice >= cabGaleriaImagenes.length) cabGaleriaIndice = 0;
     document.getElementById('cab-galeria-img').src = cabGaleriaImagenes[cabGaleriaIndice];
   }
+
+  // --- MEJORAS DE CIERRE Y NAVEGACIÓN ---
+
+  // 1. Cerrar al hacer clic en el fondo oscuro
+  window.addEventListener('click', (e) => {
+    const modalGaleria = document.getElementById('cab-galeria-modal');
+    // Si el clic es exactamente en el contenedor oscuro y no en la imagen o flechas
+    if (e.target === modalGaleria) {
+      cerrarGaleria();
+    }
+  });
+
+  // 2. Control por teclado (ESC para cerrar, Flechas para navegar)
+  document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById('cab-galeria-modal');
+    
+    // Solo actuar si el modal está visible
+    if (modal.style.display === 'flex') {
+      if (e.key === "Escape") {
+        cerrarGaleria();
+      } else if (e.key === "ArrowRight") {
+        cambiarImagen(1);
+      } else if (e.key === "ArrowLeft") {
+        cambiarImagen(-1);
+      }
+    }
+  });
 </script>
 
 <script>
+  // CLIMA EN TIEMPO REAL
   // Coordenadas aproximadas de Cabimas
   const CABIMAS = { lat: 10.403, lon: -71.439 };
 
-  // URL de API (Open-Meteo: servicio abierto y sin clave)
+  // URL de API 
   const apiUrl = (lat, lon) =>
     `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
     `&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m,weather_code` +
@@ -1103,7 +1102,7 @@ animar();
     return { icon: "☁️", label: "Nublado", state: "nube" };
   };
 
-  // Formato de fecha corta (ej. "vie, 14")
+  // Formato de fecha corta 
   const fmtDate = (iso) => {
     const d = new Date(iso);
     return d.toLocaleDateString("es-VE", { weekday: "short", day: "numeric" });
