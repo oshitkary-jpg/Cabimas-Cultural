@@ -59,7 +59,8 @@
 
 
  <nav class="menu-cultura">
-  <ul>
+   <button class="menu-toggleCUL" onclick="toggleMenu()">☰ Ver Menú</button>
+  <ul id="menu-lista"> <li><a href="#">Inicio</a></li>
     <li><a href="#introduccion">🏛️ Introducción</a></li>
     <li><a href="#cab-patrimonios">🏫 Patrimonio Tangible</a></li>
     <li><a href="#cab-intangible">🎭 Patrimonio Intangible</a></li>
@@ -780,6 +781,23 @@ document.addEventListener('keydown', (e) => {
 });
 
 
+</script>
+<script>
+function toggleMenu() {
+  // Buscamos la lista por su ID
+  var menu = document.getElementById("menu-lista");
+  var boton = document.querySelector(".menu-toggleCUL");
+
+  // Si la clase "show" existe, la quita. Si no, la pone.
+  menu.classList.toggle("show");
+
+  // Cambiamos el texto del botón para que el usuario sepa qué pasa
+  if (menu.classList.contains("show")) {
+    boton.innerHTML = "✕ Cerrar Menú";
+  } else {
+    boton.innerHTML = "☰ Ver Menú";
+  }
+}
 </script>
   <script src="js/script.js"></script>
 </body>

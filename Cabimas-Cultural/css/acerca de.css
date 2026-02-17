@@ -374,6 +374,9 @@ body {
   }
 }
 
+.menu-toggleCUL {
+  display: none !important; /* El botón NO existe en computadoras */
+}
 /* --- ESTILO EXCLUSIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
   .menu-toggleCUL {
