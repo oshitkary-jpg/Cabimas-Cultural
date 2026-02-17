@@ -376,17 +376,31 @@ body {
 
 /* --- ESTILO EXCLUSIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
-  .menu-cultura {
-    padding: 10px 5px; /* Menos espacio arriba y abajo */
-    position: sticky;
-    top: 0;
+  .menu-toggleCUL {
+    display: block !important;
+    background: #075332;
+    color: white;
+    border: 1px solid #fcbf49;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 90%;
+    font-family: 'Concert One', cursive;
   }
 
   .menu-cultura ul {
-    display: grid; /* Cambiamos Flex por Grid para control total */
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-    gap: 8px; /* Espacio pequeño entre botones */
-    padding: 5px;
+    display: none !important;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  .menu-cultura ul.show {
+   display: flex !important;
+    animation: fadeInDown 0.4s ease;
   }
 
   .menu-cultura li {
@@ -411,6 +425,21 @@ body {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(0.98);
   }
+}
+
+.menu-cultura li a {
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    border-left: 4px solid #fcbf49;
+  }
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -1993,6 +2022,7 @@ html {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* sombra detrás del botón */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* sombra detrás del texto */
   transition: transform 0.3s ease, background-color 0.3s ease;
+  
 }
 
 
@@ -2001,6 +2031,11 @@ html {
   color: #09214a;
   transform: scale(1.1);
   box-shadow: 0 0 16px rgba(252, 191, 73, 0.6); /* sombra dorada al pasar */
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 html {
