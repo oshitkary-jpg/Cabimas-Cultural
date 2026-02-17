@@ -26,20 +26,43 @@
   position: relative;
   display: inline-block;
   font-family: 'Concert One', cursive;
-  font-size: 3.5em;
+  
+  /* 1. Tamaño base para computadoras */
+  font-size: 3.5em; 
+  
   text-align: center;
   color: #ffffff;
   z-index: 1;
+  
+  /* 2. Evita que el texto toque los bordes del celular */
+  max-width: 90%; 
+  word-wrap: break-word;
 }
 
 .subtitulo-sombreado::before {
   content: "";
   position: absolute;
-  inset: -10px; /* espacio alrededor del texto */
-  background-color: rgba(0, 0, 0, 0.6); /* sombreado oscuro */
+  inset: -10px;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  z-index: -1; /* detrás del texto */
+  z-index: -1;
+}
+
+/* --- EL COMANDO RESPONSIVE --- */
+@media (max-width: 768px) {
+  .subtitulo-sombreado {
+    /* Reduce el tamaño en tablets y celulares */
+    font-size: 2em; 
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitulo-sombreado {
+    /* Tamaño ideal para celulares pequeños */
+    font-size: 1.5em; 
+  }
 }
 
 
