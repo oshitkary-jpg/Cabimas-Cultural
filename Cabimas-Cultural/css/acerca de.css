@@ -374,6 +374,45 @@ body {
   }
 }
 
+/* --- ESTILO EXCLUSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .menu-cultura {
+    padding: 10px 5px; /* Menos espacio arriba y abajo */
+    position: sticky;
+    top: 0;
+  }
+
+  .menu-cultura ul {
+    display: grid; /* Cambiamos Flex por Grid para control total */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 8px; /* Espacio pequeño entre botones */
+    padding: 5px;
+  }
+
+  .menu-cultura li {
+    width: 100%; /* Que cada item ocupe su celda */
+  }
+
+  .menu-cultura li a {
+    display: block;
+    padding: 12px 5px;
+    font-size: 0.85em; /* Letra más legible pero compacta */
+    background: rgba(255, 255, 255, 0.1); /* Un toque de brillo para separar */
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+  }
+
+  /* Efecto al tocar con el dedo */
+  .menu-cultura li a:active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0.98);
+  }
+}
+
 
 
 html {
