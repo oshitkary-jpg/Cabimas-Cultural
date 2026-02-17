@@ -567,20 +567,26 @@
 }
 
 /* Carrusel */
+/* ============================================================
+   CARRUSEL Y MODAL - CÓDIGO FINAL CORREGIDO
+   ============================================================ */
+
+/* --- ESTILOS BASE (PC Y GENERAL) --- */
 .carrusel-horizontal {
   position: relative;
   width: 100%;
-  height: 320px; /* o el alto que estés usando */
+  height: 320px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: #000;
 }
 
 .carrusel-track {
   display: flex;
   transition: transform 0.6s ease-in-out;
   width: 100%;
-  height: 100%; /* importante para que las imágenes se ajusten */
+  height: 100%;
 }
 
 .carrusel-track img {
@@ -588,108 +594,151 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  cursor: pointer;
   flex-shrink: 0;
-  animation: fadeIn 1s ease forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Flechas */
+/* Flechas Navegación */
 .flecha {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
-  font-size: 2em;
-  padding: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
-
 .flecha.izquierda { left: 10px; }
 .flecha.derecha { right: 10px; }
+.flecha:hover { background-color: rgba(0, 0, 0, 0.8); }
 
-/* Texto fijo */
+/* Mensaje del Banner (Escritorio) */
 .mensaje-banner {
   position: absolute;
   bottom: 20px;
   left: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 16px 24px;
   border-radius: 10px;
-  z-index: 15;
-  max-width: 320px;
+  z-index: 25;
+  max-width: 400px;
+  color: #fff;
   font-family: 'Playfair Display', serif;
-  animation: slideUp 1.2s ease-out;
+  pointer-events: none; /* No estorba al hacer clic en la imagen */
 }
 
-.mensaje-banner h2 {
-  font-size: 1.8em;
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
+.mensaje-banner h2 { font-size: 1.8rem; margin: 0; color: #fff; }
+.mensaje-banner p { font-size: 1rem; margin-top: 8px; color: #eee; }
 
-.mensaje-banner p {
-  font-size: 1em;
-  margin-top: 6px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Modal */
+/* Modal de Imagen */
 .modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 9999; /* Por encima de todo */
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  animation: fadeInModal 0.4s ease forwards;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
 }
-
-.modal.show {
-  display: block;
-  animation: fadeInModal 0.4s ease forwards;
-}
-
-@keyframes fadeInModal {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+.modal.show { display: flex; }
 
 .modal-contenido {
-  margin: auto;
-  display: block;
   max-width: 90%;
-  max-height: 90%;
-  margin-top: 5%;
-  border-radius: 12px;
-  animation: zoomIn 0.4s ease;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  max-height: 85%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  object-fit: contain;
 }
 
 .cerrar {
   position: absolute;
   top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 2em;
+  right: 25px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
   cursor: pointer;
-  animation: fadeIn 0.6s ease;
+  z-index: 10000;
+}
+
+/* --- OPTIMIZACIÓN MÓVIL (MAX-WIDTH: 768px) --- */
+@media (max-width: 768px) {
+  .carrusel-horizontal {
+    height: 280px; /* Un poco más bajo en móvil */
+  }
+
+  /* Mensaje Arriba y Compacto (Solo envuelve el texto) */
+  .mensaje-banner {
+    bottom: auto !important; /* Anula posición de PC */
+    top: 20px !important;    /* Lo sube */
+    left: 50% !important;   /* Centra horizontalmente */
+    transform: translateX(-50%) !important;
+    
+    width: auto !important;
+    min-width: 200px;
+    max-width: 85%;
+    display: inline-block !important;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mensaje-banner h2 { font-size: 1.2rem; }
+  .mensaje-banner p { font-size: 0.85rem; margin-top: 4px; }
+
+  /* Ajuste de Flechas */
+  .flecha {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal en Móvil */
+  .modal-contenido {
+    width: 95%;
+    max-height: 70%;
+  }
+
+  .cerrar {
+    top: 15px;
+    right: 15px;
+    font-size: 2.5rem;
+    background: rgba(0,0,0,0.3);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDownMobile {
+  from { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Ajuste para pantallas muy pequeñas (iPhone SE, etc.) */
+@media (max-width: 380px) {
+  .mensaje-banner p {
+    display: none; /* Escondemos el párrafo corto para que el título no tape la foto */
+  }
+  .carrusel-horizontal {
+    height: 200px;
+  }
 }
 
 .seccion-explora {
@@ -2161,6 +2210,85 @@ body {
   border-radius: 6px;
   z-index: 3;
   pointer-events: none;
+}
+
+/* --- OPTIMIZACIÓN CARRUSEL HISTÓRICO (CINE) --- */
+
+@media (max-width: 768px) {
+  .carrusel-historico {
+    padding: 40px 10px; /* Menos espacio lateral */
+  }
+
+  .titulo-cine {
+    font-size: 1.8em; /* Título más manejable */
+    margin-bottom: 25px;
+  }
+
+  /* 1. Ajuste de la cinta de cine */
+  .cinta-cine {
+    gap: 15px; /* Reducimos el espacio entre fotogramas */
+    /* Hacemos la animación un poco más lenta para que se pueda leer al pasar */
+    animation-duration: 30s; 
+  }
+
+  /* 2. Ajuste de los fotogramas */
+  .fotograma {
+    flex: 0 0 260px; /* Un poco más angostos para que se vean mejor */
+    min-width: 260px;
+    max-width: 260px;
+    border-width: 4px; /* Bordes más finos */
+  }
+
+  .fotograma img {
+    height: 150px; /* Imagen más pequeña */
+  }
+
+  .contenido {
+    padding: 12px;
+  }
+
+  .titulo-hallazgo {
+    font-size: 1.1em;
+  }
+
+  .detalle {
+    font-size: 0.85em; /* Texto más compacto */
+    line-height: 1.4;
+  }
+
+  /* 3. MODAL (Pantalla Completa) RESPONSIVE */
+  .pantalla-completa {
+    padding: 15px; /* Menos margen para que el modal use casi toda la pantalla */
+    background-color: rgba(18, 18, 18, 0.98); /* Más opaco */
+  }
+
+  .contenido-completo {
+    width: 100%;
+    max-width: 100%; /* El modal ocupa todo el ancho disponible */
+    padding: 20px;
+    border-width: 4px;
+    max-height: 85vh; /* Evita que el modal sea más largo que la pantalla */
+    overflow-y: auto; /* Permite scroll si el texto es muy largo */
+  }
+
+  /* 4. Botón de cierre para el modal histórico (Añádelo a tu HTML si no lo tienes) */
+  .cerrar-cine {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fcbf49;
+    font-size: 2em;
+    z-index: 1001;
+  }
+}
+
+/* 5. Mejora de rendimiento: Detener animación si el usuario prefiere reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .cinta-cine {
+    animation: none;
+    overflow-x: auto;
+    width: auto;
+  }
 }
 
 .evolucion-petrolera {

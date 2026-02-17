@@ -278,6 +278,13 @@
   flex-direction: column;
 }
 
+.banner-patrimonio {
+    height: auto; /* En móvil dejamos que el contenido dicte la altura */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+
 #particulas {
   position: absolute;
   top: 0;
@@ -597,4 +604,56 @@ html {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+/* --- OPTIMIZACIÓN DESCARGABLES --- */
+@media (max-width: 768px) {
+  #descargables {
+    padding: 2rem 1rem;
+    border-radius: 0; /* Borde a borde para aprovechar el espacio */
+  }
+
+  .descargables-title {
+    font-size: 1.8rem;
+  }
+
+  .descargables-intro {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .descargables-grid {
+    gap: 1.5rem; /* Reducimos el espacio entre tarjetas */
+    /* Mantenemos una sola columna bien definida */
+    grid-template-columns: 1fr; 
+  }
+
+  .descargable-card {
+    padding: 1.5rem; /* Reducimos el padding exagerado de 2.8rem */
+  }
+
+  .descargable-card img {
+    height: 250px; /* ¡CLAVE! Bajamos de 500px a 250px para que sea práctico */
+    margin-bottom: 0.8rem;
+  }
+
+  .descargable-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .download-btn {
+    width: 100%; /* Botón grande para que sea fácil de tocar con el pulgar */
+    box-sizing: border-box;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Optimización extra para el degradado animado en móviles */
+@media (max-width: 480px) {
+  #descargables {
+    /* Reducimos el tamaño del fondo animado para que el procesador del celular no sufra */
+    background-size: 400% 400%; 
+    animation-duration: 15s;
+  }
 }

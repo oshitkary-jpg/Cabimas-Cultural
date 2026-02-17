@@ -681,6 +681,73 @@ html {
   from { opacity:0; transform: translateX(30px); }
   to { opacity:1; transform: translateX(0); }
 }
+/* --- OPTIMIZACIÓN CARRUSEL DE PLAZAS --- */
+@media (max-width: 768px) {
+  #plazas-carrusel {
+    padding: 1rem; /* Menos margen exterior */
+    border-radius: 0; /* En móvil se ve mejor de borde a borde */
+  }
+
+  .plazas-title {
+    font-size: 1.8rem; /* Título más manejable */
+    margin-bottom: 1.5rem;
+  }
+
+  .plaza-slide {
+    height: 60vh; /* Reducimos altura para que quepa el texto abajo */
+    border-radius: 12px;
+  }
+
+  .plaza-overlay {
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.75); /* Fondo más oscuro para leer mejor en pantallas pequeñas */
+  }
+
+  .plaza-overlay h3 {
+    font-size: 1.4rem; /* Título de la plaza más pequeño */
+  }
+
+  .poetic {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .details {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: -webkit-box; /* Truco para limitar a 3 líneas y que no tape todo */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Botones de navegación: más pequeños y más cerca del borde */
+  .carousel-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .carousel-btn.prev { left: 5px; }
+  .carousel-btn.next { right: 5px; }
+
+  .map-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%; /* El botón ocupa todo el ancho para que sea fácil de tocar */
+  }
+}
+
+/* Ajuste para celulares muy pequeños o en posición horizontal */
+@media (max-height: 600px) {
+  .plaza-slide {
+    height: 80vh;
+  }
+  .details {
+    display: none; /* Escondemos detalles si la pantalla es muy bajita */
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
@@ -875,6 +942,88 @@ html {
 @media (max-width: 860px) {
   .popup-card { grid-template-columns: 1fr; width: 94%; }
   .popup-media { max-height: 220px; }
+}
+
+/* --- OPTIMIZACIÓN MAPA HISTÓRICO --- */
+@media (max-width: 768px) {
+  #mapa-historico {
+    padding: 1rem;
+    border-radius: 0; /* Aprovecha todo el ancho del celular */
+  }
+
+  .map-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .map-viewport {
+    height: 50vh; /* Reducimos altura para dejar espacio al popup abajo */
+  }
+
+  /* Hacemos los marcadores más grandes para el dedo */
+  .marker {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .marker::after {
+    font-size: 20px;
+  }
+
+  /* Ocultamos la etiqueta flotante (hover) en móvil 
+     porque no hay mouse y entorpece el clic */
+  .marker .label {
+    display: none !important;
+  }
+
+  /* REINVENCION DEL POPUP PARA MÓVIL */
+  .popup-card {
+    grid-template-columns: 1fr; /* Una sola columna */
+    position: fixed; /* Se vuelve una "hoja" que sube desde abajo */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(100%); /* Escondido abajo */
+    border-radius: 20px 20px 0 0; /* Solo bordes arriba */
+    z-index: 2000;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .popup-card.active {
+    transform: translateY(0); /* Sube suavemente */
+  }
+
+  .popup-media {
+    height: 180px; /* Imagen más pequeña para dejar ver el texto */
+  }
+
+  .popup-content {
+    padding: 1rem;
+  }
+
+  .popup-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .popup-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .route-btn {
+    width: 100%; /* Botón de acción fácil de pulsar */
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Ajustamos controles de zoom para que no queden detrás del popup */
+  .map-controls {
+    top: 10px;
+    bottom: auto;
+    flex-direction: column;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');

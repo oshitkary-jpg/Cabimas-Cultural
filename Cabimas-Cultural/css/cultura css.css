@@ -1066,6 +1066,61 @@ html {
   z-index: 0;
 }
 
+/* --- OPTIMIZACIÓN PARA MÓVILES (Juegos Cabimas) --- */
+@media (max-width: 768px) {
+  
+  .juegos-cabimas-seccion {
+    padding: 30px 10px; /* Reducimos espacio para aprovechar pantalla */
+  }
+
+  .juegos-cabimas-titulo {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .juegos-cabimas-titulo h2 {
+    font-size: 1.6em; /* Título más pequeño para que no se corte */
+  }
+
+  /* El contenedor principal permite el scroll táctil */
+  .juegos-cabimas-slider {
+    overflow-x: auto; /* Permite deslizar con el dedo */
+    scroll-snap-type: x mandatory; /* Hace que las tarjetas "encajen" al deslizar */
+    gap: 15px;
+    padding-bottom: 20px; /* Espacio para que la sombra no se corte */
+    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone */
+  }
+
+  .juegos-cabimas-tarjeta {
+    min-width: 85%; /* La tarjeta ocupa casi todo el ancho, dejando ver un poquito de la siguiente */
+    max-width: 85%;
+    scroll-snap-align: center; /* La tarjeta se centra sola al soltar el dedo */
+    padding: 12px;
+  }
+
+  /* Ocultamos las flechas en móvil para ganar espacio, 
+     ya que el usuario usará su dedo directamente */
+  .juegos-cabimas-flecha {
+    display: none; 
+  }
+
+  .juegos-cabimas-tarjeta h3 {
+    font-size: 1.1em;
+  }
+
+  .juegos-cabimas-tarjeta p {
+    font-size: 0.85em;
+  }
+}
+
+/* --- MEJORA PARA LA BARRA DE SCROLL (Opcional pero recomendado) --- */
+.juegos-cabimas-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.juegos-cabimas-slider::-webkit-scrollbar-thumb {
+  background: #ffcc00;
+  border-radius: 10px;
+}
 
 #lenguaje {
   position: relative;

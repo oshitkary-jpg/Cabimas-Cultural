@@ -535,21 +535,23 @@ html {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.783);
 }
 
-.cab-gastro-titulo {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #ff7a3f, #ffc857, #f77f00);
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(247,127,0,0.3);
-}
+/* --- OPTIMIZACIÓN GASTRONOMÍA --- */
+@media (max-width: 768px) {
+  .cab-gastro-titulo {
+    /* Usamos clamp para que el título nunca sea más grande que el ancho de la pantalla */
+    font-size: clamp(1.5rem, 8vw, 2rem); 
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px; /* Bordes un poco más sutiles en móvil */
+    line-height: 1.2;
+  }
 
-.cab-gastro-texto {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  text-align: center;
+  .cab-gastro-texto {
+    font-size: 1.05rem; /* Reducimos ligeramente para evitar fatiga visual */
+    line-height: 1.5;   /* Ajustamos el interlineado para pantallas pequeñas */
+    padding: 0 10px;    /* Margen interno para que el texto no toque el borde del cristal */
+    text-align: balance; /* Distribuye las líneas de forma más estética */
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
@@ -869,6 +871,44 @@ html {
 .legend-plaza{ background:#2a9d8f; }
 .legend-malecon{ background:#3b82f6; }
 .legend-rosa{ background:#8b5cf6; }
+
+/* --- OPTIMIZACIÓN DEL MAPA --- */
+@media (max-width: 768px) {
+  .cab-mapa-wrap {
+    /* Cambiamos de 2 columnas a 1 sola fila vertical */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .cab-mapa {
+    /* Le damos una altura mínima para que la imagen se vea bien en el celular */
+    min-height: 250px;
+    height: 300px; /* Ajusta esto según qué tan alto quieras el mapa */
+  }
+
+  /* Hacemos los puntos del mapa (marcadores) más fáciles de tocar con el dedo */
+  .cab-marker circle {
+    r: 8; /* Aumentamos un poco el radio base para pantallas táctiles */
+  }
+
+  .cab-marker-label {
+    font-size: 14px; /* Un poco más grande para legibilidad */
+    font-weight: bold;
+    /* Un pequeño truco para que el texto resalte sobre la imagen */
+    text-shadow: 1px 1px 2px white; 
+  }
+
+  .cab-mapa-legend {
+    order: 2; /* Asegura que la leyenda aparezca después del mapa */
+    padding: 1.2rem;
+  }
+
+  /* Animación más suave para móvil */
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
 
 /* ===== Grid tarjetas ===== */
 .cab-zonas-grid {
