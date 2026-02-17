@@ -574,20 +574,6 @@
 </article>
 
   </div>
-  
-  <!-- Panel de datos culturales -->
-  <div class="cab-zonas-data">
-    <div class="cab-data-card">
-      <h4>Popularidad de las zonas</h4>
-      <canvas id="cab-zonas-donut" width="260" height="260" aria-label="Popularidad por zona"></canvas>
-      <ul class="cab-donut-legend">
-  <li><span class="legend-dot legend-mercado"></span>Mercado (28%)</li>
-  <li><span class="legend-dot legend-avenida"></span>Av. Independencia (24%)</li>
-  <li><span class="legend-dot legend-rosa"></span>La Rosa (10%)</li>
-  <li><span class="legend-dot legend-costamall"></span>Costa Mall (12%)</li>
-  <li><span class="legend-dot legend-boulevard"></span>Boulevard Pedro O. Hernández (15%)</li>
-  <li><span class="legend-dot legend-estrella"></span>Parque La Estrella (10%)</li>
-</ul>
 
     </div>
 
@@ -1383,14 +1369,10 @@ estrella: {
           <ul class="cab-zona-facts">${curiosHTML}</ul>
         </div>
         <div>
-          <h4>Popularidad estimada</h4>
           <div class="cab-zona-pop">
             <canvas id="cab-zona-pop-canvas" width="220" height="220"></canvas>
-            <p style="text-align:center; font-weight:700; color:#374151;">${z.popularidad}%</p>
           </div>
-          <h4>Explora recetas relacionadas</h4>
-          <ul class="cab-zona-links">
-            <li><a href="#cab-platos">Ir a recetas típicas</a></li>
+
           </ul>
         </div>
       </div>
@@ -1464,21 +1446,6 @@ estrella: {
     });
   });
 
-  // ===== Donut global de popularidad =====
- if (donutCanvas) {
-  const valores = [28, 24, 18, 20, 10, 12, 15, 10];
-  const colores = [
-    '#ef6c00', // Mercado
-    '#f59e0b', // Av. Independencia
-    '#10b981', // Plaza Bolívar
-    '#3b82f6', // Malecón
-    '#8b5cf6', // La Rosa
-    '#d946ef', // Costa Mall
-    '#f43f5e', // Boulevard
-    '#22c55e'  // La Estrella
-  ];
-  drawDonut(donutCanvas, valores, colores, true);
-}
 
 
   // ===== Quiz zonas =====
@@ -1505,46 +1472,8 @@ estrella: {
     });
   });
 
-  // ===== Donut chart: función de dibujo =====
-  function drawDonut(canvas, values, colors, animate = false) {
-    const ctx = canvas.getContext('2d');
-    const total = values.reduce((a, b) => a + b, 0);
-    const cx = canvas.width / 2;
-    const cy = canvas.height / 2;
-    const r = Math.min(canvas.width, canvas.height) / 2 - 8;
-    const inner = r * 0.58;
-    let start = -Math.PI / 2;
 
-    const frames = animate ? 40 : 1;
-    let frame = 0;
 
-    function step() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      let s = start;
-      const progress = animate ? frame / frames : 1;
-
-      values.forEach((v, i) => {
-        const angle = (v / total) * Math.PI * 2 * progress;
-        ctx.beginPath();
-        ctx.arc(cx, cy, r, s, s + angle);
-        ctx.lineWidth = r - inner;
-        ctx.strokeStyle = colors[i];
-        ctx.stroke();
-        s += angle;
-      });
-
-      // Centro
-      ctx.beginPath();
-      ctx.arc(cx, cy, inner, 0, Math.PI * 2);
-      ctx.fillStyle = '#fff';
-      ctx.fill();
-
-      frame++;
-      if (frame <= frames) requestAnimationFrame(step);
-    }
-
-    step();
-  }
 }); // ← cierre único del DOMContentLoaded
 </script>
 
