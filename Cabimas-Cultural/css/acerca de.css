@@ -333,24 +333,45 @@ body {
   }
 }
 
-.menu-cultura {
-  background: linear-gradient(to right, #530731, #fcf649);
-  padding: 15px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 4px 10px rgba(18, 19, 33, 0.486);
-}
-
 .menu-cultura ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Importante: permite que los botones bajen si no caben */
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
+}
+
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL --- */
+@media (max-width: 768px) {
+  .banner-patrimonio {
+    height: auto; /* En móvil dejamos que el contenido dicte la altura */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .menu-cultura ul {
+    gap: 5px; /* Reducimos espacio entre botones */
+  }
+
+  .menu-cultura li a {
+    font-size: 0.9em; /* Texto un poco más pequeño */
+    padding: 8px 12px;
+    display: inline-block;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
