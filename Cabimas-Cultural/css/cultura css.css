@@ -1304,6 +1304,102 @@ html {
   100% { transform: scale(1); }
 }
 
+/* --- OPTIMIZACIÓN SECCIÓN LENGUAJE --- */
+
+@media (max-width: 768px) {
+  #lenguaje {
+    padding: 2rem 1rem;
+  }
+
+  /* 1. Título adaptativo */
+  .titulo-lenguaje h2 {
+    font-size: 1.8rem;
+  }
+
+  .titulo-lenguaje p {
+    font-size: 2rem; /* Bajamos de 3.3rem para que no rompa la pantalla */
+    line-height: 1.2;
+  }
+
+  /* 2. Carrusel táctil de expresiones */
+  .expresiones-carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px; /* Espacio más pequeño entre tarjetas */
+    padding: 1rem 15px; /* Margen para que la primera no pegue al borde */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .expresion {
+    /* CLAVE: 75% a 80% permite ver la tarjeta actual + un trozo de la siguiente */
+    flex: 0 0 75%; 
+    min-width: 75%;
+    
+    padding: 1rem;
+    scroll-snap-align: center; /* Se imanta al centro al soltar */
+    background: #ffe8c2;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .expresion:hover {
+    transform: none; /* Quitamos el hover en móvil para evitar saltos raros al tocar */
+  }
+
+  /* 3. Video responsivo */
+  .videos-lenguaje iframe {
+    width: 100%;
+    height: 220px; /* Altura adecuada para la proporción del cel */
+    border-width: 2px;
+  }
+
+  /* 4. Ajustes del Juego */
+  .juego-lenguaje {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .juego-lenguaje h3 {
+    font-size: 1.5rem;
+  }
+
+  .juego-bloque p {
+    font-size: 1.1rem;
+  }
+
+  .opciones {
+    gap: 0.8rem;
+  }
+
+  .opciones button {
+    width: 100%; /* Botones de respuesta grandes para el pulgar */
+    padding: 0.8rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Ajuste fino para pantallas extra pequeñas */
+@media (max-width: 400px) {
+  .titulo-lenguaje p {
+    font-size: 1.6rem;
+  }
+  
+  .expresion {
+    min-width: 85%;
+  }
+}
+
+.expresion h3 {
+    font-size: 1.2rem; /* Título más pequeño para ganar espacio vertical */
+    margin-bottom: 5px;
+  }
+
+  .expresion p {
+    font-size: 0.9rem; /* Texto más compacto */
+    line-height: 1.3;
+  }
+
 #moda {
   background: linear-gradient(135deg, #fff0f5, #fadf94);
   padding: 3rem 2rem;
