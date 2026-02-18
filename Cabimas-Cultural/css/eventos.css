@@ -865,6 +865,85 @@ body {
   to { opacity:1; transform:translateY(0); }
 }
 
+/* --- OPTIMIZACIÓN CALENDARIO MODERNO (MOBILE) --- */
+
+@media (max-width: 768px) {
+  #calendar-section {
+    padding: 1.5rem 0.5rem;
+    margin: 1rem 5px;
+  }
+
+  .calendar-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .modern-calendar {
+    padding: 0.8rem;
+  }
+
+  /* 1. Encabezado del calendario */
+  .calendar-header {
+    flex-direction: column; /* Apilamos título y botones si es necesario */
+    gap: 10px;
+    text-align: center;
+  }
+
+  .calendar-header h3 {
+    font-size: 1.2rem;
+    order: 1; /* El título primero */
+  }
+
+  .calendar-header .nav-buttons { /* Asegúrate de envolver tus botones en un div si no lo están */
+    display: flex;
+    gap: 15px;
+    order: 2;
+  }
+
+  .calendar-header button {
+    padding: 0.6rem 1.2rem; /* Botones más grandes para dedos */
+    font-size: 1rem;
+  }
+
+  /* 2. La Grilla (El cambio más importante) */
+  .month-grid {
+    gap: 2px; /* Espacio mínimo para ganar espacio en las celdas */
+  }
+
+  .day-cell {
+    min-height: 60px; /* Reducimos altura para que quepa el mes completo en pantalla */
+    padding: 0.2rem;
+    border-radius: 4px; /* Bordes más sutiles */
+  }
+
+  /* 3. Contenido de la celda */
+  .day-number {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .event-marker {
+    font-size: 1rem; /* Emoji un poco más pequeño */
+    margin-top: 1px;
+  }
+
+  .event-title {
+    display: none; /* OCULTAMOS EL TEXTO DEL EVENTO EN MÓVIL */
+    /* En pantallas tan pequeñas el texto no cabe, el marcador 📍 es suficiente */
+  }
+}
+
+/* Ajuste para pantallas extra pequeñas (iPhone SE / 320px) */
+@media (max-width: 360px) {
+  .day-cell {
+    min-height: 50px;
+  }
+  
+  .calendar-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
 
 #eventos-deportivos {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -1168,4 +1247,79 @@ body {
 .carousel-track {
   display: flex;
   transition: transform 0.8s ease-in-out; /* más suave */
+}
+
+/* --- OPTIMIZACIÓN EVENTOS ACTUALES (MÓVIL) --- */
+
+@media (max-width: 768px) {
+  #eventos-actuales {
+    padding: 2rem 0.5rem;
+    margin: 1rem 10px;
+    border-radius: 12px;
+  }
+
+  .actual-title {
+    font-size: 1.6rem; /* Título más equilibrado */
+    margin-bottom: 1.5rem;
+  }
+
+  /* 1. Carrusel Táctil (Swipe) */
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0; 
+    padding: 10px 0;
+  }
+
+  .actual-card {
+    /* Mostramos el 85% de la tarjeta para dejar ver un pedazo de la siguiente */
+    flex: 0 0 85%;
+    height: 180px; /* Reducimos altura para no saturar */
+    margin: 0 8px;
+    scroll-snap-align: center;
+  }
+
+  .card-banner h3 {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .card-banner .date, 
+  .card-banner .place {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* 2. Flechas: En móvil es mejor ocultarlas si hay scroll táctil */
+  .carousel-btn {
+    display: none; 
+  }
+
+  /* 3. Modal Responsivo */
+  .modal-content {
+    margin: 20% 15px; /* Más margen lateral en móviles */
+    padding: 1.5rem;
+    width: auto;
+    max-width: 90%;
+  }
+
+  .close {
+    top: 10px;
+    right: 20px;
+    color: #fff; /* Blanco para que resalte sobre el fondo oscuro del modal */
+    background: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .actual-card {
+    flex: 0 0 90%; /* Casi pantalla completa en celulares mini */
+  }
 }

@@ -395,7 +395,7 @@
 @media (max-width: 768px) {
   .menu-toggleCUL {
     display: block !important;
-    background: #075332;
+    background: #532407;
     color: white;
     border: 1px solid #fcbf49;
     padding: 10px 20px;
@@ -460,7 +460,6 @@
 }
 
 .menu-cultura {
-  background: linear-gradient(to right, #075319, #fcf649);
   padding: 15px;
   text-align: center;
   position: sticky;
@@ -1435,6 +1434,59 @@ body, #cab-zonas {
   margin: 0 auto 1rem auto; /* centrada con margen inferior */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+
+/* --- OPTIMIZACIÓN MODAL DE PLATOS (MÓVIL) --- */
+
+@media (max-width: 768px) {
+  /* 1. Ajuste del contenedor principal */
+  .cab-plato-modal-inner {
+    width: 95vw; /* Casi todo el ancho de la pantalla */
+    max-height: 90vh; /* Permitimos un poco más de altura vertical */
+    padding: 1.5rem 1rem; /* Espacio interno más equilibrado */
+    background: #111827; /* Un tono ligeramente más oscuro para resaltar el texto dorado */
+  }
+
+  /* 2. La imagen del plato (Hero) */
+  .cab-plato-hero img {
+    max-width: 220px; /* Reducimos un poco más en móvil para ver el título rápido */
+    max-height: 160px;
+    margin-bottom: 0.8rem;
+    border: 2px solid #facc15; /* Un borde dorado para que resalte la comida */
+  }
+
+  /* 3. Textos y Títulos */
+  .cab-plato-modal-content h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .cab-plato-modal-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left; /* Lectura más natural para párrafos largos */
+    color: #d1d5db;
+  }
+
+  /* 4. Botón de cierre (Touch-friendly) */
+  .cab-plato-close {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 42px; /* Más grande para que el dedo no falle */
+    height: 42px;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    /* En móvil es mejor que sea estático o color fijo, el hover no existe */
+    background: #f43f5e; 
+  }
+}
+
+/* Ajuste para pantallas pequeñas (vertical) */
+@media (max-height: 600px) {
+  .cab-plato-hero img {
+    display: none; /* Si la pantalla es muy bajita (celular horizontal), ocultamos la imagen para poder leer el texto */
+  }
 }
 
 /* ===== Sección Dulces ===== */

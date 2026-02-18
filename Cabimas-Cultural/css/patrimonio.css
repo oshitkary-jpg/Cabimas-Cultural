@@ -749,6 +749,60 @@ body {
 .carousel-btn.next { right: 10px; }
 .carousel-btn:hover { background: #a68a64; }
 
+/* --- OPTIMIZACIÓN CARRUSEL DE PRODUCTOS/ITEMS --- */
+
+@media (max-width: 768px) {
+  .carousel {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem; /* Espacio para que la sombra no se corte */
+  }
+
+  /* Habilitamos el scroll táctil suave */
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0; /* Controlaremos el espacio con los márgenes de los items */
+  }
+
+  .carousel-item {
+    /* CLAVE: Ocupa el 80% del ancho para dejar ver un 20% de la siguiente tarjeta */
+    flex: 0 0 80%; 
+    min-width: 80%;
+    margin: 0 10px; /* Margen reducido para móviles */
+    scroll-snap-align: center; /* Se detiene justo en el medio */
+    padding: 1.2rem;
+    animation: none; /* Quitamos animaciones pesadas en el scroll móvil */
+  }
+
+  .carousel-item img {
+    height: 160px; /* Un poco más pequeña para no empujar el texto */
+  }
+
+  .carousel-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-item button {
+    width: 100%; /* Botón grande y fácil de presionar */
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* Ocultamos o ajustamos las flechas en móvil */
+  .carousel-btn {
+    display: none; /* En móvil el dedo es más práctico que las flechas laterales */
+  }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .carousel-item {
+    flex: 0 0 85%;
+    min-width: 85%;
+  }
+}
+
 /* ===== Modal ===== */
 .modal {
   position: fixed;
