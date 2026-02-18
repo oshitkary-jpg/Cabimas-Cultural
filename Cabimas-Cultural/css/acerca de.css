@@ -877,6 +877,31 @@ html {
   background: linear-gradient(135deg, #3e7d5d, #ffd700);
 }
 
+/* --- OPTIMIZACIÓN BOTÓN PATRIMONIO --- */
+
+@media (max-width: 768px) {
+  .boton-patrimonio {
+    margin-top: 1.5rem;
+    padding: 0 20px; /* Margen para que no toque los bordes del cel */
+  }
+
+  .boton-patrimonio a {
+    display: block; /* El botón ocupa todo el ancho disponible */
+    padding: 1rem 1.2rem; /* Más alto para facilitar el toque */
+    font-size: 1.2rem; /* Texto un poco más grande y legible */
+    text-align: center;
+    border-radius: 12px; /* Bordes un poco más suaves */
+    
+    /* Efecto activo para móviles (cuando se presiona) */
+    transition: transform 0.1s ease;
+  }
+
+  .boton-patrimonio a:active {
+    transform: scale(0.96); /* Efecto de "hundido" al tocar con el dedo */
+    filter: brightness(1.2);
+  }
+}
+
 #ss-simbolos-significados {
   padding: 4rem 2rem;
   background-color: #0a1f2f;

@@ -1155,6 +1155,86 @@ body, #cab-zonas {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* --- OPTIMIZACIÓN MODAL DE ZONAS (RESPONSIVE) --- */
+
+@media (max-width: 768px) {
+  /* 1. Ajuste del contenedor del modal */
+  .cab-zona-modal-inner {
+    width: 95vw; /* Casi todo el ancho de la pantalla */
+    max-height: 90vh; /* Un poco más alto para aprovechar el espacio vertical */
+    border-radius: 12px;
+  }
+
+  .cab-zona-modal-content {
+    padding: 1.2rem 0.8rem; /* Ajustamos márgenes internos */
+  }
+
+  /* 2. El Hero (Imagen/Video): De 2 columnas a 1 sola */
+  .cab-zona-hero {
+    grid-template-columns: 1fr; /* Apilamos los elementos */
+    gap: 0.5rem;
+  }
+
+  .cab-zona-hero img, 
+  .cab-zona-hero video {
+    height: 180px; /* Reducimos la altura para no empujar el texto muy abajo */
+  }
+
+  /* 3. El Cuerpo del Modal: De 2 columnas a 1 sola */
+  .cab-zona-body {
+    grid-template-columns: 1fr; /* Priorizamos lectura vertical */
+    gap: 1.2rem;
+  }
+
+  /* 4. Título y textos */
+  .cab-zona-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  /* 5. Etiquetas (Tags): Más grandes para facilitar el toque */
+  .cab-zona-tags li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* 6. Botón de cierre: Lo hacemos más grande y visible */
+  .cab-zona-close {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 44px; /* Tamaño estándar para dedos (Touch Target) */
+    height: 44px;
+    background: #e63946; /* Color de contraste por defecto en móvil */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* 7. Datos curiosos (Facts) */
+  .cab-zona-facts {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  /* 8. Canvas/Gráficos: Aseguramos que no se desborde */
+  .cab-zona-pop canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Ajuste para pantallas muy pequeñas (iPhone SE, etc) */
+@media (max-width: 400px) {
+  .cab-zona-hero img, 
+  .cab-zona-hero video {
+    height: 150px;
+  }
+  
+  .cab-zona-title {
+    font-size: 1.1rem;
+  }
+}
+
 .cab-zonas-header h2 {
   font-size: 2rem;
   margin-bottom: .5rem;
